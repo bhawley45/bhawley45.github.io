@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<!--Head-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/navBar.css">
+    <link rel="stylesheet" type="text/css" href="./css/mainVideo.css">
+    <link rel="stylesheet" type="text/css" href="./css/portfolio.css">
+    <link rel="stylesheet" type="text/css" href="./css/about.css">
+    <title>Brandon J Hawley</title>
+</head>
+
+<!--Body-->
+
+<body>
+
+    <!--Navbar-->
+    <nav class="navbar">
+        <div class="navbar-toggle">
+            <button class="navbar-toggler" aria-label="Toggle navigation">
+                <img src="./images/navigation icons/hamIcon_white_cropped.png" alt="delicious hamburger">
+            </button>
+        </div>
+        <ul class="navbar-links">
+            <li><a href="#">Home</a></li> <!-- Keep #home unidentified so it take to top of webpage -->
+            <li><a href="#projects">Portfolio</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="navbar-social">
+            <a href="https://www.facebook.com/brandon.hawley.3114" target="_blank"><img
+                    src="./images/Social Icons/Facebook_Icon.png" alt="Facebook"></a>
+            <a href="https://www.linkedin.com/in/brandon-hawley-69a439165/" target="_blank"><img
+                    src="./images/Social Icons/LinkedIn_Icon.png" alt="LinkedIn"></a>
+            <a href="https://github.com/bhawley45" target="_blank"><img src="./images/Social Icons/GitHub_Icon.png"
+                    alt="GitHub"></a>
+        </div>
+    </nav>
+
+    <!--Background video-->
+    <div>
+        <div class="video-container">
+            <video autoplay muted loop>
+                <source src="./video/smoke_flame.mp4" type="video/mp4">
+                <!--Display message if video fails to run-->
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+    </div>
+
+    <!--Video Overlay-->
+    <div class="video-overlay">
+        <p class="white-text">Crafting Code; Shaping Worlds</p>
+        <div class="image-container">
+            <img src="./images/mainPhoto/Brandon_Main_noBG_sm.png" alt="Thought provoking, intuitive, genius">
+        </div>
+    </div>
+
+    <div class="divide-line"></div>
+    <h2 class="portfolio-text" id="projects">Previous Adventures!</h2>
+
+    <!--Portfolio Section-->
+    <div class="portfolio">
+        <button class="nav-button left" onclick="scrollProjects('left')">&#60;</button>
+        <div class="projects-container">
+            <div class="projects">
+                <div class="project">
+                    <a href="repository_url_1">
+                        <img src="./images/StickwBG.png" alt="Noble Night">
+                    </a>
+                    <h2>Noble Night</h2>
+                    <p>
+                        This is a random description that I'm thinking of on the spot. This is a excellent
+                        description for the picture that sits above; and furthermore demostrates with certainty that
+                        this element works as originally intended.
+                    </p>
+                </div>
+                <div class="project">
+                    <a href="repository_url_2">
+                        <img src="thumbnail_2.jpg" alt="Project 2">
+                        <h2>Project 2</h2>
+                        <p>Description of Project 2</p>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="repository_url_3">
+                        <img src="thumbnail_3.jpg" alt="Project 3">
+                        <h2>Project 3</h2>
+                        <p>Description of Project 3</p>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="repository_url_4">
+                        <img src="thumbnail_4.jpg" alt="Project 4">
+                        <h2>Project 4</h2>
+                        <p>Description of Project 4</p>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="repository_url_5">
+                        <img src="thumbnail_5.jpg" alt="Project 5">
+                        <h2>Project 5</h2>
+                        <p>Description of Project 5</p>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="repository_url_6">
+                        <img src="thumbnail_6.jpg" alt="Project 6">
+                        <h2>Project 6</h2>
+                        <p>Description of Project 6</p>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="repository_url_7">
+                        <img src="thumbnail_7.jpg" alt="Project 7">
+                        <h2>Project 7</h2>
+                        <p>Description of Project 7</p>
+                    </a>
+                </div>
+                <!-- Add more project elements as needed -->
+            </div>
+        </div>
+        <button class="nav-button right" onclick="scrollProjects('right')">&#62;</button>
+    </div>
+
+    <div class="divide-line"></div>
+
+    <!--About section PT1-->
+    <div class="row" id="about">
+        <!--Left column-->
+        <div class="column-image">
+            <img src="./images/B_H_Funny.JPG" alt="Absolutely hilarious image">
+        </div>
+        <!--Right column-->
+        <div class="column-text">
+            <h2 class="center">About Me</h2>
+            <p>
+                Hello there! I'm Brandon Hawley, a father of four, expert software architect, aspiring
+                scientist, artist, and game enthusiast. I believe creativity and imagination are some of our greatest
+                gifts as humans; my passion in life derives from this very idea. I dream to further human development,
+                improve the human condition, write narratives and create works of art that inspire humanity.
+                <br><br>
+                Through my time in the tech industry I've become adept at many different languages and frameworks
+                including: C++, C#, Java, Python, and more including Unreal and Unity engines. I have hobbies in
+                astrophysics, sound engineering, and writing. I also have experience in running a computer repair
+                buisness for 2 years, and a YouTube side-buisness for 1. I love a challenge, learning new things, and
+                making people laugh.
+            </p>
+        </div>
+    </div>
+
+    <div class="divide-line"></div>
+
+    <!--About section PT2-->
+    <div class="row">
+        <!--Left column-->
+        <div class="column-text">
+            <h2 class="center">fun version :)</h2>
+            <p>
+                Greetings! I am Brandon Hawley, a craftsman of remarkable games and software. Dost thou know of those
+                wondrous video games and applications? 'Tis I who toils behind the curtain, bestowing upon them charm
+                and thrill. I am well-versed in sundry programming languages—C++, C#, Java, Python, HTML, CSS, and
+                JavaScript—enabling me to commune with machines and conjure feats of great marvel.
+                <br><br>
+                Verily, I hold a deep reverence for the potent forces of imagination and creativity. Envision me as a
+                digital artisan who employs technology to transmute concepts into actuality. From the forging of
+                enthralling chronicles to the fashioning of entire virtual realms, mine aim is to proffer creations that
+                endure in memory. Anon, should thou embark upon this odyssey where ingenuity, technology, and innovation
+                converge, I bid thee accompany me. Together, we shall weave our notions into resplendent actualities!
+            </p>
+        </div>
+        <!--Right column-->
+        <div class="column-image">
+            <img src="./images/StickwBG.png" alt="The noble stick-figure night" class="knight">
+        </div>
+    </div>
+
+    <div class="divide-line"></div>
+
+    <!--Contact section-->
+    <div class="row" id="contact">
+        <!--Contact form column-->
+        <div class="column-text Column_tall">
+            <h2 class="portfolio-text">Contact Form</h2>
+            <br>
+            <!--This specifies where and how to send the form data; we are leaving it blank-->
+            <form action="" method="POST">
+                <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
+                <label>Name:</label>
+                <input type="text" placeholder="Please enter your name here">
+                <label>Email:</label>
+                <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
+                <label>Message:</label>
+                <input type="text" id="Message" name="Message" placeholder="Please write your message here">
+                <input type="submit" value="SUBMIT">
+            </form>
+        </div>
+    </div>
+
+    <!--Footer section-->
+    <footer>
+        <p class="center">
+            <a href="https://www.AftermathGameStudio.com/" target="_blank">&copy;Aftermath Studio</a>
+        </p>
+    </footer>
+
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>

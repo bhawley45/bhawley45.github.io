@@ -1,0 +1,57 @@
+.row {
+    background-color: #333;
+    display: flex;
+    /* Use flexbox */
+    align-items: center;
+    /* Vertically center items within the row */
+    justify-content: center;
+    /* Horizontally center items within the row */
+}
+
+.column-text {
+    background-color: papayawhip;
+    width: 60%;
+    /* Take up the other 60% of width left by <img> */
+    max-height: min(500px, 50vw);
+    padding: 10px;
+    /* This ensures there is space between the top of the column and the headings */
+}
+
+/* Screens 1000px and smaller will display a scroll bar if the text overflows the column height */
+@media screen and (max-width: 1000px) {
+    .column-text {
+        overflow: auto;
+    }
+}
+
+.column-image {
+    width: 40%;
+    overflow: hidden;
+    border-radius: 15%;
+}
+
+.column-image img {
+    background-color: papayawhip;
+    width: 100%;
+    height: 100%;
+    /* This will maintain the image's aspect ratio */
+    object-fit: cover;
+    /* Crop and scale the image to cover the entire container */
+}
+
+/* This class is applied to the columns in the final row, overriding the height and padding to provide more 
+    room for the contact form  while keeping the rest of the formatting from Column_1 or Column_2 */
+.Column_tall {
+    background-color: #333;
+    height: 750px;
+}
+
+/* This inserts something after the content of selected elements (in this case the elements with class "Row") */
+.row:after {
+    content: "";
+    /* By leaving this blank, we are allowing the footer (covered lower down) to be displayed - removing it makes the footer overwrite a column */
+    display: table;
+    /* The display property specifies the type of display behavior; the table value tells the browser to treat the element as a table */
+    clear: both;
+    /* This clears any other elements from floating on the left or the right of an element */
+}

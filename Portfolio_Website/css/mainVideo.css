@@ -1,0 +1,119 @@
+/* Styling for portfolio title text */
+.white-text {
+    color: white;
+    text-align: center;
+    cursor: default;
+    font-size: min(65px, 3.75vw);
+
+    z-index: 1;
+
+    /*=-= ANIMATIONS =-=*/
+    opacity: 0;
+    transform: translateY(50%);
+    -webkit-animation: opacity 2.5s;
+    /* This applies the slideIn animation below for Safari 4.0 - 8.0 */
+    animation: opacity 2.5s ease-in forwards, glow 6.2s infinite, slideIn .65s ease-in forwards;
+    /* "forwards" ensures the final state of the animation is maintained after completion*/
+}
+
+@keyframes opacity {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateY(0);
+        /* Move the navbar back into position */
+        opacity: 1;
+    }
+}
+
+@keyframes glow {
+
+    0%,
+    100% {
+        text-shadow: 0 0 5px rgba(245, 245, 245, 0.3);
+    }
+
+    50% {
+        text-shadow: 0 0 12px rgba(245, 245, 245, 1);
+    }
+}
+
+.image-container {
+    position: relative;
+    /* keeps position relative to .video-overlay container */
+    width: 100%;
+    /* keeps full width - up to 2560px (specified in portfolio.css/body{}) */
+    height: auto;
+    /* maintain original aspect ratio */
+
+    padding-bottom: 36%;
+    /* */
+}
+
+.image-container img {
+    position: absolute;
+    /* set position to be inside of parent container */
+
+    top: 60%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    /* Center image element in viewport (w/ slight left offset)*/
+
+    /*width: min(1076px, 42vw);================================================*/
+    width: min(630px, 42vw);
+    /* 630px keeps image from scaling past container limit (1500px) */
+    height: auto;
+    z-index: -1;
+}
+
+/* Create a container for the video */
+.video-container {
+    position: fixed;
+    top: 50px;
+    /* Adjust as needed to align with navigation bar */
+    left: 50%;
+    transform: translateX(-50%);
+    /* Center the container horizontally */
+    /*width: min(2560px, 100vw);=============================================*/
+    width: min(1500px, 100vw);
+    /* Keeps video full width - up to 2560px: */
+    /*-> 100% of viewport unless it exceeds 2560px */
+    height: calc(100% - 50px);
+    /* Subtract navigation bar height */
+    overflow: hidden;
+    z-index: -2;
+    /* Place the video behind content */
+}
+
+/* Formatting for background video */
+.video-container video {
+    /* remove video from normal flow (fix to webpage) */
+    width: 100%;
+    height: auto;
+    /* Subtract navigation bar height */
+    object-fit: contain;
+}
+
+/* Ensure the video container covers the viewport */
+@media screen and (min-aspect-ratio: 1500/844) {
+    .video-container {
+        height: 100vh;
+    }
+}
+
+/*@media screen and (min-aspect-ratio: 2560/1440) { ======================================
+    .video-container {
+        height: 100vh;
+    }
+}*/
+
+
+
+
+/* Make the c++ conde in a single line that repeats, 
+have it band diagonally across the screen slowly, like 
+code making a world...*/

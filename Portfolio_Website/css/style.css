@@ -1,0 +1,141 @@
+/***** GENERAL STYLING *****/
+/* Body */
+body {
+    margin: 0% auto;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-image: url(../images/Dark_Stars.jpg);
+    background-color: black;
+    font-size: clamp(14px, 2.5vw, 28px);
+    /*max-width: 2560px;*/
+    max-width: 1500px;
+}
+
+/* Anchor elements */
+a {
+    color: rgb(255, 0, 0);
+    /* This ensures all links are blue */
+}
+
+/* Quotation elements */
+q {
+    font-style: italic;
+    /* This makes the quote italicized */
+}
+
+/* Styling for footer element */
+footer {
+    padding: 2%;
+    /* This gives the footer padding that is equal to 2% of the width of the element's area */
+    background-image: url(../images/Dark_Stars.jpg);
+}
+
+/* Paragraph elements */
+p {
+    font-family: Perpetua, Rockwell Extra Bold;
+    text-align: justify;
+    /* Justify text within paragraph elements */
+    letter-spacing: 1px;
+    /* This expands the text slightly */
+    font-size: clamp(14px, 2.5vw, 20px);
+    padding-left: 20px;
+    /* Adds padding to the left of the paragraph element */
+    padding-right: 20px;
+    /* Adds padding to the right of the paragraph element */
+}
+
+/* Center class - this applies to all elements with the class "center" */
+.center {
+    text-align: center;
+    /* This center aligns the text */
+}
+
+.divide-line {
+    width: 100%;
+    height: 4px;
+    background-color: grey;
+    /* Set your desired line color */
+}
+
+/***** TABLE STYLING -  this section covers the styling of the columns and rows within the table *****/
+* {
+    /* The asterisk is a universal selector that applies this effect to all elements on the page */
+    box-sizing: border-box;
+    /* This creates a box with a border within which we will place most of our text */
+}
+
+/***** CONTACT FORM STYLING *****/
+/* input[type=text] targets all text input sections of the contact form */
+input[type=text] {
+    width: 100%;
+    /* Each input box covers the full width of the container */
+    padding: 12px;
+    /* Adds padding within the text box */
+    border: 1px solid #ccc;
+    /* Setting a solid border and its color */
+    border-radius: 4px;
+    /* Slightly rounds the corners of the text box border */
+    box-sizing: border-box;
+    /* This creates a box with a border around the contact form input boxes */
+    margin-top: 6px;
+    /* Adds a margin to the top of the text box */
+    margin-bottom: 16px;
+    /* Adds a margin to the bottom of the text box */
+    resize: vertical;
+    /* This allows the user to resize the text boxes vertically */
+    font-family: Perpetua, Rockwell Extra Bold;
+}
+
+/* Hover effects for input boxes */
+input[type=text]:hover {
+    box-shadow: 0 0 5px #00004d inset;
+    /* This creates a blue shadow in the text box when hovered over by the user */
+}
+
+/* Submit button */
+input[type=submit] {
+    background-color: black;
+    /* Sets the background color of the submit button to black */
+    color: white;
+    /* Sets the font color of the Submit button to white */
+    font-weight: bold;
+    /* Makes the font of the submit button bold */
+    padding: 12px 20px;
+    /* Adds padding to the submit button */
+    border: none;
+    /* Removes the border from the submit button */
+    border-radius: 4px;
+    /* Gives the submit button the same rounded corners as the text boxes */
+    cursor: pointer;
+    /* Changes the cursor to pointer when over the submit button */
+    display: block;
+    /* Allows the submit button to be centered */
+    margin-left: auto;
+    /* In combination with "margin-right: auto" this will center the submit button */
+    margin-right: auto;
+    font-family: Perpetua, Rockwell Extra Bold;
+}
+
+/* Hover effect for submit button */
+input[type=submit]:hover {
+    background-color: white;
+    /* Turns the background of the submit button white when the user hovers over it */
+    color: black;
+    /* Turns the font black when hovered over */
+    transform: scale(1.5);
+    /* Makes the button increase 1.5 times in size */
+    transition: transform 1.5s;
+    /* Makes the transform effect last 1.5 seconds */
+}
+
+/* Form element */
+form {
+    border-radius: 5px;
+    /* Rounds the corners of the contact form */
+    background-color: #f2f2f2;
+    padding: 10px;
+    /* Adds padding to the contact form */
+    font-family: "Trebuchet MS", Optima;
+}
+
+/***** END OF CONTACT FORM STYLING *****/
