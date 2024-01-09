@@ -9,12 +9,12 @@
 }
 
 .column-text {
-    background-color: papayawhip;
     width: 60%;
     /* Take up the other 60% of width left by <img> */
     max-height: min(500px, 50vw);
     padding: 10px;
-    /* This ensures there is space between the top of the column and the headings */
+    /* Ensures there is space between the top of the column and the headings */
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, .6);
 }
 
 /* Screens 1000px and smaller will display a scroll bar if the text overflows the column height */
@@ -41,7 +41,7 @@
 
 /* This class is applied to the columns in the final row, overriding the height and padding to provide more 
     room for the contact form  while keeping the rest of the formatting from Column_1 or Column_2 */
-.Column_tall {
+.column_tall {
     background-color: #333;
     height: 750px;
 }

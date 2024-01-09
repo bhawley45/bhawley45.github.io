@@ -33,28 +33,19 @@ footer {
 /* Paragraph elements */
 p {
     font-family: Perpetua, Rockwell Extra Bold;
+    color: aliceblue;
     text-align: justify;
     /* Justify text within paragraph elements */
     letter-spacing: 1px;
-    /* This expands the text slightly */
     font-size: clamp(14px, 2.5vw, 20px);
     padding-left: 20px;
-    /* Adds padding to the left of the paragraph element */
     padding-right: 20px;
-    /* Adds padding to the right of the paragraph element */
 }
 
 /* Center class - this applies to all elements with the class "center" */
 .center {
     text-align: center;
     /* This center aligns the text */
-}
-
-.divide-line {
-    width: 100%;
-    height: 4px;
-    background-color: grey;
-    /* Set your desired line color */
 }
 
 /***** TABLE STYLING -  this section covers the styling of the columns and rows within the table *****/
@@ -122,7 +113,7 @@ input[type=submit]:hover {
     /* Turns the background of the submit button white when the user hovers over it */
     color: black;
     /* Turns the font black when hovered over */
-    transform: scale(1.5);
+    transform: scale(1.1);
     /* Makes the button increase 1.5 times in size */
     transition: transform 1.5s;
     /* Makes the transform effect last 1.5 seconds */
@@ -132,10 +123,11 @@ input[type=submit]:hover {
 form {
     border-radius: 5px;
     /* Rounds the corners of the contact form */
-    background-color: #f2f2f2;
+    background-color: transparent;
     padding: 10px;
     /* Adds padding to the contact form */
     font-family: "Trebuchet MS", Optima;
+    width: 500px;
 }
 
 /***** END OF CONTACT FORM STYLING *****/

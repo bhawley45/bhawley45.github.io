@@ -68,7 +68,7 @@
     z-index: 2;
 }
 
-/* Media query for small screens (e.g., mobile devices) */
+/* Media query for small screens */
 @media screen and (max-width: 768px) {
     .navbar-links {
         display: none;

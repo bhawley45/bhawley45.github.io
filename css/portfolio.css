@@ -33,10 +33,6 @@
     padding: 20px 0;
 }
 
-.projects {
-    display: flex;
-}
-
 .project {
     width: 350px;
     height: 350px;
@@ -44,6 +40,11 @@
     background-color: #f1f1f1;
     border-radius: 10px;
     overflow: hidden;
+    transition: transform .3s ease;
+}
+
+.project:hover {
+    transform: scale(1.05);
 }
 
 .project img {
