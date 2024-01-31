@@ -45,7 +45,7 @@ function updateButtonStates() {
     const rightButton = document.querySelector('.nav-button.right');
 
     leftButton.disabled = scrollAmount === 0;
-    rightButton.disabled = scrollAmount === (projects.length - 3) * projectWidth;
+    rightButton.disabled = scrollAmount === (projects.length - 1) * projectWidth;
 }
 
 updateButtonStates();
