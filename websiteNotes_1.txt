@@ -1,0 +1,42 @@
+New website design (#3)
+8-bit adventure/RPG themed
+Dark/cool background for site
+
+Console:
+Add Stickers for W101 and Destiny
+Add "Brandon's" in soft color (like drawn on)
+
+Extra:
+my pixel art guy pops up from the bottom left, says hello and introduces, and instructs the user how to use the site (maybe different text for each section?)
+Audio for button clicks and background music for each project page?
+
+Make L/R buttons A and B on a NES controller
+
+Make Social Links pixelated and monochromatic
+
+Top toolbar:
+Centered
+Always shown, always on top
+Slightly darker/lighter than BG
+Home, About, Resume, Contact
+Darken the section the user is in
+
+Hero Section:
+Animated console(top-loader) sliding up from bottom of window on page load
+Games fall from top and do 1 wave on load
+On hover, games get larger and push the others out (soft white background)
+Game Cartridge unique decals for each game with title (~match NES)
+On click, screen goes black (Out->In) then (In->Out) on project specific page
+
+About section:
+My image on the left (towards the top)
+My image is updated (linked in Profile Image), do the same code thing with the face
+Text on the right
+Unified text section below with horizontal bullet points or something to show highlighted skills and experience
+
+Resume:
+arcade machine that says “insert coin for resume”
+On click: plays animation of coin going in (with sound?) and opens resume .pdf in another tab on the users browser
+
+Contact:
+just a simple form that goes to my email
