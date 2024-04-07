@@ -36,12 +36,12 @@ document.addEventListener('DOMContentLoaded', () => {
         breakpoints: {
             // when window width is >= 320px
             320: {
-              slidesPerView: 1.25,
+              slidesPerView: 1,
               spaceBetween: 10
             },
             // when window width is >= 420px
             420: {
-                slidesPerView: 1.75,
+                slidesPerView: 1.5,
                 spaceBetween: 12.5
               },
             // when window width is >= 520px
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             // when window width is >= 1020px
             1020: {
-              slidesPerView: 3.25,
+              slidesPerView: 3.65,
               spaceBetween: 27.5
             }
         },
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cartridge.addEventListener('mouseenter', (event) => {
             const target = event.target;
             if(!isSwiperDisabled){ // If swiper is not disabled (meaning a slide hadn't been clicked yet by user)
-                target.style.transform = 'scale(1.15)';
+                target.style.transform = 'scale(1.1)';
                 hoverSound.play(); // Play hover sound
             }
         
@@ -137,9 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
         consoleContainer.style.bottom = '0px'; // distance from bottom of parent container
         consoleContainer.style.opacity = '1';
 
-        consoleContainer.style.position = clickedCartridge.style.position;
-
-        clickedCartridge.style.scale = 1.15
+        //clickedCartridge.style.scale = 1.15 // Causes visual problems on mobile
 
         clickedCartridge.classList.add('insert-cartridge');
     }

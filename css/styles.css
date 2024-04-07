@@ -4,7 +4,7 @@
 
 body {
     font-family: 'VT323', monospace;
-    font-size: 20px;
+    font-size: 16px;
     background-color: #333;
     color: whitesmoke;
 
@@ -23,6 +23,12 @@ body {
     opacity: 0; /* Invisible until loading animation */
 }
 
+h2 {
+    color: whitesmoke;
+    font-size: clamp(2rem, 4vw, 3.25rem);
+}
+
+
 /* ------------------ Navigation Bar --------------------- */
 
 .navbar {
@@ -32,12 +38,16 @@ body {
 }
 
 .navbar-brand {
-    font-size: 2rem;
-    padding-left: 12px;
+    padding-left: 4px;
+}
+
+.navbar-brand span {
+    font-size: clamp(2rem, 5vw, 3.25rem);
 }
 
 .nav-item {
-    font-size: 1.65rem;
+    font-size: 1.85rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
 }
 
 .navbar-toggler-icon {
@@ -76,11 +86,12 @@ body {
     left: 15%; /* Start expanding from the left edge */
 }
 
+
 /* ------------------ Swiper Carousel --------------------- */
 
 .swiper-container {
     position: relative;
-    height: 500px;
+    height: 450px;
     width: auto;
     overflow: hidden; /* Keep additional slides hidden */
     z-index: 10; /* Keep above background elements */
@@ -88,7 +99,7 @@ body {
 
 .swiper-slide {
     display: flex;
-    bottom: 50px;
+    bottom: 35px;
     justify-content: center;
     align-items: center;
     
@@ -140,7 +151,7 @@ body {
 }
 
 .swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: 100px; /* Distance from bottom to cartridges */
+    bottom: 40px; /* Distance from bottom to cartridges */
 }
 
 /* Pagination Bullet Color when inactive */
@@ -159,6 +170,7 @@ body {
 .pagination-disabled {
     display: none;
 }
+
 
 /* ------------------ Console --------------------- */
 
@@ -179,9 +191,10 @@ body {
 
 #console-front {
     position: relative;
-    width: 675px;
+    width: 550px;
     height: auto; 
 }
+
 
 /* ------------------ Page Load Animations --------------------- */
 
@@ -231,7 +244,7 @@ body {
 
 @keyframes flyRight {
     to {
-        transform: translateX(150vw);
+        transform: translateX(10vw);
         opacity: 0;
     }
 }
@@ -241,7 +254,7 @@ body {
         transform: translateY(0);
     }
     100% {
-        transform: translateY(75px); /* Adjust based on your console design */
+        transform: translateY(100px); /* Cartridge downward movement */
     }
 }
 
@@ -257,30 +270,47 @@ body {
     animation: insert .68s forwards ease-in-out;
 }
 
+
+/* ------------------ Social Icons --------------------- */
+
+
+
+
+/* ------------------ About Section --------------------- */
+  
+#about .row {
+    margin-bottom: 2rem;
+}
+  
+#about h2 {
+    margin-bottom: 1rem;
+}
+  
+#about img {
+    margin-bottom: 1rem;
+}
+  
+ @media (max-width: 240px) {
+    #about .order-md-2 {
+      order: -1; /* This ensures the image stays on top on smaller screens */
+    }
+}
+
+/* Center images and paragraphs for smaller screens */
+@media (max-width: 600px) {
+    #about .row > [class^="col-"] {
+      text-align: center;
+    }
+    
+    #about img {
+      margin-left: auto;
+      margin-right: auto;
+    }
+}
+
+
+
 /* ------------------ Unused Sections --------------------- */
-
-/* Social Links */
-.social-links {
-    /*position: fixed;
-    right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);*/
-}
-
-.social-links a {
-    display: block;
-}
-
-/* About Section */
-#about {
-    max-width: 800px;
-    margin: 0 auto; /* Center the section */
-    padding: 4rem 1rem; /* Add some padding */
-    background-color: rgba(255, 255, 255, 0.1); /* A light background */
-    color: whitesmoke; /* Text color */
-    font-size: 1.1em; /* Adjust text size */
-    line-height: 1.6; /* Adjust line spacing */
-}
 
 /* Experience Section */
 #experience {
