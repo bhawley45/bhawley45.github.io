@@ -2,7 +2,7 @@
 const hoverSound = new Audio('./sounds/funny/sfx_hover.wav');
 const clickSound = new Audio('./sounds/funny/sfx_click.wav');
 const insertCartridgeSound = new Audio('./sounds/funny/sfx_insertCartridge.wav');
-const typingSound = new Audio('path/to/typing-sound.mp3'); // Path to your typing sound
+const typingSound = new Audio('./sounds/sfx_typing.wav'); // Path to your typing sound
 const typingElements = document.querySelectorAll('.typing-text'); // All elements to animate with typing
 const consoleContainer = document.getElementById('console-container');
 const pagination = document.querySelector('.swiper-pagination');

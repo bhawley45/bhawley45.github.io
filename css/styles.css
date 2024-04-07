@@ -25,6 +25,12 @@ body {
 
 /* ------------------ Navigation Bar --------------------- */
 
+.navbar {
+    padding-top: 15px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
 .navbar-brand {
     font-size: 2rem;
     padding-left: 12px;
