@@ -84,10 +84,6 @@ body {
     width: auto;
     overflow: hidden; /* Keep additional slides hidden */
     z-index: 10; /* Keep above background elements */
-
-    /* On load animation  */
-    animation: fadeInUp 1s ease-out forwards;
-    opacity: 0; /* Start with the Swiper container invisible */
 }
 
 .swiper-slide {
@@ -95,6 +91,10 @@ body {
     bottom: 50px;
     justify-content: center;
     align-items: center;
+    
+    /* On load animation  */
+    animation: fadeInUp 1s ease-out forwards;
+    opacity: 0; /* Start with the Swiper container invisible */
 }
 
 .cartridge-image {
