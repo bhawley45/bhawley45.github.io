@@ -14,8 +14,13 @@ body {
     background-image: url(../images/Backgrounds/StarryGradient.png);
     background-position: center;
     background-attachment: fixed;
+    background-size: cover;
     background-repeat: no-repeat;
     overflow-x: hidden;
+}
+
+.transparent {
+    opacity: 0; /* Invisible until loading animation */
 }
 
 /* ------------------ Navigation Bar --------------------- */
@@ -65,7 +70,188 @@ body {
     left: 15%; /* Start expanding from the left edge */
 }
 
-/* ------------------ Unused --------------------- */
+/* ------------------ Swiper Carousel --------------------- */
+
+.swiper-container {
+    position: relative;
+    height: 500px;
+    width: auto;
+    overflow: hidden; /* Keep additional slides hidden */
+    z-index: 10; /* Keep above background elements */
+
+    /* On load animation  */
+    animation: fadeInUp 1s ease-out forwards;
+    opacity: 0; /* Start with the Swiper container invisible */
+}
+
+.swiper-slide {
+    display: flex;
+    bottom: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cartridge-image {
+    height: 275px;
+    transition: transform 350ms ease;
+}
+
+.swiper-button-prev, .swiper-button-next {
+    position: absolute;
+    top: 45%; /* Center vertically with cartridges */
+    z-index: 10;
+    /* Size of buttons */
+    width: 40px;
+    height: 40px;
+    /* Align the button's content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Adjust color of arrows */
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.swiper-button-prev:hover, .swiper-button-next:hover {
+    color: #e52d27;
+}
+  
+.swiper-button-prev {
+    left: 10px; /* Adjust as needed */
+    transform: translate(0, -50%);
+}
+  
+.swiper-button-next {
+    right: 10px; /* Adjust as needed */
+    transform: translate(0, -50%);
+}
+  
+.swiper-pagination {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 100px; /* Distance from bottom to cartridges */
+}
+
+/* Pagination Bullet Color when inactive */
+.swiper-pagination-bullet {
+    background-color: #333; /* Color for inactive bullets */
+    opacity: 0.5; /* Adjust for less/more visibility */
+}
+  
+/* Pagination Bullet Color when active */
+.swiper-pagination-bullet-active {
+    background-color: #e52d27; /* Color for the active bullet */
+    opacity: 1; /* Fully opaque */
+}
+
+/* Activated in carousel.js*/
+.pagination-disabled {
+    display: none;
+}
+
+/* ------------------ Console --------------------- */
+
+#console-container {
+    position: absolute;
+    bottom: -100px; /* Start off-screen */
+    left: 50%;
+    transform: translateX(-50%);
+    transition: bottom 400ms ease-in-out, opacity 250ms ease-in-out;
+    opacity: 0;
+    z-index: 15;
+}
+
+/*#console-back {
+    position: absolute;
+    z-index: 1; /* Behind cartridges *//*
+}*/
+
+#console-front {
+    position: relative;
+    width: 675px;
+    height: auto; 
+}
+
+/* ------------------ Page Load Animations --------------------- */
+
+/* Carousel animation */
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+/* Typing animation  */
+@keyframes typing {
+    from { 
+        width: 0; 
+        opacity: 0;
+    }
+    to { 
+        width: 100%;
+        opacity: 1; 
+    }
+  }
+  
+  .typing {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0; /* Start out hidden */
+    animation: typing .45s steps(40, end) forwards;
+    /* Adjust the animation duration and steps as needed */
+}
+
+
+/* ------------------ Cartridge Insert Animations --------------------- */
+
+/* Styling for animating the cartridge insertion */
+@keyframes flyLeft {
+    to {
+        transform: translateX(-150vw);
+        opacity: 0;
+    }
+}
+
+@keyframes flyRight {
+    to {
+        transform: translateX(150vw);
+        opacity: 0;
+    }
+}
+
+@keyframes insert {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(75px); /* Adjust based on your console design */
+    }
+}
+
+.fly-left {
+    animation: flyLeft 0.5s forwards ease-in-out;
+}
+
+.fly-right {
+    animation: flyRight 0.5s forwards ease-in-out;
+}
+
+.insert-cartridge {
+    animation: insert .68s forwards ease-in-out;
+}
+
+/* ------------------ Unused Sections --------------------- */
 
 /* Social Links */
 .social-links {
@@ -105,111 +291,3 @@ body {
     padding: 2rem;
 }
 
-.swiper-container {
-    position: relative;
-    height: 500px;
-    width: auto;
-    overflow: hidden; /* Keep additional slides hidden */
-    z-index: 10; /* Keep above background elements */
-}
-
-.swiper-slide {
-    display: flex;
-    bottom: 50px;
-    justify-content: center;
-    align-items: center;
-}
-
-.cartridge-image {
-    height: 275px;
-    transition: transform 300ms ease;
-}
-
-.swiper-button-prev, .swiper-button-next {
-    position: absolute;
-    top: 45%; /* Center vertically with cartridges */
-    z-index: 10;
-    /* Size of buttons */
-    width: 40px;
-    height: 40px;
-    /* Align the button's content */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* Adjust color of arrows */
-    color: #333;
-    transition: color 0.3s ease;
-}
-
-.swiper-button-prev:hover, .swiper-button-next:hover {
-    color: #e52d27;
-}
-  
-.swiper-button-prev {
-    left: 10px; /* Adjust as needed */
-    transform: translate(0, -50%);
-}
-  
-.swiper-button-next {
-    right: 10px; /* Adjust as needed */
-    transform: translate(0, -50%);
-}
-  
-.swiper-pagination {
-    position: absolute;
-    bottom: 10px; /* Distance from bottom to cartridges */
-    left: 0;
-    width: 100%;
-    text-align: center;
-}
-
-  /* Pagination Bullet Color when inactive */
-.swiper-pagination-bullet {
-    background-color: #333; /* Color for inactive bullets */
-    opacity: 0.5; /* Adjust for less/more visibility */
-  }
-  
-  /* Pagination Bullet Color when active */
-  .swiper-pagination-bullet-active {
-    background-color: #e52d27; /* Color for the active bullet */
-    opacity: 1; /* Fully opaque */
-  }
-  
-
-/* ------------------ Cartridge Insert Animations --------------------- */
-
-/* Styling for animating the cartridge insertion */
-@keyframes flyLeft {
-    to {
-        transform: translateX(-150vw);
-        opacity: 0;
-    }
-}
-
-@keyframes flyRight {
-    to {
-        transform: translateX(150vw);
-        opacity: 0;
-    }
-}
-
-@keyframes insert {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(100px); /* Adjust based on your console design */
-    }
-}
-
-.fly-left {
-    animation: flyLeft 0.5s forwards ease-in-out;
-}
-
-.fly-right {
-    animation: flyRight 0.5s forwards ease-in-out;
-}
-
-.insert-cartridge {
-    animation: insert 0.5s forwards ease-in-out;
-}
