@@ -19,14 +19,26 @@ body {
     overflow-x: hidden;
 }
 
-.transparent {
-    opacity: 0; /* Invisible until loading animation */
-}
-
 h2 {
     color: whitesmoke;
     font-size: clamp(2rem, 4vw, 3.25rem);
 }
+
+.white-subheading {
+    color: whitesmoke;
+    font-size: clamp(1.25rem, 2vw, 1.45rem);
+}
+
+.light-blue-text {
+    color: #8297bd;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+.transparent {
+    opacity: 0; /* Invisible until loading animation */
+}
+
+
 
 
 /* ------------------ Navigation Bar --------------------- */
@@ -151,7 +163,7 @@ h2 {
 }
 
 .swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: 40px; /* Distance from bottom to cartridges */
+    bottom: 50px; /* Distance from bottom to cartridges */
 }
 
 /* Pagination Bullet Color when inactive */
@@ -277,23 +289,12 @@ h2 {
 
 
 /* ------------------ About Section --------------------- */
-  
-#about .row {
-    margin-bottom: 2rem;
-}
-  
-#about h2 {
-    margin-bottom: 1rem;
-}
-  
-#about img {
-    margin-bottom: 1rem;
-}
-  
- @media (max-width: 240px) {
-    #about .order-md-2 {
-      order: -1; /* This ensures the image stays on top on smaller screens */
-    }
+
+.custom-circle-img {
+    width: 350px;  /* or any size you prefer */
+    height: 350px; /* make sure height and width are the same for a circle */
+    object-fit: cover; /* this will cover the area without stretching the image */
+    border-radius: 50%; /* this will make it round */
 }
 
 /* Center images and paragraphs for smaller screens */
@@ -307,6 +308,7 @@ h2 {
       margin-right: auto;
     }
 }
+
 
 
 
