@@ -71,8 +71,8 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             // when window width is >= 1020px
             1020: {
-              slidesPerView: 3.65,
-              spaceBetween: 27.5
+              slidesPerView: 3.75,
+              spaceBetween: 25
             }
         },
         on: {

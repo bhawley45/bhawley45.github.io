@@ -21,24 +21,22 @@ body {
 
 h2 {
     color: whitesmoke;
-    font-size: clamp(2rem, 4vw, 3.25rem);
+    font-size: clamp(2rem, 5vw, 3.25rem);
 }
 
 .white-subheading {
     color: whitesmoke;
-    font-size: clamp(1.25rem, 2vw, 1.45rem);
+    font-size: clamp(1.2rem, 2.25vw, 1.55rem);
 }
 
 .light-blue-text {
     color: #8297bd;
-    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-size: clamp(1.1rem, 2.25vw, 1.4rem);
 }
 
 .transparent {
     opacity: 0; /* Invisible until loading animation */
 }
-
-
 
 
 /* ------------------ Navigation Bar --------------------- */
