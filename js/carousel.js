@@ -36,42 +36,32 @@ document.addEventListener('DOMContentLoaded', () => {
         breakpoints: {
             // when window width is >= 320px
             320: {
-              slidesPerView: 1,
+              slidesPerView: 1.5,
               spaceBetween: 10
             },
             // when window width is >= 420px
             420: {
-                slidesPerView: 1.5,
+                slidesPerView: 1.85,
                 spaceBetween: 12.5
               },
             // when window width is >= 520px
             520: {
-              slidesPerView: 2,
+              slidesPerView: 2.25,
               spaceBetween: 15
             },
             // when window width is >= 620px
             620: {
-              slidesPerView: 2.25,
+              slidesPerView: 2.75,
               spaceBetween: 17.5
-            },
-            // when window width is >= 720px
-            720: {
-                slidesPerView: 2.5,
-              spaceBetween: 20
             },
             // when window width is >= 820px
             820: {
-                slidesPerView: 2.75,
+                slidesPerView: 3,
                 spaceBetween: 22.5
             },
-            // when window width is >= 920px
-            920: {
-                slidesPerView: 3,
-                spaceBetween: 25
-            },
             // when window width is >= 1020px
-            1020: {
-              slidesPerView: 3.75,
+            1200: {
+              slidesPerView: 3.5,
               spaceBetween: 25
             }
         },
@@ -81,6 +71,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 swiper.slideTo(this.clickedIndex); // Move clicked slide to center
                 swiper.disable(); // Keep user from moving carousel after click
                 isSwiperDisabled = true;
+                
+                clickSound.play(); // Play click sound
+                handleCartridgeClick(event.target); 
             },
         },
     });
@@ -104,11 +97,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             //target.style.boxShadow = 'none'; // Remove glow effect
             //pushSiblings(target, 0);
-        });
-
-        cartridge.addEventListener('click', (event) => {
-            clickSound.play(); // Play click sound
-            handleCartridgeClick(event.target);
         });
     });
 

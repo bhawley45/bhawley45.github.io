@@ -21,7 +21,7 @@ body {
 
 h2 {
     color: whitesmoke;
-    font-size: clamp(2rem, 5vw, 3.25rem);
+    font-size: clamp(2.25rem, 5vw, 3.25rem);
 }
 
 .white-subheading {
@@ -52,12 +52,12 @@ h2 {
 }
 
 .navbar-brand span {
-    font-size: clamp(2rem, 5vw, 3.25rem);
+    font-size: clamp(2.25rem, 5vw, 3.25rem);
 }
 
 .nav-item {
-    font-size: 1.85rem;
-    font-size: clamp(1.5rem, 4vw, 2rem);
+    /*font-size: 1.85rem;*/
+    font-size: clamp(1.65rem, 4vw, 2rem);
 }
 
 .navbar-toggler-icon {
@@ -101,7 +101,8 @@ h2 {
 
 .swiper-container {
     position: relative;
-    height: 450px;
+    /*height: 450px;*/
+    height: clamp(350px, 50vw, 525px); /* Adjust swiper size based on vieport width */
     width: auto;
     overflow: hidden; /* Keep additional slides hidden */
     z-index: 10; /* Keep above background elements */
@@ -119,7 +120,8 @@ h2 {
 }
 
 .cartridge-image {
-    height: 275px;
+    /*height: 275px;*/
+    height: clamp(200px, 30vw, 325px);
     transition: transform 350ms ease;
 }
 
@@ -161,7 +163,7 @@ h2 {
 }
 
 .swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: 50px; /* Distance from bottom to cartridges */
+    bottom: 25px; /* Distance from bottom to cartridges */
 }
 
 /* Pagination Bullet Color when inactive */
@@ -201,7 +203,8 @@ h2 {
 
 #console-front {
     position: relative;
-    width: 550px;
+    /*width: 550px;*/
+    width: clamp(350px, 50vw, 625px);
     height: auto; 
 }
 
@@ -289,8 +292,8 @@ h2 {
 /* ------------------ About Section --------------------- */
 
 .custom-circle-img {
-    width: clamp(165px, 25vw, 325px);  /* Adjust the minimum size, preferred size, and maximum size */
-    height: clamp(165px, 25vw, 325px); /* Same as width */
+    width: clamp(175px, 30vw, 325px);  /* Adjust the minimum size, preferred size, and maximum size */
+    height: clamp(175px, 30vw, 325px); /* Same as width */
     object-fit: cover;
     border-radius: 50%;
 }
