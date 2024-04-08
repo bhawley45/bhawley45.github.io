@@ -291,14 +291,14 @@ h2 {
 /* ------------------ About Section --------------------- */
 
 .custom-circle-img {
-    width: 350px;  /* or any size you prefer */
-    height: 350px; /* make sure height and width are the same for a circle */
-    object-fit: cover; /* this will cover the area without stretching the image */
-    border-radius: 50%; /* this will make it round */
+    width: clamp(165px, 25vw, 325px);  /* Adjust the minimum size, preferred size, and maximum size */
+    height: clamp(165px, 25vw, 325px); /* Same as width */
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 /* Center images and paragraphs for smaller screens */
-@media (max-width: 600px) {
+@media (max-width: 820px) {
     #about .row > [class^="col-"] {
       text-align: center;
     }
@@ -308,8 +308,6 @@ h2 {
       margin-right: auto;
     }
 }
-
-
 
 
 /* ------------------ Unused Sections --------------------- */
