@@ -334,23 +334,33 @@ h2 {
 }
 
 #experience .subheading {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 
-/* Add styling for images if needed */
 #experience img {
-    /* Add any desired styles, such as padding or borders */
-    margin-bottom: 1rem; /* Add space between the icons */
-    max-width: 100px; /* Example fixed width, adjust as necessary */
+    max-width: 100%;
     height: auto;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
-    #experience img {
-        max-width: 75px; /* Smaller size for mobile */
+    /* Stack grids on smaller screens and center align them */
+    #experience .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    #experience .col-sm-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    #experience .col-4 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+    #experience .row {
+        justify-content: center;
     }
 }
+
 
 
 
