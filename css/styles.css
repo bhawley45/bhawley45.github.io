@@ -13,6 +13,7 @@ body {
     margin: 0 auto;
     background-image: url(../images/Backgrounds/StarryGradient.png);
     background-position: center;
+    background-position-y: top;
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -32,6 +33,7 @@ h2 {
 .light-blue-text {
     color: #8297bd;
     font-size: clamp(1.1rem, 2.25vw, 1.4rem);
+    text-shadow: 0 0 3px #333;
 }
 
 .transparent {
