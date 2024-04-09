@@ -39,6 +39,19 @@ h2 {
 }
 
 
+/* ------------------ Text Glowing Animation --------------------- */
+
+@keyframes glowing {
+    0% { text-shadow: 0 0 3px  #e52d27, 0 0 7px #e52d27, 0 0 12px  #e52d27; }
+    50% { text-shadow: 0 0 0;}
+    100% { text-shadow: 0 0 3px  #e52d27, 0 0 7px #e52d27, 0 0 12px  #e52d27; }
+}
+  
+.glow {
+    animation: glowing 4250ms infinite;
+}
+
+
 /* ------------------ Navigation Bar --------------------- */
 
 .navbar {
@@ -142,7 +155,7 @@ h2 {
 }
 
 .swiper-button-prev:hover, .swiper-button-next:hover {
-    color: #e52d27;
+    color: #e60073;
 }
   
 .swiper-button-prev {
@@ -271,13 +284,13 @@ h2 {
     }
 }
 
-.fly-left {
+/*.fly-left {
     animation: flyLeft 0.5s forwards ease-in-out;
-}
+}*/
 
-.fly-right {
+/*.fly-right {
     animation: flyRight 0.5s forwards ease-in-out;
-}
+}*/
 
 .insert-cartridge {
     animation: insert .68s forwards ease-in-out;
@@ -311,12 +324,38 @@ h2 {
 }
 
 
+/* ------------------ Experience Section --------------------- */
+
+#experience {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+
+#experience .subheading {
+    margin-bottom: 4rem;
+}
+
+/* Add styling for images if needed */
+#experience img {
+    /* Add any desired styles, such as padding or borders */
+    margin-bottom: 1rem; /* Add space between the icons */
+    max-width: 100px; /* Example fixed width, adjust as necessary */
+    height: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #experience img {
+        max-width: 75px; /* Smaller size for mobile */
+    }
+}
+
+
+
+
+
 /* ------------------ Unused Sections --------------------- */
 
-/* Experience Section */
-#experience {
-    padding: 2rem;
-}
 
 /* Testimonials Section */
 #testimonials {
