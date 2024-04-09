@@ -25,6 +25,11 @@ h2 {
     font-size: clamp(2.45rem, 5vw, 3.25rem);
 }
 
+h3 {
+    color: whitesmoke;
+    font-size: clamp(1.55rem, 5vw, 2.25rem);
+}
+
 .white-subheading {
     color: whitesmoke;
     font-size: clamp(1.2rem, 2.25vw, 1.55rem);
@@ -44,9 +49,9 @@ h2 {
 /* ------------------ Text Glowing Animation --------------------- */
 
 @keyframes glowing {
-    0% { text-shadow: 0 0 3px  #e52d27, 0 0 7px #e52d27, 0 0 12px  #e52d27; }
+    0% { text-shadow: 0 0 7px  papayawhip; }
     50% { text-shadow: 0 0 0;}
-    100% { text-shadow: 0 0 3px  #e52d27, 0 0 7px #e52d27, 0 0 12px  #e52d27; }
+    100% { text-shadow: 0 0 7px  papayawhip; }
 }
   
 .glow {
@@ -359,6 +364,14 @@ h2 {
     filter: grayscale(0);
 }
 
+/* Remove grayscale for smaller devices that can't hover */
+@media (hover: none) {
+    #experience img {
+        -webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
+        filter: grayscale(0%);
+    }
+}
+
 @media (max-width: 768px) {
     /* Stack grids on smaller screens and center align them */
     #experience .col-4 {
@@ -379,17 +392,29 @@ h2 {
 } 
 
 
+/* ------------------ Recommendations Sections --------------------- */
+
+.recommendations-container {
+    padding-top: 2rem;
+}
+
+.recommendation {
+    /*border-right: 2px solid white; /* Separator */
+    padding: 10px; /* Spacing inside each recommendation */
+}
+
+.recommendation:last-child {
+    border-right: none; /* No border for the last element */
+}
+
+
+
 
 
 
 
 /* ------------------ Unused Sections --------------------- */
 
-
-/* Testimonials Section */
-#testimonials {
-    padding: 2rem;
-}
 
 /* Contact Section */
 #contact {
