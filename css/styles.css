@@ -329,29 +329,38 @@ h2 {
 /* ------------------ Experience Section --------------------- */
 
 #experience {
-    padding-top: 4rem;
-    padding-bottom: 2rem;
+    padding-top: 1rem;
+}
+
+#experience .container {
+    width: clamp(250px, 75vw, 1000px);
+    height: auto;
 }
 
 #experience .subheading {
-    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4rem;
+    max-width: 65%;
 }
 
 #experience img {
     max-width: 100%;
+    width: clamp(50px, 15vw, 85%);
     height: auto;
+
+    -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+    filter: grayscale(100%);
+    transition: filter 0.3s ease; /* Smooth transition for the filter effect */
+}
+
+#experience img:hover {
+    -webkit-filter: grayscale(0); /* Chrome, Safari, Opera */
+    filter: grayscale(0);
 }
 
 @media (max-width: 768px) {
     /* Stack grids on smaller screens and center align them */
-    #experience .col-md-6 {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-    #experience .col-sm-6 {
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
     #experience .col-4 {
         flex: 0 0 33.333333%;
         max-width: 33.333333%;
@@ -359,7 +368,15 @@ h2 {
     #experience .row {
         justify-content: center;
     }
-}
+
+    #experience {
+        padding-top: 0;
+    }
+    #experience .subheading {
+        margin-bottom: 2rem;
+        max-width: 85%;
+    }
+} 
 
 
 
