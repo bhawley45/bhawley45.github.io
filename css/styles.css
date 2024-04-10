@@ -411,6 +411,12 @@ h3 {
     margin: 0 1rem;
     padding: 1.5rem;
     min-height: 169px;
+
+    transition: scale 0.3s ease;
+}
+
+.testimonial:hover {
+    scale: 1.05;
 }
    
 .testimonial:before {

@@ -1,4 +1,4 @@
-// Define sound effects and variables
+// Define SFX and variables
 const hoverSound = new Audio('./sounds/funny/sfx_hover.wav');
 const clickSound = new Audio('./sounds/funny/sfx_click.wav');
 const insertCartridgeSound = new Audio('./sounds/funny/sfx_insertCartridge.wav');
@@ -67,13 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         on: {
             click() {
-                console.log('index', this.clickedIndex);
+                //console.log('index', this.clickedIndex);
                 swiper.slideTo(this.clickedIndex); // Move clicked slide to center
-                swiper.disable(); // Keep user from moving carousel after click
-                isSwiperDisabled = true;
-                
-                clickSound.play(); // Play click sound
-                handleCartridgeClick(event.target); 
             },
         },
     });
@@ -81,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
     cartridges.forEach(cartridge => {
         cartridge.addEventListener('mouseenter', (event) => {
             const target = event.target;
-            if(!isSwiperDisabled){ // If swiper is not disabled (meaning a slide hadn't been clicked yet by user)
+            if(!isSwiperDisabled){ // Only run if user hasn't selected a cartridge
                 target.style.transform = 'scale(1.1)';
                 hoverSound.play(); // Play hover sound
             }
@@ -97,6 +92,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
             //target.style.boxShadow = 'none'; // Remove glow effect
             //pushSiblings(target, 0);
+        });
+
+        cartridge.addEventListener('click', (event) => {
+            clickSound.play(); // Play click sound
+            if(!isSwiperDisabled){ // Only run if user hasn't selected a cartridge
+                handleCartridgeClick(event.target);
+                swiper.disable(); // Keep user from moving carousel after click
+                isSwiperDisabled = true;
+            }
         });
     });
 
