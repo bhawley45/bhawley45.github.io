@@ -348,7 +348,7 @@ h3 {
     padding-bottom: 2rem;
 }
 
-#experience .subheading {
+.subheading {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 4rem;
@@ -391,7 +391,7 @@ h3 {
     #experience {
         padding-top: 0;
     }
-    #experience .subheading {
+    .subheading {
         margin-bottom: 2rem;
         max-width: 85%;
     }
@@ -441,7 +441,7 @@ h3 {
 }   
 
 .media-heading {
-    font-size: clamp(1rem, 2.25vw, 1.25rem);
+    font-size: clamp(1.25rem, 2.25vw, 1.65rem);
 }
 
 
