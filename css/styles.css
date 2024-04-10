@@ -20,6 +20,12 @@ body {
     overflow-x: hidden;
 }
 
+.style12 {
+	height: 6px;
+	background: url(http://ibrahimjabbari.com/images/hr-12.png) repeat-x 0 0;
+    border: 0;
+}
+
 h2 {
     color: whitesmoke;
     font-size: clamp(2.45rem, 5vw, 3.25rem);
@@ -412,31 +418,16 @@ h3 {
     padding: 1.5rem;
     min-height: 169px;
 
-    transition: scale 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .testimonial:hover {
     scale: 1.05;
-}
-   
-.testimonial:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    -ms-transform: skew(-3deg,-2deg);
-    -webkit-transform: skew(-3deg,-2deg);
-    -o-transform: skew(-3deg,-2deg);
-    -moz-transform: skew(-3deg,-2deg);
-    bottom: 14px;
-    box-shadow: 0 16px 5px rgba(0,0,0,.04);
-    max-width: 90%;
-    width: 90%;
-    height: 50px;
-    left: 1px;
+    box-shadow: 0 0 15px rgba(245,245,245,.05);
 }
    
 .avatar .img-circle {
-    background: #fff;
+    background: whitesmoke;
     padding: 3px;
     border: 1px solid #c5c5c5;
 }
@@ -454,14 +445,56 @@ h3 {
 }
 
 
-/* ------------------ Unused Sections --------------------- */
+/* ------------------ Contact and Footer Section --------------------- */
 
-
-/* Contact Section */
-#contact {
-    padding: 2rem;
+.contact-section {
+    padding: 2rem 0;
 }
 
+.contact-form {
+    border-left: 1px solid #fff;
+    padding-left: 2rem;
+}
+
+.social-links img {
+    width: 32px; /* adjust as needed */
+    margin-right: 10px;
+}
+
+.footer {
+    background: #111;
+    color: #ddd;
+    padding: 0.5rem 0;
+    font-size: 0.85rem;
+    border-top: 1px solid #fff;
+}
+
+.footer .trademark {
+    float: left;
+    margin-left: 2rem;
+}
+
+.footer .last-updated {
+    float: right;
+    margin-right: 2rem;
+}
+
+/* Clear float */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.btn-submit {
+    background-color: #e52d27;
+    color: white;
+    border: none;
+    padding: 0.5rem 2rem;
+}
+
+
+/* ------------------ Torn-paper Divider --------------------- */
 
 
 /* ------------------ Fun Pac-Man Divider --------------------- */
