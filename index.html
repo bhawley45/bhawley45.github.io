@@ -1,306 +1,423 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brandon Hawley - Portfolio</title>
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <!-- Custom stylesheets and scripts -->
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/navBar.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brandon Hawley - Portfolio</title>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
+  <!-- Custom stylesheets and scripts -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/navBar.css" />
 </head>
+
 <body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-sm navbar-dark justify-content-center">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <!--<img src="./images/Logos/Logo_Aftermath_Transparent.png" alt="" width="50" height="50">-->
+        <span class="typing-text transparent">Brandon Hawley</span>
+      </a>
+      <button class="navbar-toggler align-middle" type="button" data-bs-toggle="collapse"
+        data-bs-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-center typing-text transparent" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-center typing-text transparent" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-center typing-text transparent" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-center typing-text transparent" href="#">Resume</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-sm navbar-dark justify-content-center">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <!--<img src="./images/Logos/Logo_Aftermath_Transparent.png" alt="" width="50" height="50">-->
-                <span class="typing-text transparent">Brandon Hawley</span>
-            </a>
-            <button class="navbar-toggler align-middle" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link text-center typing-text transparent" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-center typing-text transparent" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-center typing-text transparent" href="#">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-center typing-text transparent" href="#">Resume</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav> 
-
-
-    <!-- Cartridge Carousel with Swiper -->
-    <div class="swiper-container">  
-        <!-- Console -->
-        <div id="console-container">
-            <!-- <img src="./images/Console_Base_Back.png" alt="Console Back" id="console-back"> -->
-            <img src="./images/Console_Base_Front.png" alt="Console Front" id="console-front">
-        </div>
-        
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-
-            <!-- Slides -->
-            <div class="swiper-slide"><img src="images/Cartridge_Base_Cropped.png" alt="Project 1" class="cartridge-image"></div>
-            <div class="swiper-slide"><img src="images/Cartridge_Base_Cropped.png" alt="Project 2" class="cartridge-image"></div>
-            <div class="swiper-slide"><img src="images/Cartridge_Base_Cropped.png" alt="Project 3" class="cartridge-image"></div>
-            <div class="swiper-slide"><img src="images/Cartridge_Base_Cropped.png" alt="Project 4" class="cartridge-image"></div>
-            <div class="swiper-slide"><img src="images/Cartridge_Base_Cropped.png" alt="Project 5" class="cartridge-image"></div>
-            <div class="swiper-slide"><img src="images/Cartridge_Base_Cropped.png" alt="Project 6" class="cartridge-image"></div>
-            <!-- Add more slides here! -->
-        </div>
-
-        <!-- Dots at bottom of slide -->
-        <div class="swiper-pagination"></div>
-    
-        <!-- Navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+  <!-- Cartridge Carousel (Swiper) -->
+  <div class="carousel-container">
+    <!-- Console -->
+    <div id="console-container">
+      <!-- <img src="./images/Console_Base_Back.png" alt="Console Back" id="console-back"> -->
+      <img src="./images/Console_Base_Front.png" alt="Console Front" id="console-front" />
     </div>
 
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">
+        <img src="images/Cartridge_Base_Cropped.png" alt="Project 1" class="cartridge-image" />
+      </div>
+      <div class="swiper-slide">
+        <img src="images/Cartridge_Base_Cropped.png" alt="Project 2" class="cartridge-image" />
+      </div>
+      <div class="swiper-slide">
+        <img src="images/Cartridge_Base_Cropped.png" alt="Project 3" class="cartridge-image" />
+      </div>
+      <div class="swiper-slide">
+        <img src="images/Cartridge_Base_Cropped.png" alt="Project 4" class="cartridge-image" />
+      </div>
+      <div class="swiper-slide">
+        <img src="images/Cartridge_Base_Cropped.png" alt="Project 5" class="cartridge-image" />
+      </div>
+      <div class="swiper-slide">
+        <img src="images/Cartridge_Base_Cropped.png" alt="Project 6" class="cartridge-image" />
+      </div>
+      <!-- Add more slides here! -->
+    </div>
 
-    <!-- Social Links -->
-    
+    <!-- Dots at bottom of slide -->
+    <div class="swiper-pagination"></div>
 
+    <!-- Navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
 
-    <!-- About Section -->
-    <section id="about" class="text-light">
-        <div class="container">
-            <h2 class="text-center mb-3 glow">My story so far...</h2>
-            <div class="row justify-content-center align-items-center">
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <img src="./images/familyWinter2023_Square.jpg" alt="Family" class="img-fluid custom-circle-img">
-                </div>
-                <div class="col-md-8">
-                    <p class="white-subheading">&emsp; Hello, I’m Brandon Hawley, a passionate father of 2 and game 
-                        developer with 6 years of software development experience. I’ve developed a few small titles 
-                        in both Unreal Engine and Unity, with a major release coming soon!</p>
-                    <p class="light-blue-text">&emsp; As a kid, I dreamed of becoming a game developer. I created 
-                        fantastical environments and stories, keeping a journal with a destroyed binding due to all 
-                        the extra notes and drawings I shoved into it over the years. In 2018, I started a degree in 
-                        Electrical Engineering, only to switch to Computer Science the following year. Sadly, in 2020, 
-                        I had to drop out due to complications arising from COVID.</p>
-                </div>
-            </div>
-            <div class="row justify-content-center align-items-center">
-                <div class="col-md-8 mt-2">
-                    <p class="light-blue-text">&emsp; From there, I decided to go full-time with my side business: 
-                        repairing electronics, while learning software and game development on the side. I became 
-                        extremely skilled, but the electronics jobs began to dominate everything, leaving my software 
-                        dreams in the dust. Then, later that year, we lost our first son. My wife and I were devastated 
-                        and felt utterly lost...</p>
-                    <p class="light-blue-text">&emsp; I had to close my business, seek therapy, and we had to rethink 
-                        how our lives were going to look. I spent a good two years in limbo, but I found a spark of hope 
-                        in 2023. I remembered my dream of game development, all my ideas, and I could feel life flowing 
-                        through my veins again. So I took the leap! I started a YouTube channel to reconnect with gaming 
-                        and started a Software/Game Development bootcamp. One year later, after a lot of blood, sweat, 
-                        and tears, here we are!</p>
-                </div>
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <img src="./images/Brandon_Distance_Cropped_Transparent.png" alt="Brandon" class="img-fluid custom-circle-img">
-                </div>
-            </div>
+  <!-- Social Links -->
+
+  <!-- NEED TO ADD -->
+
+  <!-- About Section -->
+  <section id="about" class="text-light">
+    <div class="container">
+      <h2 class="text-center mb-3 glow">My story so far...</h2>
+      <div class="row justify-content-center align-items-center">
+        <div class="col-md-4 mb-3 mb-md-0">
+          <img src="./images/familyWinter2023_Square.jpg" alt="Family" class="img-fluid custom-circle-img" />
         </div>
-    </section>
-    
-    <!-- Pac-man divider-->
-    <hr />
-
-    <!-- Technologies Section -->
-    <section id="experience" class="text-center my-3">
-        <h2 class="glow">What I do...</h2>
-        <p class="subheading light-blue-text">
-            For me, the joy of learning and creating has always been the most rewarding part. Throughout my career, 
-            I’ve gained experience in many programming languages, frameworks, and applications. 
-        </p>
-        <div class="container">
-            <div class="row g-5">
-                <!-- Left Grid -->
-                <div class="col-md-6">
-                    <div class="row g-4">
-                        <div class="col-4">
-                            <img src="./images/Logos/Technologies/Logo_UnrealEngine.png" alt="Unreal Engine" class="img-fluid">
-                        </div>
-                        <div class="col-4">
-                            <img src="./images/Logos/Technologies/Logo_Unity_1.png" alt="Unity" class="img-fluid">
-                        </div>
-                        <div class="col-4">
-                            <img src="./images/Logos/Technologies/Logo_Cpp.png" alt="C++" class="img-fluid">
-                        </div>
-                        <div class="col-4">
-                            <img src="./images/Logos/Technologies/Logo_Cs.png" alt="C#" class="img-fluid">
-                        </div>
-                        <div class="col-4">
-                            <img src="./images/Logos/Technologies/Logo_Java_1.png" alt="Java" class="img-fluid">
-                        </div>
-                        <div class="col-4">
-                            <img src="./images/Logos/Technologies/Logo_HTML5.png" alt="HTML 5" class="img-fluid">
-                        </div>
-                        <div class="col-4">
-                            <img src="./images/Logos/Technologies/Logo_CSS3.png" alt="CSS 3" class="img-fluid">
-                        </div>
-                        <div class="col-4">
-                            <img src="./images/Logos/Technologies/Logo_JavaScript.png" alt="JavaScript" class="img-fluid">
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Right Grid -->
-                <div class="col-md-6">
-                    <div class="row g-4">
-                        <div class="col-4">
-                            <img src="./images/Logos/Technologies/Logo_NET.png" alt=".NET" class="img-fluid">
-                        </div>
-                        <div class="col-4">
-                            <img src="./images/Logos/Technologies/Logo_Blender.png" alt="Blender" class="img-fluid">
-                        </div>
-                        <div class="col-4">
-                            <img src="./images/Logos/Technologies/Logo_Tux.png" alt="Linux" class="img-fluid">
-                        </div>
-                        <div class="col-4">
-                            <img src="./images/Logos/Technologies/Logo_VSCode.png" alt="VS Code" class="img-fluid">
-                        </div>
-                        <div class="col-4">
-                            <img src="./images/Logos/Technologies/Logo_VisualStudio.png" alt="Visual Studio" class="img-fluid">
-                        </div>
-                        <div class="col-4">
-                            <img src="./images/Logos/Technologies/Logo_JetBrains.png" alt="JetBrains" class="img-fluid">
-                        </div>
-                        <div class="col-4">
-                            <img src="./images/Logos/Technologies/Logo_GitHub.png" alt="GitHub" class="img-fluid">
-                        </div>
-                        <div class="col-4">
-                            <img src="./images/Logos/Technologies/Logo_DaVinciResolve.png" alt="DaVinci Resolve" class="img-fluid">
-                        </div>
-                        <!-- Placeholder for the missing bottom right image -->
-                        <div class="col-4">
-                            <!-- Empty for now -->
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="col-md-8">
+          <p class="white-text">
+            &emsp; Hello, I’m Brandon Hawley, a passionate father of 2 and
+            game developer with 6 years of software development experience.
+            I’ve developed a few small titles in both Unreal Engine and Unity,
+            with a major release coming soon!
+          </p>
+          <p class="light-blue-text">
+            &emsp; As a kid, I dreamed of becoming a game developer. I created
+            fantastical environments and stories, keeping a journal with a
+            destroyed binding due to all the extra notes and drawings I shoved
+            into it over the years. In 2018, I started a degree in Electrical
+            Engineering, only to switch to Computer Science the following
+            year. Sadly, in 2020, I had to drop out due to complications
+            arising from COVID.
+          </p>
         </div>
-    </section>
-    
-    <a class="style12"></a>
+      </div>
+      <div class="row justify-content-center align-items-center">
+        <div class="col-md-8 mt-2">
+          <p class="light-blue-text">
+            &emsp; From there, I decided to go full-time with my side
+            business: repairing electronics, while learning software and game
+            development on the side. I became extremely skilled, but the
+            electronics jobs began to dominate everything, leaving my software
+            dreams in the dust. Then, later that year, we lost our first son.
+            My wife and I were devastated and felt utterly lost...
+          </p>
+          <p class="light-blue-text">
+            &emsp; I had to close my business, seek therapy, and we had to
+            rethink how our lives were going to look. I spent a good two years
+            in limbo, but I found a spark of hope in 2023. I remembered my
+            dream of game development, all my ideas, and I could feel life
+            flowing through my veins again. So I took the leap! I started a
+            YouTube channel to reconnect with gaming and started a
+            Software/Game Development bootcamp. One year later, after a lot of
+            blood, sweat, and tears, here we are!
+          </p>
+        </div>
+        <div class="col-md-4 mb-3 mb-md-0">
+          <img src="./images/Brandon_Distance_Cropped_Transparent.png" alt="Brandon"
+            class="img-fluid custom-circle-img" />
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Testimonials Section -->
-    <section class="container-testimonials text-center my-5">
-        <h2 class="glow mb-3">Where I've been...</h2>
-        <p class="subheading light-blue-text">
-            In my journey so far, I've had the privilege of collaborating with several outstanding organizations. 
-            I can't wait to see what's next!
+  <!-- Pac-man divider-->
+  <hr />
+
+  <!-- Technologies Section -->
+  <section id="experience" class="text-center my-3">
+    <h2 class="glow">What I do...</h2>
+    <p class="light-blue-text subheading">
+      For me, the joy of learning and creating has always been the most
+      rewarding part. Throughout my career, I’ve gained experience in many
+      programming languages, frameworks, and applications.
+    </p>
+    <div class="container">
+      <div class="row g-5">
+        <!-- Left Grid -->
+        <div class="col-md-6">
+          <div class="row g-4">
+            <div class="col-4">
+              <img src="./images/Logos/Technologies/Logo_UnrealEngine.png" alt="Unreal Engine" class="img-fluid" />
+            </div>
+            <div class="col-4">
+              <img src="./images/Logos/Technologies/Logo_Unity_1.png" alt="Unity" class="img-fluid" />
+            </div>
+            <div class="col-4">
+              <img src="./images/Logos/Technologies/Logo_Cpp.png" alt="C++" class="img-fluid" />
+            </div>
+            <div class="col-4">
+              <img src="./images/Logos/Technologies/Logo_Cs.png" alt="C#" class="img-fluid" />
+            </div>
+            <div class="col-4">
+              <img src="./images/Logos/Technologies/Logo_Java_1.png" alt="Java" class="img-fluid" />
+            </div>
+            <div class="col-4">
+              <img src="./images/Logos/Technologies/Logo_HTML5.png" alt="HTML 5" class="img-fluid" />
+            </div>
+            <div class="col-4">
+              <img src="./images/Logos/Technologies/Logo_CSS3.png" alt="CSS 3" class="img-fluid" />
+            </div>
+            <div class="col-4">
+              <img src="./images/Logos/Technologies/Logo_JavaScript.png" alt="JavaScript" class="img-fluid" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Grid -->
+        <div class="col-md-6">
+          <div class="row g-4">
+            <div class="col-4">
+              <img src="./images/Logos/Technologies/Logo_NET.png" alt=".NET" class="img-fluid" />
+            </div>
+            <div class="col-4">
+              <img src="./images/Logos/Technologies/Logo_Blender.png" alt="Blender" class="img-fluid" />
+            </div>
+            <div class="col-4">
+              <img src="./images/Logos/Technologies/Logo_Tux.png" alt="Linux" class="img-fluid" />
+            </div>
+            <div class="col-4">
+              <img src="./images/Logos/Technologies/Logo_VSCode.png" alt="VS Code" class="img-fluid" />
+            </div>
+            <div class="col-4">
+              <img src="./images/Logos/Technologies/Logo_VisualStudio.png" alt="Visual Studio" class="img-fluid" />
+            </div>
+            <div class="col-4">
+              <img src="./images/Logos/Technologies/Logo_JetBrains.png" alt="JetBrains" class="img-fluid" />
+            </div>
+            <div class="col-4">
+              <img src="./images/Logos/Technologies/Logo_GitHub.png" alt="GitHub" class="img-fluid" />
+            </div>
+            <div class="col-4">
+              <img src="./images/Logos/Technologies/Logo_DaVinciResolve.png" alt="DaVinci Resolve" class="img-fluid" />
+            </div>
+            <!-- Placeholder for the missing bottom right image -->
+            <div class="col-4">
+              <!-- Empty -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Header for Experience Section -->
+  <section class="experience-header text-center my-5">
+    <h2 class="glow mb-3">Where I've been...</h2>
+    <p class="light-blue-text subheading">
+      In my journey so far, I've had the privilege of collaborating with
+      several outstanding organizations. I can't wait to see what's next!
+    </p>
+  </section>
+
+  <!-- Experience timeline -->
+  <section class="timeline">
+
+    <div class="container left-container">
+      <img src="./images/Logos/Organizations/comptia_logo.jpg" class="left-timeline-image" alt="Image 1">
+      <div class="text-box">
+        <h2>Container 1</h2>
+        <small>2015-2016</small>
+        <p>thiskfksdnglsnkls dnmgskldg ksdnklsd ngsdn gsdns dkgsdngklsdn ksdmfkl sdmfls dmfklsd
+          d snjsdn fjsdnf jksdnfjksdnm klfsdmf msdkfmsd klmf klsdmsdm klm sddsnsdk jfnjksdn jkdjsf
         </p>
+        <span class="left-container-arrow"></span>
+      </div>
+    </div>
+    <div class="container right-container">
+      <img src="./images/Logos/Organizations/comptia_logo.jpg" class="right-timeline-image" alt="Image 1">
+      <div class="text-box">
+        <h2>Container 2</h2>
+        <small>2016-2017</small>
+        <p>thiskfksdnglsnkls dnmgskldg ksdnklsd ngsdn gsdns dkgsdngklsdn ksdmfkl sdmfls dmfklsd
+          d snjsdn fjsdnf jksdnfjksdnm klfsdmf msdkfmsd klmf klsdmsdm klm sddsnsdk jfnjksdn jkdjsf
+        </p>
+        <span class="right-container-arrow"></span>
+      </div>
+    </div>
+    <div class="container left-container">
+      <img src="./images/Logos/Organizations/comptia_logo.jpg" class="left-timeline-image" alt="Image 1">
+      <div class="text-box">
+        <h2>Container 3</h2>
+        <small>2017-2018</small>
+        <p>thiskfksdnglsnkls dnmgskldg ksdnklsd ngsdn gsdns dkgsdngklsdn ksdmfkl sdmfls dmfklsd
+          d snjsdn fjsdnf jksdnfjksdnm klfsdmf msdkfmsd klmf klsdmsdm klm sddsnsdk jfnjksdn jkdjsf
+        </p>
+        <span class="left-container-arrow"></span>
+      </div>
+    </div>
+    <div class="container right-container">
+      <img src="./images/Logos/Organizations/comptia_logo.jpg" class="right-timeline-image" alt="Image 1">
+      <div class="text-box">
+        <h2>Container 4</h2>
+        <small>2018-2019</small>
+        <p>thiskfksdnglsnkls dnmgskldg ksdnklsd ngsdn gsdns dkgsdngklsdn ksdmfkl sdmfls dmfklsd
+          d snjsdn fjsdnf jksdnfjksdnm klfsdmf msdkfmsd klmf klsdmsdm klm sddsnsdk jfnjksdn jkdjsf
+        </p>
+        <span class="right-container-arrow"></span>
+      </div>
+    </div>
+    <div class="container left-container">
+      <img src="./images/Logos/Organizations/comptia_logo.jpg" class="left-timeline-image" alt="Image 1">
+      <div class="text-box">
+        <h2>Container 5</h2>
+        <small>2020-2024</small>
+        <p>thiskfksdnglsnkls dnmgskldg ksdnklsd ngsdn gsdns dkgsdngklsdn ksdmfkl sdmfls dmfklsd
+          d snjsdn fjsdnf jksdnfjksdnm klfsdmf msdkfmsd klmf klsdmsdm klm sddsnsdk jfnjksdn jkdjsf
+        </p>
+        <span class="left-container-arrow"></span>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- Testimonials Section -->
+  <section class="container-testimonials text-center my-5">
+    <div class="row justify-content-center">
+      <div class="col-5 testimonial">
         <div class="row justify-content-center">
-            <div class="col-5 testimonial">
-                <div class="row">
-                    <div class="avatar col-md-4">
-                        <a href="https://cbayou.org/archery-excellence-indoor-archery-range/" target="_blank">
-                            <img class="img-circle" src="./images/Logos/Recommendations/Logo_ArcheryExcellence.jpg" alt="Archery Excellence">
-                        </a>
-                    </div>
-            
-                    <div class="testimonial-main col-md-8">
-                        <h3 class="media-heading" style="color: #e52d27;">Archery Excellence</h3>
-                        <p class="testimony-body">
-                            ... We're pleased to have had Brandon as part of our team and wholeheartedly
-                             recommend him to any organization he considers joining. He is an invaluable asset to any team 
-                             and working alongside him is a genuinely enjoyable experience.
-                            </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-5 testimonial">
-                <div class="row">
-                    <div class="avatar col-md-4">
-                        <a href="https://www.linkedin.com/in/kevinmcmilian/" target="_blank">
-                            <img class="img-circle" src="./images/Logos/Recommendations/Logo_Cumoratek.jpg" alt="Cumoratek Consulting">
-                        </a>
-                    </div>
-            
-                    <div class="testimonial-main col-md-8">
-                        <h3 class="media-heading" style="color: #e52d27;">Cumoratek Consulting</h3>
-                        <p class="testimony-body">
-                            I have had the pleasure of working with Brandon for multiple years in a variety of capacities.
-                             I always appreciate Brandon's positive approach to his work and his immense wealth of knowledge. 
-                             He is and has been an excellent asset to our team here at Cumoratek!
-                        </p>
-                    </div>
-                </div>
-            </div>
+          <div class="avatar col-md-4">
+            <a href="https://cbayou.org/archery-excellence-indoor-archery-range/" target="_blank">
+              <img class="img-circle" src="./images/Logos/Organizations/Logo_ArcheryExcellence.jpg"
+                alt="Archery Excellence" />
+            </a>
+          </div>
         </div>
-    </section>
+        <div class="row justify-content-center">
+          <div class="testimonial-main col-md-12">
+            <h3 class="media-heading" style="color: #e52d27">
+              Archery Excellence
+            </h3>
+            <p class="testimony-body">
+              "... We're pleased to have had Brandon as part of our team and
+              wholeheartedly recommend him to any organization he considers
+              joining. He is an invaluable asset to any team and working
+              alongside him is a genuinely enjoyable experience."
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-5 testimonial">
+        <div class="row justify-content-center">
+          <div class="avatar col-md-4">
+            <a href="https://www.linkedin.com/in/kevinmcmilian/" target="_blank">
+              <img class="img-circle" src="./images/Logos/Organizations/Logo_Cumoratek.jpg"
+                alt="Cumoratek Consulting" />
+            </a>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="testimonial-main col-md-12">
+            <h3 class="media-heading" style="color: #e52d27">
+              Cumoratek Consulting
+            </h3>
+            <p class="testimony-body">
+              "I have had the pleasure of working with Brandon for multiple
+              years in a variety of capacities. I always appreciate Brandon's
+              positive approach to his work and his immense wealth of
+              knowledge. He is and has been an excellent asset to our team
+              here at Cumoratek!"
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section bg-dark text-light">
+    <div class="container">
+      <div class="row">
+        <!-- Paragraph & Social Links -->
+        <div class="col-md-5">
+          <p>
+            In my journey so far, I've had the privilege of collaborating with
+            several outstanding organizations. I can't wait to see what's
+            next!
+          </p>
+        </div>
 
-    <!-- Contact Section -->
-    <section class="contact-section bg-dark text-light">
-        <div class="container">
+        <!-- Contact Form -->
+        <div class="col-md-7 contact-form">
+          <form>
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="<Name>" required />
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="<Email>" required />
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" placeholder="<Message>" rows="5" required></textarea>
+            </div>
             <div class="row">
-                <!-- Paragraph & Social Links -->
-                <div class="col-md-5">
-                    <p>In my journey so far, I've had the privilege of collaborating with several outstanding organizations. I can't wait to see what's next!</p>
-                    <div class="social-links">
-                        <a href="https://www.youtube.com/channel/UCss3_mmdO30U7I99bcNwwog"><img src="./images/Logos/Technologies/Logo_Youtube.png" alt="YouTube"></a>
-                        <a href="https://www.linkedin.com/in/brandon-hawley/"><img src="./images/Logos/Technologies/Logo_LinkedIn.png" alt="LinkedIn"></a>
-                        <a href="https://github.com/bhawley45"><img src="./images/Logos/Technologies/Logo_GitHub.png" alt="GitHub"></a>
-                    </div>
+              <div class="col-md-5"></div>
+              <div class="col-md-2">
+                <button type="submit" class="btn btn-submit">Submit</button>
+              </div>
+              <div class="col-md-1"></div>
+              <div class="col-md-4">
+                <div class="social-links">
+                  <a href="https://www.youtube.com/channel/UCss3_mmdO30U7I99bcNwwog"><img
+                      src="./images/Logos/Technologies/Logo_Youtube.png" alt="YouTube" /></a>
+                  <a href="https://www.linkedin.com/in/brandon-hawley/"><img
+                      src="./images/Logos/Technologies/Logo_LinkedIn.png" alt="LinkedIn" /></a>
+                  <a href="https://github.com/bhawley45"><img src="./images/Logos/Technologies/Logo_GitHub.png"
+                      alt="GitHub" /></a>
                 </div>
-        
-                <!-- Contact Form -->
-                <div class="col-md-7 contact-form">
-                    <form>
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Name" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control" placeholder="Email" required>
-                        </div>
-                        <div class="mb-3">
-                            <textarea class="form-control" placeholder="Message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-submit">Submit</button>
-                    </form>
-                </div>
+              </div>
             </div>
-            <div class="row">
-                <div 
-            </div>
+          </form>
         </div>
-    </section>
+      </div>
+      <div class="row">
+        <div< /div>
+      </div>
+  </section>
 
+  <!-- Footer -->
+  <footer class="footer clearfix">
+    <div class="container">
+      <div class="trademark">&copy; 2024 Brandon Hawley</div>
+      <div class="last-updated">Last updated: April 2024</div>
+    </div>
+  </footer>
 
-    <!-- Footer -->
-    <footer class="footer clearfix">
-        <div class="container">
-            <div class="trademark">&copy; 2024 Brandon Hawley</div>
-            <div class="last-updated">Last updated: April 2024</div>
-        </div>
-    </footer>
-
-    <!-- Bootstrap 4 with Popper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script src="js/carousel.js" defer></script>
-    <script src="js/navbar.js" defer></script>
+  <!-- Bootstrap 4 with Popper JS -->
+  <script src="./assets/js/bootstrap.bundle.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="./assets/js/swiper-bundle.min.js"></script>
+  <!-- jQuery -->
+  <script src="./assets/js/jquery-3.7.1.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/carousel.js" defer></script>
+  <script src="js/timeline.js" defer></script>
 </body>
+
 </html>
