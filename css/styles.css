@@ -34,7 +34,7 @@ h3 {
 
 .white-text {
     color: whitesmoke;
-    font-size: clamp(1.2rem, 2.25vw, 1.55rem);
+    font-size: clamp(1.2rem, 2.25vw, 1.45rem);
 }
 
 .subheading {
@@ -42,7 +42,7 @@ h3 {
     margin-right: auto;
     margin-bottom: 4rem;
     max-width: 65%;
-    font-size: clamp(1.2rem, 2.25vw, 1.55rem)
+    font-size: clamp(1.2rem, 2.25vw, 1.45rem)
 }
 
 @media (max-width: 768px) {
@@ -53,8 +53,8 @@ h3 {
 }
 
 .light-blue-text {
-    color: #8297bd;
-    font-size: clamp(1.1rem, 2.25vw, 1.4rem);
+    color: #4a99ee;
+    font-size: clamp(1.2rem, 2.25vw, 1.45rem);
     text-shadow: 0 0 3px #333;
 }
 
@@ -483,7 +483,7 @@ h3 {
 @media (max-width: 768px) {
 
     #experience .container {
-        width: 300px;
+        width: 400px;
     }
 
     /* Stack grids on smaller screens and center align them */
@@ -505,64 +505,6 @@ h3 {
 
 /************************************************************
 
-	Testimonials Section
-
-*************************************************************/
-
-.container-testimonials {
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-}
-
-.testimony-body {
-    font-family: "Times New Roman", serif;
-    font-size: clamp(0.5rem, 2.5vw, 1rem);
-}
-
-.testimonials {
-    margin-top: 40px;
-}
-
-.testimonial {
-    margin-bottom: 3em;
-    background: rgba(0, 0, 0, 0.1);
-    border: .25px solid #111111d2;
-    border-radius: 5%;
-    margin: 0 1rem;
-    padding: 1.5rem;
-    min-height: 169px;
-
-    transition: all 0.3s ease;
-}
-
-.testimonial:hover {
-    scale: 1.05;
-    box-shadow: 0 0 15px rgba(245, 245, 245, 0.05);
-}
-
-.avatar .img-circle {
-    background: whitesmoke;
-    padding: 3px;
-    border: 1px solid #c5c5c5;
-}
-
-.avatar img {
-    max-width: 100%;
-}
-
-.img-circle {
-    border-radius: 50%;
-}
-
-.media-heading {
-    font-size: clamp(1.35rem, 2.25vw, 1.75rem);
-}
-
-
-
-/************************************************************
-
 	Timeline Section
 
 *************************************************************/
@@ -570,7 +512,7 @@ h3 {
 .timeline {
     position: relative;
     max-width: 1200px;
-    margin: 100px auto;
+    margin: 50px auto;
 
     --timeline-height: 0%;
     /* Default state before animation */
@@ -643,31 +585,45 @@ h3 {
 
 
 
+
 .text-box h2 {
-    color: #111;
+    /* color: #111; */
+    font-size: clamp(1.5rem, 2.5vw, 2.25rem);
     /* font-weight: 450; */
 }
 
-.text-box small {
-    color: #111;
-    display: inline-block;
+.text-box h1 {
     margin-bottom: 15px;
 }
 
-.text-box p {
+/* .timeline-text {
     color: #111;
+} */
+
+.dropdown-text {
+    /* color: #111; */
+    font-size: clamp(.75rem, 2.5vw, 1rem);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.timeline-text {
-    color: #111;
+.timeline-title {
+    color: #4a99ee;
+    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
 }
 
 .timeline .text-box {
     padding: 20px 30px;
     position: relative;
     border-radius: 6px;
-    background: rgba(245, 245, 245, 0.75);
     font-size: 15px;
+    cursor: pointer;
+
+    transition: all .45s ease;
+}
+
+.timeline .text-box:hover {
+    background-color: #111;
+    box-shadow: 0 0 2px #797777b6;
 }
 
 .right-container {
@@ -680,18 +636,18 @@ h3 {
 
 .right-timeline-image {
     position: absolute;
-    width: 40px;
+    width: 50px;
     border-radius: 50%;
-    left: -20px;
+    left: -25px;
     top: 32px;
     z-index: 10;
 }
 
 .left-timeline-image {
     position: absolute;
-    width: 40px;
+    width: 50px;
     border-radius: 50%;
-    right: -20px;
+    right: -25px;
     top: 32px;
     z-index: 10;
 }
@@ -704,7 +660,7 @@ h3 {
     z-index: 1;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-left: 15px solid whitesmoke;
+    border-left: 15px solid #000;
     right: -15px;
 }
 
@@ -716,7 +672,7 @@ h3 {
     z-index: 1;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-right: 15px solid whitesmoke;
+    border-right: 15px solid #000;
     left: -15px;
 }
 
@@ -739,7 +695,7 @@ h3 {
         font-size: 13px;
     }
 
-    .text-box small {
+    .text-box h1 {
         margin-bottom: 10px;
     }
 
@@ -754,9 +710,137 @@ h3 {
 
     .left-container-arrow,
     .right-container-arrow {
-        border-right: 15px solid whitesmoke;
+        border-right: 15px solid #000;
         border-left: 0;
         left: -15px;
+    }
+}
+
+
+
+/************************************************************
+
+	Timeline Drop-Down Styling
+
+*************************************************************/
+
+/* Alters timeline text-box background */
+.active-background {
+    background-color: rgba(17, 17, 17, 1);
+}
+
+.inactive-background {
+    background-color: rgba(17, 17, 17, .80);
+}
+
+/* Chevron Styling */
+.fas {
+    color: #4a99ee;
+}
+
+.timeline-collapse:not(.show) {
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+.timeline-collapse.show {
+    height: auto;
+}
+
+.timeline-collapse {
+    transition: height 0.5s ease;
+}
+
+
+
+/************************************************************
+
+	Testimonials Section
+
+*************************************************************/
+
+.container-testimonials {
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimony-body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: clamp(0.75rem, 2.5vw, 1rem);
+}
+
+.testimonials {
+    margin-top: 40px;
+}
+
+.testimonial {
+    margin-bottom: 3em;
+    background-color: rgba(17, 17, 17, .80);
+    border-radius: 5%;
+    margin: 0 1rem;
+    padding: 1.5rem;
+    min-height: 169px;
+
+    transition: all 0.3s ease;
+}
+
+.testimonial:hover {
+    background-color: #111;
+    box-shadow: 0 0 2px #797777b6;
+}
+
+.avatar .img-circle {
+    background: whitesmoke;
+    padding: 3px;
+    border: 1px solid #c5c5c5;
+}
+
+.avatar img {
+    max-width: 100%;
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
+.media-heading {
+    color: #4a99ee;
+    font-size: clamp(1.35rem, 2.25vw, 1.75rem);
+}
+
+@media (max-width: 768px) {
+
+    .container-testimonials {
+        width: 85%;
+    }
+
+    .testimonial {
+        flex: 0 0 85%;
+        /* Each testimonial box takes full width of the container */
+        max-width: 85%;
+        /* Ensure no constraints on the max-width */
+        margin-bottom: 1em;
+        /* Add some bottom margin for spacing between stacked items */
+    }
+
+    .avatar {
+        flex: 0 0 85%;
+        /* Full width avatars to center the images */
+        justify-content: center;
+        /* Center align avatar images within the column */
+        display: flex;
+    }
+
+    .testimonial-main {
+        flex: 0 0 100%;
+        /* Full width for text content for better readability */
+    }
+
+    .container-testimonials .row {
+        justify-content: center;
+        /* Center align the rows */
     }
 }
 
@@ -775,12 +859,6 @@ h3 {
 .contact-form {
     border-left: 1px solid #fff;
     padding-left: 2rem;
-}
-
-.social-links img {
-    width: 32px;
-    /* adjust as needed */
-    margin-right: 10px;
 }
 
 .btn-submit {
@@ -803,17 +881,43 @@ h3 {
     color: #ddd;
     padding: 0.5rem 0;
     font-size: 0.85rem;
-    border-top: 1px solid #fff;
 }
 
-.footer .trademark {
-    float: left;
-    margin-left: 2rem;
+.footer .nav-links a {
+    color: rgb(163, 161, 161);
+    margin-right: 20px;
+    text-decoration: none;
+    font-size: clamp(1.65rem, 4vw, 2rem);
+
+    transition: color 0.3s;
 }
 
-.footer .last-updated {
-    float: right;
-    margin-right: 2rem;
+.footer .nav-links a:hover {
+    color: whitesmoke;
+}
+
+.footer-social-links li {
+    display: inline-block;
+    margin-right: 20px;
+    list-style: none;
+}
+
+.footer-social-links li a img {
+    width: 40px;
+    height: auto;
+    display: block;
+    position: relative;
+    background-color: transparent;
+
+    transition: scale 0.3s ease;
+}
+
+.footer-social-links li a img:hover {
+    scale: 1.05;
+}
+
+.dark-grey-text {
+    color: #5a554c;
 }
 
 /* Clear float */
@@ -822,7 +926,6 @@ h3 {
     clear: both;
     display: table;
 }
-
 
 
 

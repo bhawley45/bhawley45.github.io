@@ -23,9 +23,11 @@ let isSwiperDisabled = false; // Track swiper element
       allowTouchMove: true, // Allow movement with touchscreen swipe
       centeredSlides: true, // Active slide centered
       grabCursor: true,
+      slideToClickedSlide: true, // Move clicked slide to center
       direction: "horizontal",
       slidesPerGroup: 1,
       speed: 900, // Transitional speed
+
       autoplay: {
         // Autoplay slides
         delay: 4250,
@@ -74,12 +76,6 @@ let isSwiperDisabled = false; // Track swiper element
           spaceBetween: 25,
         },
       },
-      on: {
-        click() {
-          //console.log('index', this.clickedIndex);
-          swiper.slideTo(this.clickedIndex); // Move clicked slide to center
-        },
-      },
     });
 
     cartridges.forEach((cartridge) => {
@@ -90,18 +86,12 @@ let isSwiperDisabled = false; // Track swiper element
           target.style.transform = "scale(1.1)";
           hoverSound.play(); // Play hover sound
         }
-
-        //target.style.boxShadow = '0px 0px 20px rgba(255, 255, 255, 0.6)'; // Add glow effect
-        //pushSiblings(target, 20);
       });
 
       cartridge.addEventListener("mouseleave", (event) => {
         const target = event.target;
         // Bug: Remove jerkyness when user clicks cartridge and animation plays
         target.style.transform = "scale(1)";
-
-        //target.style.boxShadow = 'none'; // Remove glow effect
-        //pushSiblings(target, 0);
       });
 
       cartridge.addEventListener("click", (event) => {
@@ -123,7 +113,6 @@ let isSwiperDisabled = false; // Track swiper element
       swiper.slideToClickedSlide = true; // See on:(click) above
       swiper.slidesPerView = 1;
 
-      //flyAwaySiblings(cartridge);
       animateCartridgeInsertion(cartridge);
 
       setTimeout(() => {
@@ -138,9 +127,6 @@ let isSwiperDisabled = false; // Track swiper element
       // Move console up
       consoleContainer.style.bottom = "0px"; // distance from bottom of parent container
       consoleContainer.style.opacity = "1";
-
-      //clickedCartridge.style.scale = 1.15 // Causes visual problems on mobile
-
       clickedCartridge.classList.add("insert-cartridge");
     }
 
@@ -160,35 +146,5 @@ let isSwiperDisabled = false; // Track swiper element
         typingSound.play();
       }, index * 225); // Adjust timing for each index of typing-text found
     });
-
-    // function pushSiblings(target, distance) {
-    //     let prev = target.previousElementSibling;
-    //     let next = target.nextElementSibling;
-
-    //     // Move previous siblings to the left
-    //     while (prev) {
-    //         prev.style.transform = `translateX(-${distance}px)`;
-    //         prev = prev.previousElementSibling;
-    //     }
-
-    //     // Move next siblings to the right
-    //     while (next) {
-    //         next.style.transform = `translateX(${distance}px)`;
-    //         next = next.nextElementSibling;
-    //     }
-    // }
-
-    // function flyAwaySiblings(clickedCartridge) {
-    //     const siblings = Array.from(clickedCartridge.parentNode.children);
-    //     const clickedIndex = siblings.indexOf(clickedCartridge);
-
-    //     siblings.forEach((sibling, index) => {
-    //         if (index < clickedIndex) {
-    //             sibling.classList.add('fly-left');
-    //         } else if (index > clickedIndex) {
-    //             sibling.classList.add('fly-right');
-    //         }
-    //     });
-    // }
   });
 })();
