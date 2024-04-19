@@ -1,11 +1,3 @@
-* {
-    /* Font Adjustments */
-    font-family: "VT323", monospace;
-    text-rendering: optimizeLegibility;
-    color: whitesmoke;
-    font-size: 16px;
-}
-
 body {
     padding: 0;
     margin: 0 auto;
@@ -22,152 +14,36 @@ body {
     overflow-x: hidden;
 }
 
-h2 {
-    color: whitesmoke;
-    font-size: clamp(2.45rem, 5vw, 3.25rem);
-}
-
-h3 {
-    color: whitesmoke;
-    font-size: clamp(1.55rem, 5vw, 2.25rem);
-}
-
-.white-text {
-    color: whitesmoke;
-    font-size: clamp(1.2rem, 2.25vw, 1.45rem);
-}
-
-.grey-text {
-    color: #a3a1a1;
-}
-
-.light-blue-text {
-    color: #4a99ee;
-    font-size: clamp(1.2rem, 2.25vw, 1.45rem);
-    text-shadow: 0 0 3px #333;
-}
-
-.light-blue-title {
-    color: #4a99ee;
-    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
-}
-
-.subheading {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 4rem;
-    max-width: 65%;
-    font-size: clamp(1.2rem, 2.25vw, 1.45rem)
-}
-
-@media (max-width: 768px) {
-    .subheading {
-        margin-bottom: 2rem;
-        max-width: 85%;
-    }
-}
-
-.transparent {
-    opacity: 0;
-    /* Invisible until loading animation */
-}
-
 
 
 /************************************************************
 
-	Animation: Text Glow
+	Cool Retro Logo
 
 *************************************************************/
 
-@keyframes glowing {
-    0% {
-        text-shadow: 0 0 7px papayawhip;
-    }
-
-    50% {
-        text-shadow: 0 0 0;
-    }
-
-    100% {
-        text-shadow: 0 0 7px papayawhip;
-    }
+.novacancy {
+    font-family: "Monoton", sans-serif;
+    font-size: clamp(2.75rem, 5vw, 3.5rem);
+    line-height: 1.25rem;
 }
 
-.glow {
-    animation: glowing 4250ms infinite;
-}
-
-
-
-/************************************************************
-
-	Navigation Bar
-
-*************************************************************/
-
-.navbar {
-    padding-top: 15px;
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
-.navbar-brand {
-    padding-left: 4px;
-}
-
-.navbar-brand span {
-    font-size: clamp(2.45rem, 5vw, 3.25rem);
-}
-
-.navbar-toggler-icon {
-    width: 25px;
-    height: 25px;
-}
-
-.nav-link {
-    font-size: clamp(1.65rem, 4vw, 2rem);
-}
-
-/* Target the navbar links */
-.navbar-nav .nav-link {
+.board {
     position: relative;
-    /* Required for positioning the pseudo-element */
-    overflow: hidden;
-    /* Ensures the pseudo-element doesn't extend outside */
-    color: rgb(163, 161, 161);
-    transition: color 0.3s;
+    top: 6.25rem;
+    width: auto;
+    max-width: 100%;
+    margin-bottom: 2rem;
+
+    text-transform: uppercase;
+    text-shadow: 0 0 80px #e52d27, 0 0 30px FireBrick, 0 0 6px DarkRed;
+    color: #e52d27;
+    z-index: 15;
 }
 
-.nav-link:hover {
+#error {
     color: whitesmoke;
-}
-
-/* Add the underline effect */
-.navbar-nav .nav-link::after {
-    content: "";
-    position: absolute;
-    bottom: 8px;
-    /* Line distance from link text */
-    left: 0;
-    /* Start from the middle */
-    width: 0;
-    /* Initially no width */
-    height: 2px;
-    /* Height of the underline */
-    background-color: #e52d27;
-    transition: width 0.5s ease, left 0.5s ease;
-    /* Smooth transition for the effect */
-}
-
-/* When hovering, expand the underline */
-.navbar-nav .nav-link:hover::after,
-.navbar-nav .nav-link:focus::after {
-    /* Also trigger on focus for accessibility */
-    width: 70%;
-    /* Full width of the link */
-    left: 15%;
-    /* Start expanding from the left edge */
+    text-shadow: 0 0 80px whitesmoke, 0 0 30px #008000, 0 0 6px #0000ff;
 }
 
 
@@ -178,40 +54,40 @@ h3 {
 
 *************************************************************/
 
-.carousel-container {
+#carousel {
+    margin-top: 4rem;
     position: relative;
-    /*height: 450px;*/
-    height: clamp(350px,
-            50vw,
-            525px);
-    /* Adjust swiper size based on vieport width */
+    /* height: clamp(350px, 50vw, 525px); */
+    height: clamp(450px, 65vw, 575px);
     width: auto;
     overflow: hidden;
     /* Keep additional slides hidden */
     z-index: 10;
-    /* Keep above background elements */
 }
 
-.carousel-container .swiper-slide {
+#carousel .swiper-slide {
     display: flex;
-    bottom: 35px;
+    /* bottom: 35px; */
+    bottom: 0px;
     justify-content: center;
     align-items: center;
 
     /* On load animation  */
     animation: fadeInUp 1s ease-out forwards;
+    transition: transform 0.3s, opacity 0.3s;
     opacity: 0;
     /* Start with the Swiper container invisible */
 }
 
 .cartridge-image {
     /*height: 275px;*/
-    height: clamp(200px, 30vw, 325px);
+    /* height: clamp(200px, 30vw, 325px); */
+    height: clamp(225px, 30vw, 335px);
     transition: transform 350ms ease;
 }
 
-.carousel-container .swiper-button-prev,
-.carousel-container .swiper-button-next {
+#carousel .swiper-button-prev,
+#carousel .swiper-button-next {
     position: absolute;
     top: 45%;
     /* Center vertically with cartridges */
@@ -228,37 +104,37 @@ h3 {
     transition: color 0.3s ease;
 }
 
-.carousel-container .swiper-button-prev:hover,
-.carousel-container .swiper-button-next:hover {
+#carousel .swiper-button-prev:hover,
+#carousel .swiper-button-next:hover {
     color: #e60073;
 }
 
-.carousel-container .swiper-button-prev {
+#carousel .swiper-button-prev {
     left: 10px;
     /* Adjust as needed */
     transform: translate(0, -50%);
 }
 
-.carousel-container .swiper-button-next {
+#carousel .swiper-button-next {
     right: 10px;
     /* Adjust as needed */
     transform: translate(0, -50%);
 }
 
-.carousel-container .swiper-pagination {
+#carousel .swiper-pagination {
     position: absolute;
     left: 0;
     width: 100%;
     text-align: center;
 }
 
-.carousel-container .swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: 25px;
+#carousel .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 65px;
     /* Distance from bottom to cartridges */
 }
 
 /* Pagination Bullet Color when inactive */
-.carousel-container .swiper-pagination-bullet {
+#carousel .swiper-pagination-bullet {
     background-color: #333;
     /* Color for inactive bullets */
     opacity: 0.5;
@@ -266,7 +142,7 @@ h3 {
 }
 
 /* Pagination Bullet Color when active */
-.carousel-container .swiper-pagination-bullet-active {
+#carousel .swiper-pagination-bullet-active {
     background-color: #e52d27;
     /* Color for the active bullet */
     opacity: 1;
@@ -286,7 +162,7 @@ h3 {
 
 *************************************************************/
 
-#console-container {
+#console {
     position: absolute;
     bottom: -100px;
     /* Start off-screen */
@@ -297,61 +173,11 @@ h3 {
     z-index: 15;
 }
 
-/*#console-back {
-    position: absolute;
-    z-index: 1; /* Behind cartridges */
-/*
-}*/
-
-#console-front {
+#console-image {
     position: relative;
     /*width: 550px;*/
     width: clamp(350px, 50vw, 625px);
     height: auto;
-}
-
-
-
-/************************************************************
-
-	Animation: Page Load
-
-*************************************************************/
-
-/* Carousel animation */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(100px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Typing animation  */
-@keyframes typing {
-    from {
-        width: 0;
-        opacity: 0;
-    }
-
-    to {
-        width: 100%;
-        opacity: 1;
-    }
-}
-
-.typing {
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    opacity: 0;
-    /* Start out hidden */
-    animation: typing 0.45s steps(40, end) forwards;
-    /* Adjust the animation duration and steps as needed */
 }
 
 
@@ -447,21 +273,14 @@ h3 {
 
 *************************************************************/
 
-#experience .container {
-    width: clamp(300px, 75vw, 1000px);
-    height: auto;
-    padding-bottom: 2rem;
-}
-
 #experience img {
     max-width: 100%;
-    width: clamp(75px, 15vw, 85%);
+    width: 100px;
     height: auto;
-
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
+
     transition: filter 0.3s ease;
-    /* Smooth transition for the filter effect */
 }
 
 #experience img:hover {
@@ -478,29 +297,6 @@ h3 {
         filter: grayscale(0%);
     }
 }
-
-@media (max-width: 768px) {
-
-    #experience .container {
-        width: 400px;
-    }
-
-    /* Stack grids on smaller screens and center align them */
-    #experience .col-4 {
-        flex: 0 0 33.333333%;
-        max-width: 33.333333%;
-    }
-
-    #experience .row {
-        justify-content: center;
-    }
-
-    #experience {
-        padding-top: 0;
-    }
-}
-
-
 
 /************************************************************
 
@@ -528,14 +324,12 @@ h3 {
     height: var(--timeline-height);
 
     background: transparent;
-    /*background: #fff;*/
     border-left: 4px dotted #dd4c47a8;
     top: 0;
     z-index: -1;
 
     transition: height 3s linear;
     /* Smooth transition for the line drawing effect */
-    /*animation: moveLine 6s linear forwards;*/
 }
 
 .timeline .container {
@@ -543,11 +337,10 @@ h3 {
     margin: 0;
     position: relative;
     width: 50%;
-
     opacity: 0;
-    /* animation: moveDown 1s linear forwards; */
 }
 
+/* Triggered in timeline.js */
 @keyframes moveDown {
     from {
         opacity: 0;
@@ -560,35 +353,8 @@ h3 {
     }
 }
 
-/* Delay controlled in timeline.js */
-
-/* .timeline .container:nth-child(1) {
-    animation-delay: 0s;
-}
-
-.timeline .container:nth-child(2) {
-    animation-delay: 1s;
-}
-
-.timeline .container:nth-child(3) {
-    animation-delay: 2s;
-}
-
-.timeline .container:nth-child(4) {
-    animation-delay: 3s;
-}
-
-.timeline .container:nth-child(5) {
-    animation-delay: 4s;
-} */
-
-
-
-
 .text-box h2 {
-    /* color: #111; */
-    font-size: clamp(1.5rem, 2.5vw, 2.25rem);
-    /* font-weight: 450; */
+    font-size: clamp(1.65rem, 4vw, 2.25rem);
 }
 
 .text-box h1 {
@@ -596,13 +362,8 @@ h3 {
 }
 
 .dropdown-text {
-    font-size: clamp(.75rem, 2.5vw, 1rem);
+    font-size: clamp(.85rem, 2.5vw, 1rem);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.timeline-title {
-    color: #4a99ee;
-    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
 }
 
 .timeline .text-box {
@@ -721,10 +482,12 @@ h3 {
 /* Alters timeline text-box background */
 .active-background {
     background-color: rgba(17, 17, 17, 1);
+    border-radius: 20px;
 }
 
 .inactive-background {
     background-color: rgba(17, 17, 17, .80);
+    border-radius: 20px;
 }
 
 /* Chevron Styling */
@@ -754,18 +517,16 @@ h3 {
 
 *************************************************************/
 
-.testimonial {
-    transition: all 0.5s ease;
+#testimonials .swiper-slide {
+    background-color: #0f0e0e;
+    border-radius: 20px;
+    padding: 1rem;
 }
 
-.testimonial:hover {
-    background-color: rgba(17, 17, 17, .80);
-    box-shadow: 0 0 2px #797777b6;
-}
-
-.testimony-body {
+.testimonial-body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: clamp(0.75rem, 2.5vw, 1rem);
+    font-size: clamp(0.85rem, 2.5vw, 1rem);
+    font-style: italic;
 }
 
 .avatar .img-circle {
@@ -774,7 +535,24 @@ h3 {
 }
 
 .avatar img {
-    max-width: 100%;
+    max-width: 70%;
+}
+
+/* Pagination Bullet Color when inactive */
+#testimonials .swiper-pagination-bullet {
+    background-color: #a3a1a1;
+    opacity: 0.5;
+}
+
+/* Pagination Bullet Color when active */
+#testimonials .swiper-pagination-bullet-active {
+    background-color: #e52d27;
+    opacity: 1;
+}
+
+#testimonials .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: -25px;
+    /* Distance from bottom to cartridges */
 }
 
 
@@ -793,7 +571,7 @@ h3 {
 }
 
 .form-control {
-    font-size: clamp(1.2rem, 2.25vw, 1.45rem);
+    font-size: clamp(1.2rem, 2.25vw, 1.55rem);
     background-color: #111;
     border-radius: 0;
     border: none;
@@ -826,8 +604,8 @@ h3 {
 
 .btn {
     background-color: #e52d27;
-    font-size: 1.5rem;
     padding: .45rem 1.5rem;
+    color: whitesmoke;
     border: none;
 
     transition: all 0.3s ease;

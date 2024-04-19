@@ -1,0 +1,73 @@
+body {
+    padding: 0;
+    margin: 0 auto;
+    /* Standard width for modern webpages */
+    max-width: 1400px;
+
+    /* Background Adjustments */
+    background-color: #111;
+}
+
+.swiper-container {
+    position: relative;
+    /* Center in Col */
+    height: 100%;
+    width: auto;
+    margin: 20px auto;
+
+    /* Hide additional slides */
+    overflow-x: hidden;
+}
+
+.swiper-slide-container {
+    text-align: center;
+    background: #fff;
+    width: 100%;
+    height: auto;
+    margin: auto;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    height: 20rem;
+    width: auto;
+}
+
+.gallery-top {
+    height: 80%;
+    width: 100%;
+}
+
+.gallery-thumbs {
+    height: 50%;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+.gallery-thumbs .swiper-slide img {
+    border-radius: 20px;
+
+}
+
+.gallery-thumbs .swiper-slide {
+    width: 20%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+.gallery-thumbs .swiper-slide-active {
+    opacity: 1;
+}

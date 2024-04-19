@@ -4,10 +4,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brandon Hawley - Portfolio</title>
+  <title>Brandon Hawley - Gameplay Dev</title>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
   <!-- Swiper CSS -->
@@ -16,16 +19,25 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
   <!-- Custom stylesheets and scripts -->
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="css/navBar.css" />
+  <link rel="stylesheet" href="css/essentials.css" />
 </head>
 
 <body>
+
+  <script>
+    window.addEventListener('pageshow', (event) => {
+      // Check if the page is coming from cache
+      if (event.persisted) {
+        window.location.reload(); // Reload the page
+      }
+    });
+  </script>
+
   <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-sm navbar-dark justify-content-center">
-    <div class="container-fluid">
+  <nav class="navbar navbar-expand-md">
+    <div class="container-fluid align-items-center">
       <a class="navbar-brand" href="#">
-        <!--<img src="./images/Logos/Logo_Aftermath_Transparent.png" alt="" width="50" height="50">-->
-        <span class="typing-text transparent">Brandon Hawley</span>
+        <span class="typing-text transparent">/Game/Developer</span>
       </a>
       <button class="navbar-toggler align-middle" type="button" data-bs-toggle="collapse"
         data-bs-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false"
@@ -51,19 +63,27 @@
     </div>
   </nav>
 
-  <!-- Cartridge Carousel (Swiper) -->
-  <div class="carousel-container">
+  <!-- https://codepen.io/rileyjshaw/pen/DQYazZ -->
+  <!-- Cool Retro Logo -->
+  <section id="logo">
+    <div class="board text-center">
+      <p id="error">Brandon</p>
+      <p id="code">Hawley</p>
+    </div>
+  </section>
+
+  <!-- Cartridge Carousel(Swiper) [See carousel.js] -->
+  <div id="carousel">
     <!-- Console -->
-    <div id="console-container">
-      <!-- <img src="./images/Console_Base_Back.png" alt="Console Back" id="console-back"> -->
-      <img src="./images/Console_Base_Front.png" alt="Console Front" id="console-front" />
+    <div id="console">
+      <img src="./images/Console_Base_Front.png" alt="Console" id="console-image" />
     </div>
 
-    <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
       <!-- Slides -->
       <div class="swiper-slide">
-        <img src="images/Cartridge_Base_Cropped.png" alt="Project 1" class="cartridge-image" />
+        <img src="images/Cartridge_Base_Cropped.png" alt="Project 1" class="cartridge-image"
+          data-project-url="project_1_pigs.html">
       </div>
       <div class="swiper-slide">
         <img src="images/Cartridge_Base_Cropped.png" alt="Project 2" class="cartridge-image" />
@@ -96,18 +116,18 @@
   <!-- NEED TO ADD -->
 
   <!-- About Section -->
-  <section id="about" class="text-light">
-    <div class="container">
-      <h2 class="text-center mb-5 glow">My story so far...</h2>
+  <section id="about">
+    <div class="container-fluid px-4">
+      <h2 class="text-center mb-4 glow">My story so far...</h2>
 
       <div class="row justify-content-center align-items-center">
         <div class="col-md-12">
           <p class="white-text">
-            &emsp; Hello, I'm Brandon Hawley, a dedicated father and game developer with over six years of experience
-            in software development. As a kid, I was fascinated by gaming; my imagination would run wild with
+            &emsp; Hello, I'm Brandon Hawley, a dedicated father and game developer with six years of software
+            development experience. As a kid, I was inspired by gaming; my imagination would run wild with
             fantastic stories and worlds. I filled journals with sketches, references, and writings until their
             bindings fell apart. But as time went on, I lost faith that my dreams were possible. I started at MCC
-            pursuing an associate's in Electrical Engineering, lured by the promise of financial stability, but I
+            pursuing an associate's in Electrical Engineering, hoping for financial stability. I
             quickly realized it was not a good fit.
           </p>
         </div>
@@ -120,18 +140,18 @@
 
         <div class="col-md-8">
           <p class="white-text">
-            &emsp; I switched to Computer Science and started fresh at Missouri Western. However, as the COVID-19
-            pandemic began disrupting everything, I realized I was essentially paying for a self-directed education.
-            This led me to rethink my approach. I got married and founded Hawleywood Electronics LLC to support my
+            &emsp; I switched to Computer Science and started fresh at Missouri Western. However, as COVID-19
+            started disrupting everything, I realized I was essentially paying for self-education. I decided it was time
+            to rethink my approach. I got married and founded Hawleywood Electronics LLC to support my
             family, teaching myself software development on the side. Life was good, albeit it hectic - until it wasn't.
-            As the business grew, it began to consume all my time and energy, leaving nothing left for my family or my
-            dreams.
+            As the electronics business grew, it began to consume all my time and energy, leaving nothing left for my
+            family or my dreams.
           </p>
           <p class="white-text">
-            &emsp; Then our world suddenly shattered... We lost our 9-month-old son in December of 2020. Losing him was
-            unimaginable, bringing our lives to a screeching halt. My commitment to Hawleywood Electronics had stolen
-            time from my family that I will never get back, spent on something I didn't even enjoy. I slowly closed my
-            business and entered a season of soul-searching.
+            &emsp; Then my world suddenly shattered... We lost our 9-month-old son in December of 2020. Losing him was
+            brought indescribable pain. My commitment to Hawleywood Electronics had stolen time from my family that I
+            could never get back, spent on something I didn't even enjoy. I slowly closed my business and entered a
+            season of soul-searching.
           </p>
         </div>
       </div>
@@ -139,30 +159,27 @@
       <div class="row justify-content-center align-items-center">
         <div class="col-md-8 mt-2">
           <p class="white-text">
-            &emsp; The arrival of our second son brought new hope and renewed purpose. It was then that I fully embraced
+            &emsp; The arrival of our second son brought hope and renewed purpose. It was then that I fully embraced
             my childhood dream of creating games, resolving no longer to sideline the passions that had ignited my
-            imagination. Life is too short not to pursue your dreams. This shift has not only brought fulfillment but
-            has also allowed me to be more present with my family. I'm not overwhelmed by work and can provide a stable,
-            loving environment with a consistent schedule.
+            imagination.
           </p>
+
+          <div class="text-center my-2">
+            <q>
+              Life is too short not to pursue your dreams!
+            </q>
+          </div>
+
           <p class="white-text">
-            &emsp; I decided to take a more structured path into Game Dev. I enrolled in a game development bootcamp.
-            There, I learned the foundations of both software and game development, project management, and teamwork.
-            The program included practical experience, culminating in an internship at Prosper IT Consulting.
+            &emsp; Now, I balance being a father with my renewed passion for game development. This shift has brought
+            me not only fulfillment but invaluable time with my family. Each project is more than just a game—it's a
+            part of my personal revival and a testament to the resilience needed to pursue one's dreams amid life's
+            unpredictability.
           </p>
         </div>
         <div class="col-md-4 mb-3 mb-md-0">
           <img src="./images/Brandon_Distance_Cropped_Transparent.png" alt="Brandon"
             class="img-fluid custom-circle-img" />
-        </div>
-      </div>
-      <div class="row justify-content-center align-items-center">
-        <div class="col-md-12">
-          <p class="white-text text-center">
-            &emsp; Now, I balance being a father with my rekindled pursuit of game development. Each project is more
-            than just a game; it's a piece of my personal revival and a testament to the resilience required to follow
-            one's dreams amid life’s unpredictability.
-          </p>
         </div>
       </div>
     </div>
@@ -172,16 +189,21 @@
   <hr />
 
   <!-- Technologies Section -->
-  <section id="experience" class="text-center my-3">
-    <h2 class="glow">What I do...</h2>
-    <p class="light-blue-text subheading">
-      My passion for learning and creating has always been the cornerstone of my professional journey. Throughout my
-      career, I have developed in a variety of programming languages, frameworks, and tools.
-    </p>
-    <div class="container">
-      <div class="row g-5">
+  <section id="experience">
+    <div class="container-lg text-center my-3">
+
+      <h2 class="glow">What I do...</h2>
+      <p class="light-blue-text subheading">
+        &emsp; I'm an independent game developer with extensive experience in Unreal Engine and Unity. My preferred
+        engine is Unreal. I have experience in a variety of languages but am most proficient in C#, C++, and Java. I
+        have worked with several frameworks, including .NET, for about a year now. I've also been trained in full-stack
+        web development through my work at Cumoratek Consulting and Prosper IT Consulting. Through my creative work at
+        ObviouslyBrandon I've also become well versed in video editing, acting, and scripting.
+      </p>
+
+      <div class="row">
         <!-- Left Grid -->
-        <div class="col-md-6">
+        <div class="col-6 mb-3">
           <div class="row g-4">
             <div class="col-4">
               <img src="./images/Logos/Technologies/Logo_UnrealEngine.png" alt="Unreal Engine" class="img-fluid" />
@@ -211,7 +233,7 @@
         </div>
 
         <!-- Right Grid -->
-        <div class="col-md-6">
+        <div class="col-6">
           <div class="row g-4">
             <div class="col-4">
               <img src="./images/Logos/Technologies/Logo_NET.png" alt=".NET" class="img-fluid" />
@@ -237,10 +259,6 @@
             <div class="col-4">
               <img src="./images/Logos/Technologies/Logo_DaVinciResolve.png" alt="DaVinci Resolve" class="img-fluid" />
             </div>
-            <!-- Placeholder for the missing bottom right image -->
-            <div class="col-4">
-              <!-- Empty -->
-            </div>
           </div>
         </div>
       </div>
@@ -252,8 +270,8 @@
   <section class="experience-header text-center my-5">
     <h2 class="glow mb-3">Where I've been...</h2>
     <p class="light-blue-text subheading">
-      In my journey so far, I've had the privilege of collaborating with
-      several outstanding organizations. I can't wait to see what's next!
+      Throughout my career I've had the privilege of collaborating with several outstanding organizations. I can't wait
+      to see what's next!
     </p>
   </section>
 
@@ -271,7 +289,7 @@
       <div class="text-box inactive-background" id="text-box-content" data-bs-toggle="collapse"
         data-bs-target="#fullContent1">
         <h2 class="text-center">2022-Present</h2>
-        <h1 class="timeline-title text-center">Creative Director @ Youtube: ObviouslyBrandon</h1>
+        <h1 class="light-blue-title text-center">Creative Director @ Youtube: ObviouslyBrandon</h1>
 
         <!-- Skills as bullet point -->
         <ul>
@@ -302,7 +320,7 @@
       <div class="text-box inactive-background" id="text-box-content" data-bs-toggle="collapse"
         data-bs-target="#fullContent2">
         <h2 class="text-center">2023-2024</h2>
-        <h1 class="timeline-title text-center">Game Development Intern @ Prosper IT Consulting</h1>
+        <h1 class="light-blue-title text-center">Game Development Intern @ Prosper IT Consulting</h1>
 
         <!-- Skills as bullet point -->
         <ul>
@@ -310,6 +328,7 @@
             Control, DBMS, .NET, JavaScript, HTML, CSS, Bootstrap, Project Management, Agile Methodologies
           </li>
         </ul>
+
         <span id="fullContent2" class="timeline-collapse dropdown-text">&emsp; Extended my learning from The Tech
           Academy through an internship with Prosper IT Consulting, the bootcamp’s founding business. This experience
           allowed me to apply my newly acquired skills in software and game development directly to real-world IT
@@ -334,17 +353,26 @@
       <div class="text-box inactive-background" id="text-box-content" data-bs-toggle="collapse"
         data-bs-target="#fullContent3">
         <h2 class="text-center">January 24, 2024</h2>
-        <h1 class="timeline-title text-center">Game & Software Development Certificate @ The Tech Academy</h1>
+        <h1 class="light-blue-title text-center">Game & Software Development Certificate @ The Tech Academy</h1>
 
         <!-- Skills as bullet point -->
         <ul>
           <li class="dropdown-text">Achievements: Graduated with Honors</li>
         </ul>
+
+        <!-- Certificate -->
+        <div class="text-center mb-3">
+          <a href="#" target="_blank">
+            <button type="button" class="btn">Show Certificate</button>
+          </a>
+        </div>
+
         <span id="fullContent3" class="timeline-collapse dropdown-text">&emsp; Graduated with honors from The Tech
-          Academy's Game and Software Development Bootcamp, which involved over 900 hours of rigorous training. Key
-          projects included developing a first-person shooter with Unreal Engine 5, crafting a command-line Blackjack
-          game in C#, and designing a responsive cinema website homepage using Bootstrap 4. Applied Agile methodologies
-          to streamline processes and enhance product reliability.
+          Academy's Game and Software Development Bootcamp, which involved over 900 hours of rigorous courses. I was
+          trained in a variety of languages and systems, covering development over the "full-stack". Key projects
+          included a first-person shooter with Unreal Engine 5, 2D adventure platformer in Unity, a command-line C#
+          verion of Blackjack, and a number of websites using a variety of frameworks. We gained experience utilizing
+          Agile methodologies to streamline project development.
         </span>
 
         <div class="text-center">
@@ -366,7 +394,7 @@
       <div class="text-box inactive-background" id="text-box-content" data-bs-toggle="collapse"
         data-bs-target="#fullContent4">
         <h2 class="text-center">2023-2024</h2>
-        <h1 class="timeline-title text-center">IT Specialist @ Cumoratek Consulting</h1>
+        <h1 class="light-blue-title text-center">IT Specialist @ Cumoratek Consulting</h1>
 
         <!-- Skills as bullet point -->
         <ul>
@@ -394,7 +422,7 @@
       <div class="text-box inactive-background" id="text-box-content" data-bs-toggle="collapse"
         data-bs-target="#fullContent5">
         <h2 class="text-center">2018-2022</h2>
-        <h1 class="timeline-title text-center">CEO @ Hawleywood Electronics LLC</h1>
+        <h1 class="light-blue-title text-center">CEO @ Hawleywood Electronics LLC</h1>
 
         <!-- Skills as bullet point -->
         <ul>
@@ -428,7 +456,7 @@
       <div class="text-box inactive-background" id="text-box-content" data-bs-toggle="collapse"
         data-bs-target="#fullContent6">
         <h2 class="text-center">2016-2019</h2>
-        <h1 class="timeline-title text-center">General Manager @ Archery Excellence</h1>
+        <h1 class="light-blue-title text-center">General Manager @ Archery Excellence</h1>
 
         <!-- Skills as bullet point -->
         <ul>
@@ -466,7 +494,7 @@
       <div class="text-box inactive-background" id="text-box-content" data-bs-toggle="collapse"
         data-bs-target="#fullContent7">
         <h2 class="text-center">2019-2020</h2>
-        <h1 class="timeline-title text-center">Bachelor's of Computer Science @ Missouri Western State University</h1>
+        <h1 class="light-blue-title text-center">Bachelor's of Computer Science @ Missouri Western State University</h1>
 
         <!-- Skills as bullet point -->
         <ul>
@@ -499,14 +527,24 @@
       <div class="text-box inactive-background" id="text-box-content" data-bs-toggle="collapse"
         data-bs-target="#fullContent8">
         <h2 class="text-center">2018-2020</h2>
-        <h1 class="timeline-title text-center">Degreework in Computer Science @ Metropolitan Community College</h1>
+        <h1 class="light-blue-title text-center">Degreework in Computer Science @ Metropolitan Community College</h1>
 
         <!-- Skills as bullet point -->
         <ul>
           <li class="dropdown-text">Achievements: Phi-Theta-Kappa Honor Society, CompTIA A+ Certification</li>
         </ul>
-        <span id="fullContent8" class="timeline-collapse dropdown-text">&emsp; I initially pursued an Associate’s degree
-          in Electrical Engineering before transitioning to Computer Science. In 2019, prior to completing my associate
+
+        <!-- Certificate -->
+        <div class="text-center my-3">
+          <a href="./documentation/certificates/CompTIA IT Fund. Certification.pdf" target="_blank">
+            <button type="button" class="btn">CompTIA A+ Certificate</button>
+          </a>
+        </div>
+
+        <span id="fullContent8" class="timeline-collapse dropdown-text">&emsp; I initially pursued an Associate’s
+          degree
+          in Electrical Engineering before transitioning to Computer Science. In 2019, prior to completing my
+          associate
           degree, I transferred to Missouri Western State University to further my education in Computer Science,
           continuing with General Education classes until May 2020. Throughout my academic journey, I acquired
           foundational knowledge in various subjects and earned an invitation to the Phi Theta Kappa Honor Society due
@@ -524,131 +562,122 @@
   </section>
 
 
-  <!-- Testimonials Section -->
-  <section id="testimonials">
-    <!-- Testimonials Heading -->
-    <!-- <h2 class="glow text-center">Testimonials</h2> -->
-
-    <div class="container-fluid text-center mt-5">
-      <div class="row justify-content-evenly">
-
-        <div class="col-md-6 testimonial rounded-3 mb-2 p-4">
-
-          <div class="row align-items-center">
-
-            <div class="col-4 avatar">
-              <a href="https://cbayou.org/archery-excellence-indoor-archery-range/" target="_blank">
-                <img src="./images/Logos/Organizations/Logo_ArcheryExcellence.jpg" class="rounded-circle"
-                  alt="Archery Excellence">
-              </a>
-            </div>
-
-            <div class="col-8 testimonial-main">
-              <h3 class="light-blue-title">
-                Archery Excellence
-              </h3>
-              <p class="testimony-body">
-                "... We're pleased to have had Brandon as part of our team and
-                wholeheartedly recommend him to any organization he considers
-                joining. He is an invaluable asset to any team and working
-                alongside him is a genuinely enjoyable experience."
-              </p>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="col-md-6 testimonial rounded-3 p-4">
-
-          <div class="row align-items-center">
-
-            <div class="col-4 avatar">
-              <a href="https://kcavit.com/" target="_blank">
-                <img src="./images/Logos/Organizations/Logo_Cumoratek_2.jpg" class="rounded-circle"
-                  alt="Cumoratek Consulting">
-              </a>
-            </div>
-
-            <div class="col-8 testimonial-main">
-              <h3 class="light-blue-title">
-                Cumoratek Consulting
-              </h3>
-              <p class="testimony-body">
-                "I have had the pleasure of working with Brandon for multiple
-                years in a variety of capacities. I always appreciate Brandon's
-                positive approach to his work and his immense wealth of
-                knowledge. He is and has been an excellent asset to our team
-                here at Cumoratek!"
-              </p>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
   <!-- Contact Section -->
-  <section id="contact" class="mt-5">
+  <section id="contact" class="mt-4">
     <div class="container-fluid pt-5">
-      <div class="row">
+      <div class="row align-items-center">
 
-        <div class="col-12">
-          <div class="row align-items-center">
-
-            <div class="col-md-7 mb-5">
-              <h2 class="mb-5">A new dev you seek?<br>Reach out, you should.</h2>
-
-              <form class="border-right mb-2" method="POST" action="https://formsubmit.co/bhawley45@gmail.com">
-
-                <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
-                <input type="hidden" name="_captcha" value="false">
-
-                <div class="row mb-2">
-                  <div class="col-sm-6 form-group">
-                    <input type="text" class="form-control" name="fname" id="fname" placeholder="First name" required>
-                  </div>
-                  <div class="col-sm-6 form-group">
-                    <input type="text" class="form-control" name="lname" id="lname" placeholder="Last name" required>
-                  </div>
-                </div>
-
-                <div class="row mb-2">
-                  <div class="col-md-12 form-group">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-md-12 form-group">
-                    <textarea class="form-control" name="message" id="message" cols="30" rows="5"
-                      placeholder="Write your message" required></textarea>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-md-12 mt-4 text-center">
-                    <input type="submit" value="Submit" class="btn btn-primary rounded-5">
-                  </div>
-                </div>
-
-              </form>
+        <div class="col-md-7 mb-5">
+          <h2 class="mb-5">A new dev you seek?<br>Reach out, you should.</h2>
+          <form class="border-right mb-2" method="POST" action="https://formsubmit.co/bhawley45@gmail.com">
+            <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+            <input type="hidden" name="_captcha" value="false">
+            <div class="row mb-2">
+              <div class="col-sm-6 form-group">
+                <input type="text" class="form-control" name="fname" id="fname" placeholder="First name" required>
+              </div>
+              <div class="col-sm-6 form-group">
+                <input type="text" class="form-control" name="lname" id="lname" placeholder="Last name" required>
+              </div>
             </div>
-
-            <!-- Inspirational Quote -->
-            <div class="col-md-5 text-center">
-              <h3 style="font-style: italic;">You can't say GG when the G has not been G'd</h3>
-              <h1 class="mt-2 mb-5">-Ryukahr</h1>
+            <div class="row mb-2">
+              <div class="col-md-12 form-group">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+              </div>
             </div>
-
-          </div>
+            <div class="row">
+              <div class="col-md-12 form-group">
+                <textarea class="form-control" name="message" id="message" cols="30" rows="5"
+                  placeholder="Write your message" required></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 mt-4 text-center">
+                <input type="submit" value="Submit" class="btn btn-primary rounded-5">
+              </div>
+            </div>
+          </form>
         </div>
 
+
+        <div class="col-md-5 text-center mb-4">
+          <!-- Testimonial Quotes -->
+          <!-- <h2 class="grey-text mb-5">Testimonials</h2> -->
+          <div class="swiper mb-5" id="testimonials">
+            <div class="swiper-wrapper">
+
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="testimonial-card">
+                  <div class="row align-items-center justify-content-center">
+
+                    <!-- Slide #1 -->
+                    <div class="col-4 avatar">
+                      <a href="https://kcavit.com/" target="_blank">
+                        <img src="./images/Logos/Organizations/Logo_Cumoratek_2.jpg" class="rounded-circle"
+                          alt="Cumoratek Consulting">
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="row align-items-center">
+
+                    <div class="col-12 testimonial-main">
+                      <h3 class="light-blue-title">
+                        Cumoratek Consulting
+                      </h3>
+                      <p class="testimonial-body">
+                        "I have had the pleasure of working with Brandon for multiple
+                        years in a variety of capacities. I always appreciate Brandon's
+                        positive approach to his work and his immense wealth of
+                        knowledge. He is and has been an excellent asset to our team
+                        here at Cumoratek!"
+                      </p>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide #2 -->
+              <div class="swiper-slide">
+                <div class="testimonial-card">
+                  <div class="row align-items-center justify-content-center">
+
+                    <div class="col-4 avatar">
+                      <a href="https://cbayou.org/archery-excellence-indoor-archery-range/" target="_blank">
+                        <img src="./images/Logos/Organizations/Logo_ArcheryExcellence.jpg" class="rounded-circle"
+                          alt="Archery Excellence">
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="row align-items-center">
+
+                    <div class="col-12 testimonial-main">
+                      <h3 class="light-blue-title">
+                        Archery Excellence
+                      </h3>
+                      <p class="testimonial-body">
+                        "... We're pleased to have had Brandon as part of our team and
+                        wholeheartedly recommend him to any organization he considers
+                        joining. He is an invaluable asset to any team and working
+                        alongside him is a genuinely enjoyable experience."
+                      </p>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
+
 
 
   <!-- Footer -->
@@ -705,9 +734,14 @@
   <script src="./assets/js/swiper-bundle.min.js"></script>
   <!-- jQuery -->
   <script src="./assets/js/jquery-3.7.1.min.js"></script>
+  <!-- NoVacancy JS -->
+  <script src="./assets/js/jquery.novacancy.js"></script>
   <!-- Custom JS -->
+  <script src="js/logo.js" defer></script>
+  <script src="js/typingAnimation.js" defer></script>
   <script src="js/carousel.js" defer></script>
   <script src="js/timeline.js" defer></script>
+  <script src="js/testimonials.js" defer></script>
 </body>
 
 </html>

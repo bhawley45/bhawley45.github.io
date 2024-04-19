@@ -4,9 +4,7 @@ const clickSound = new Audio("./sounds/funny/sfx_click.wav");
 const insertCartridgeSound = new Audio(
   "./sounds/funny/sfx_insertCartridge.wav"
 );
-const typingSound = new Audio("./sounds/sfx_typing.wav"); // Path to your typing sound
-const typingElements = document.querySelectorAll(".typing-text"); // All elements to animate with typing
-const consoleContainer = document.getElementById("console-container");
+const consoleContainer = document.getElementById("console");
 const pagination = document.querySelector(".swiper-pagination");
 
 let isSwiperDisabled = false; // Track swiper element
@@ -18,7 +16,7 @@ let isSwiperDisabled = false; // Track swiper element
     const cartridges = document.querySelectorAll(".cartridge-image");
 
     // Initialize Swiper
-    const swiper = new Swiper(".carousel-container", {
+    const swiper = new Swiper("#carousel", {
       loop: true, // Enable infinite loop
       allowTouchMove: true, // Allow movement with touchscreen swipe
       centeredSlides: true, // Active slide centered
@@ -35,7 +33,7 @@ let isSwiperDisabled = false; // Track swiper element
       pagination: {
         // Show dot for each slide
         el: ".swiper-pagination",
-        clickable: false, // NEED TO FIX ISSUES WITH CLICKING
+        clickable: false,
       },
       navigation: {
         // Navigation buttons
@@ -45,32 +43,27 @@ let isSwiperDisabled = false; // Track swiper element
 
       // Adjusting number of cartridges based on viewport
       breakpoints: {
-        // when window width is >= 320px
-        320: {
-          slidesPerView: 1.75,
-          spaceBetween: 10,
-        },
-        // when window width is >= 420px
+        // when window width is >= 450px
         420: {
           slidesPerView: 1.85,
           spaceBetween: 12.5,
         },
-        // when window width is >= 520px
-        520: {
+        // when window width is >= 550px
+        576: {
           slidesPerView: 2.25,
           spaceBetween: 15,
         },
-        // when window width is >= 620px
-        620: {
+        // when window width is >= 650px
+        768: {
           slidesPerView: 2.75,
           spaceBetween: 17.5,
         },
-        // when window width is >= 820px
-        820: {
+        // when window width is >= 850px
+        992: {
           slidesPerView: 3,
           spaceBetween: 22.5,
         },
-        // when window width is >= 1020px
+        // when window width is >= 1200px
         1200: {
           slidesPerView: 3.5,
           spaceBetween: 25,
@@ -130,21 +123,14 @@ let isSwiperDisabled = false; // Track swiper element
       clickedCartridge.classList.add("insert-cartridge");
     }
 
-    //NEEDS IMPLIMENTED!!!!
     function loadProjectPage(clickedCartridge) {
       const projectUrl = clickedCartridge.getAttribute("data-project-url");
       if (projectUrl) {
-        window.location.href = projectUrl; // Redirect to the project page
+        setTimeout(() => {
+          // Redirect to the project page
+          window.location.href = projectUrl;
+        }, 500);
       }
     }
-
-    // Typing animation
-    typingElements.forEach((element, index) => {
-      // Delay the start of each typing animation
-      setTimeout(() => {
-        element.classList.add("typing");
-        typingSound.play();
-      }, index * 225); // Adjust timing for each index of typing-text found
-    });
   });
 })();
