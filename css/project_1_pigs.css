@@ -2,7 +2,7 @@ body {
     padding: 0;
     margin: 0 auto;
     /* Standard width for modern webpages */
-    max-width: 1400px;
+    max-width: 1200px;
 
     /* Background Adjustments */
     background-color: #111;
@@ -41,9 +41,19 @@ body {
     align-items: center;
 }
 
+.swiper-slide {
+    justify-content: center;
+    align-items: center;
+}
+
 .swiper-slide img {
-    height: 20rem;
-    width: auto;
+    /* height: 20rem; */
+    /* width: auto; */
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .gallery-top {
@@ -52,18 +62,14 @@ body {
 }
 
 .gallery-thumbs {
-    height: 50%;
+    height: 20%;
+    width: auto;
     box-sizing: border-box;
     padding: 10px 0;
 }
 
-.gallery-thumbs .swiper-slide img {
-    border-radius: 20px;
-
-}
-
 .gallery-thumbs .swiper-slide {
-    width: 20%;
+    width: 25%;
     height: 100%;
     opacity: 0.4;
 }

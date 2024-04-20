@@ -307,7 +307,7 @@ body {
 .timeline {
     position: relative;
     max-width: 1200px;
-    margin: 50px auto;
+    margin: 50px 0;
 
     --timeline-height: 0%;
     /* Default state before animation */
@@ -334,6 +334,7 @@ body {
 
 .timeline .container {
     padding: 10px 50px;
+    border-radius: 20px;
     margin: 0;
     position: relative;
     width: 50%;
@@ -369,7 +370,7 @@ body {
 .timeline .text-box {
     padding: 20px 30px;
     position: relative;
-    border-radius: 6px;
+    border-radius: 20px;
     font-size: 15px;
     cursor: pointer;
 
@@ -432,18 +433,17 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-    .timeline {
-        margin: 50px auto;
-    }
 
     .timeline::after {
-        left: 31px;
+        left: 35px;
     }
 
     .timeline .container {
         width: 100%;
         padding-left: 80px;
         padding-right: 25px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .text-box {

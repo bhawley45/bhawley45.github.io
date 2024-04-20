@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Delay the start of each typing animation
     setTimeout(() => {
       element.classList.add("typing");
-      console.log(element);
+      // console.log(element);
       typingSound.play();
     }, index * 225); // Adjust timing for each index of typing-text found
   });
