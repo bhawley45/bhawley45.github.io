@@ -8,6 +8,53 @@ body {
     background-color: #111;
 }
 
+.tags-container {
+    margin: 3rem 0;
+}
+
+@media screen and (max-width: 992px) {
+    .tags-container {
+        margin-bottom: 2rem;
+    }
+}
+
+/************************************************************
+
+	Game Title
+
+*************************************************************/
+
+.novacancy {
+    font-family: "Monoton", sans-serif;
+    font-size: clamp(2.75rem, 7vw, 3.5rem);
+    line-height: 1.25rem;
+}
+
+.board {
+    position: relative;
+    top: 3rem;
+    width: auto;
+    max-width: 100%;
+    margin-bottom: 4rem;
+
+    text-transform: uppercase;
+    text-shadow: 0 0 80px #e52d27, 0 0 30px FireBrick, 0 0 6px DarkRed;
+    color: #e52d27;
+    z-index: 15;
+}
+
+#error {
+    color: whitesmoke;
+    text-shadow: 0 0 80px whitesmoke, 0 0 30px #008000, 0 0 6px #0000ff;
+}
+
+
+/************************************************************
+
+	Project Slides
+
+*************************************************************/
+
 .swiper-container {
     position: relative;
     /* Center in Col */
@@ -27,17 +74,8 @@ body {
     margin: auto;
 
     /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
     align-items: center;
 }
 
@@ -47,33 +85,66 @@ body {
 }
 
 .swiper-slide img {
-    /* height: 20rem; */
-    /* width: auto; */
-
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
     display: block;
 }
 
-.gallery-top {
-    height: 80%;
+.gallery {
+    height: auto;
     width: 100%;
 }
 
-.gallery-thumbs {
-    height: 20%;
-    width: auto;
-    box-sizing: border-box;
+
+/* Thumbnail specific container */
+
+.thumbnail-container {
+    text-align: center;
+    /* Center thumbnails */
     padding: 10px 0;
 }
 
-.gallery-thumbs .swiper-slide {
-    width: 25%;
-    height: 100%;
+.thumbnail {
+    width: 75px;
+    /* Fixed width for all thumbnails */
+    height: auto;
+    cursor: pointer;
     opacity: 0.4;
+    transition: opacity 0.3s ease;
 }
 
-.gallery-thumbs .swiper-slide-active {
+.thumbnail:hover,
+.thumbnail.thumb-active {
     opacity: 1;
+}
+
+
+
+/************************************************************
+
+	Tag Styling
+
+*************************************************************/
+
+.badge {
+    font-size: clamp(.55rem, 1.5vw, .75rem);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.tag-bg-engine {
+    background-color: whitesmoke;
+    color: #111;
+}
+
+.tag-bg-genre {
+    background-color: #e52d27;
+}
+
+.tag-bg-style {
+    background-color: #9733e9;
+}
+
+.tag-bg-extra {
+    background-color: #a3a1a1;
 }

@@ -41,7 +41,7 @@ h3 {
     margin-right: auto;
     margin-bottom: 4rem;
     max-width: 65%;
-    font-size: clamp(1.2rem, 2.25vw, 1.45rem)
+    font-size: clamp(1.2rem, 2.25vw, 1.45rem);
 }
 
 @media (max-width: 768px) {

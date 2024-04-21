@@ -53,13 +53,34 @@
     </nav>
 
 
+    <!-- https://codepen.io/rileyjshaw/pen/DQYazZ -->
+    <!-- Cool Retro Logo -->
+    <section id="logo">
+        <div class="board text-center">
+            <p id="error" class="logo-adjustment">Pigs?</p>
+        </div>
+    </section>
+
+
     <section id="project">
         <div class="container-fluid">
+            <div class="row tags-container text-center">
 
-            <div class="row mt-5">
+                <!-- <h2 class="text-center">Pigs?</h2> -->
+
+                <!-- Feature Tags -->
+                <div class="text-center">
+                    <span class="badge tag-bg-engine">Unity</span>
+                    <span class="badge tag-bg-genre">Action/Adventure</span>
+                    <span class="badge tag-bg-style">2D-Platformer</span>
+                    <span class="badge tag-bg-extra">Pixel Art</span>
+                </div>
+
+            </div>
+            <div class="row mb-5">
                 <div class="col-lg-6">
 
-                    <div class="swiper-container gallery-top">
+                    <div class="swiper-container gallery">
                         <div class="swiper-wrapper">
 
                             <div class="swiper-slide">
@@ -70,6 +91,12 @@
                             </div>
                             <div class="swiper-slide">
                                 <img src="./images/Backgrounds/FantasyBackground.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <video controls>
+                                    <source src="path-to-video.mp4" type="video/mp4">
+                                    Your browser does not support the video tag :(
+                                </video>
                             </div>
 
                         </div>
@@ -77,38 +104,34 @@
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>
                     </div>
-                    <div class="swiper-container gallery-thumbs">
-                        <div class="swiper-wrapper">
-
-                            <div class="swiper-slide">
-                                <img src="./images/Projects/Pigs/Pigs_TN.png" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="./images/Backgrounds/FantasyBackground.png" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="./images/Backgrounds/FantasyBackground.png" alt="">
-                            </div>
-
-                        </div>
+                    <div class="thumbnail-container">
+                        <!-- Static thumbnails -->
+                        <img class="thumbnail" src="./images/Projects/Pigs/Pigs_TN.png" alt="" data-index="0">
+                        <img class="thumbnail" src="./images/Backgrounds/FantasyBackground.png" alt="" data-index="1">
+                        <img class="thumbnail" src="./images/Backgrounds/FantasyBackground.png" alt="" data-index="2">
+                        <img class="thumbnail" src="./images/Logos/Organizations/Logo_Youtube.png" alt=""
+                            data-index="3">
                     </div>
 
                 </div>
-                <div class="col-lg-6">
-                    <h2>This is a title</h2>
+                <div class="col-lg-6 align-items-center">
 
-                    <!-- Feature Tags -->
-                    <span class="badge text-bg-light">Unity</span>
-                    <span class="badge text-bg-primary">2D-Platformer</span>
-                    <span class="badge text-bg-danger">Pixel Art</span>
-
-                    <h1>This is a subheading</h1>
+                    <h4 class="text-center mb-2">A commical 2D platformer</h4>
                     <p>
+                        &emsp; In this game, the user assumes the role of a young prince whose kingdom
                         sokdfsdsd fnsd ksdf sjkdnsdn sdnfj dndknfsjkn jsdfn sn sn nf sjknjksdn sdfsd sd sknfsd
                         nfnalfaklfsdl faklma mlakm klam aklmwakel klam lakmkl m m kl mkleamf aklm waklmd lkamleam amf kl
                         akl aklm klfmkm aklmalkdklasmdflk amklsdkl akls aklsflk asflnewjnfjokesfnjasefdnajkl nfjkanf
                         ajklfn kaj nfjk nfjas ejkf nasjkfnjkfnasjk najk aj najkln sjklndfkl andkla lkas d
                     </p>
+
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <button type="button" class="btn btn-primary me-3">Play</button>
+                            <button type="button" class="btn btn-primary">Download</button>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
@@ -141,6 +164,7 @@
     <!-- Custom JS -->
     <script src="js/typingAnimation.js" defer></script>
     <script src="js/projectGallery.js" defer></script>
+    <script src="js/logo.js" defer></script>
 </body>
 
 </html>

@@ -1,27 +1,30 @@
 document.addEventListener("DOMContentLoaded", () => {
-  var galleryTop = new Swiper(".gallery-top", {
+  var galleryTop = new Swiper(".gallery", {
     spaceBetween: 10,
     loop: true,
-    loopedSlides: 3, // Match # of total slides
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
   });
 
-  var galleryThumbs = new Swiper(".gallery-thumbs", {
-    spaceBetween: 10,
-    centeredSlides: true,
-    slidesPerView: "auto",
-    touchRatio: 0.2,
-    slideToClickedSlide: true,
-    loop: true,
-    loopedSlides: 3, // Match # of total slides
-    watchSlidesVisibility: true, // This ensures that only visible thumbs are clickable
-    watchSlidesProgress: true, // This ensures that thumbs progress is watched
+  const thumbnails = document.querySelectorAll(".thumbnail");
+  thumbnails.forEach((thumbnail) => {
+    thumbnail.addEventListener("click", function () {
+      const index = parseInt(this.getAttribute("data-index"), 10);
+      galleryTop.slideToLoop(index, 500);
+    });
   });
 
-  // Controllers
-  galleryTop.controller.control = galleryThumbs;
-  galleryThumbs.controller.control = galleryTop;
+  galleryTop.on("slideChange", function () {
+    thumbnails.forEach((thumb, idx) => {
+      thumb.classList.remove("thumb-active");
+      if (galleryTop.realIndex === idx) {
+        thumb.classList.add("thumb-active");
+      }
+    });
+  });
+
+  // Set initial active thumbnail
+  thumbnails[galleryTop.realIndex].classList.add("thumb-active");
 });
