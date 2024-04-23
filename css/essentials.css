@@ -22,6 +22,7 @@ h3 {
 }
 
 .grey-text {
+    font-size: clamp(1.2rem, 2.25vw, 1.45rem);
     color: #a3a1a1;
 }
 
@@ -200,4 +201,51 @@ h3 {
     /* Start out hidden */
     animation: typing 0.45s steps(40, end) forwards;
     /* Adjust the animation duration and steps as needed */
+}
+
+
+
+/************************************************************
+
+	Footer 
+
+*************************************************************/
+
+footer {
+    background: #111;
+    color: #ddd;
+    font-size: 0.85rem;
+}
+
+footer .nav-links a {
+    font-size: clamp(1.75rem, 4vw, 2rem);
+    color: rgb(163, 161, 161);
+    text-decoration: none;
+    margin-right: 1rem;
+
+    transition: color 0.3s;
+}
+
+footer .nav-links a:hover {
+    color: whitesmoke;
+}
+
+.footer-social-links li {
+    display: inline-block;
+    list-style: none;
+    margin-right: 1.25rem;
+}
+
+.footer-social-links li a img {
+    width: 40px;
+    height: auto;
+    display: block;
+    position: relative;
+    background-color: transparent;
+
+    transition: scale 0.3s ease;
+}
+
+.footer-social-links li a img:hover {
+    scale: 1.05;
 }

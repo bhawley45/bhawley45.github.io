@@ -24,7 +24,7 @@ body {
 
 .novacancy {
     font-family: "Monoton", sans-serif;
-    font-size: clamp(2.75rem, 5vw, 3.5rem);
+    font-size: clamp(2.75rem, 8vw, 3.75rem);
     line-height: 1.25rem;
 }
 
@@ -33,7 +33,7 @@ body {
     top: 6.25rem;
     width: auto;
     max-width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
 
     text-transform: uppercase;
     text-shadow: 0 0 80px #e52d27, 0 0 30px FireBrick, 0 0 6px DarkRed;
@@ -46,6 +46,13 @@ body {
     text-shadow: 0 0 80px whitesmoke, 0 0 30px #008000, 0 0 6px #0000ff;
 }
 
+@media (max-width: 768px) {
+    .board {
+        top: 4rem;
+        margin-bottom: 2rem;
+    }
+}
+
 
 
 /************************************************************
@@ -55,34 +62,32 @@ body {
 *************************************************************/
 
 #carousel {
-    margin-top: 4rem;
     position: relative;
-    /* height: clamp(350px, 50vw, 525px); */
     height: clamp(450px, 65vw, 575px);
     width: auto;
-    overflow: hidden;
+
     /* Keep additional slides hidden */
+    overflow: hidden;
+
     z-index: 10;
 }
 
 #carousel .swiper-slide {
     display: flex;
-    /* bottom: 35px; */
-    bottom: 0px;
+    bottom: 0;
     justify-content: center;
     align-items: center;
 
-    /* On load animation  */
+    /* On load animations  */
     animation: fadeInUp 1s ease-out forwards;
     transition: transform 0.3s, opacity 0.3s;
-    opacity: 0;
+
     /* Start with the Swiper container invisible */
+    opacity: 0;
 }
 
 .cartridge-image {
-    /*height: 275px;*/
-    /* height: clamp(200px, 30vw, 325px); */
-    height: clamp(225px, 30vw, 335px);
+    height: clamp(235px, 35vw, 335px);
     transition: transform 350ms ease;
 }
 
@@ -100,7 +105,7 @@ body {
     justify-content: center;
     align-items: center;
     /* Adjust color of arrows */
-    color: #333;
+    color: #a3a1a1;
     transition: color 0.3s ease;
 }
 
@@ -110,15 +115,13 @@ body {
 }
 
 #carousel .swiper-button-prev {
-    left: 10px;
-    /* Adjust as needed */
-    transform: translate(0, -50%);
+    left: 5px;
+    top: 50%;
 }
 
 #carousel .swiper-button-next {
-    right: 10px;
-    /* Adjust as needed */
-    transform: translate(0, -50%);
+    right: 5px;
+    top: 50%;
 }
 
 #carousel .swiper-pagination {
@@ -136,17 +139,13 @@ body {
 /* Pagination Bullet Color when inactive */
 #carousel .swiper-pagination-bullet {
     background-color: #333;
-    /* Color for inactive bullets */
     opacity: 0.5;
-    /* Adjust for less/more visibility */
 }
 
 /* Pagination Bullet Color when active */
 #carousel .swiper-pagination-bullet-active {
     background-color: #e52d27;
-    /* Color for the active bullet */
     opacity: 1;
-    /* Fully opaque */
 }
 
 /* Activated in carousel.js*/
@@ -635,53 +634,6 @@ form.border-right {
     #contact .container-fluid {
         padding: 0 2.5rem;
     }
-}
-
-
-
-/************************************************************
-
-	Footer 
-
-*************************************************************/
-
-footer {
-    background: #111;
-    color: #ddd;
-    font-size: 0.85rem;
-}
-
-footer .nav-links a {
-    font-size: clamp(1.75rem, 4vw, 2rem);
-    color: rgb(163, 161, 161);
-    text-decoration: none;
-    margin-right: 1rem;
-
-    transition: color 0.3s;
-}
-
-footer .nav-links a:hover {
-    color: whitesmoke;
-}
-
-.footer-social-links li {
-    display: inline-block;
-    list-style: none;
-    margin-right: 1.25rem;
-}
-
-.footer-social-links li a img {
-    width: 40px;
-    height: auto;
-    display: block;
-    position: relative;
-    background-color: transparent;
-
-    transition: scale 0.3s ease;
-}
-
-.footer-social-links li a img:hover {
-    scale: 1.05;
 }
 
 

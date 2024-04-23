@@ -43,22 +43,27 @@ let isSwiperDisabled = false; // Track swiper element
 
       // Adjusting number of cartridges based on viewport
       breakpoints: {
-        // when window width is >= 450px
-        420: {
-          slidesPerView: 1.85,
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 1.5,
           spaceBetween: 12.5,
         },
-        // when window width is >= 550px
+        // when window width is >= 420px
+        420: {
+          slidesPerView: 2,
+          spaceBetween: 12.5,
+        },
+        // when window width is >= 576px
         576: {
-          slidesPerView: 2.25,
+          slidesPerView: 2.5,
           spaceBetween: 15,
         },
-        // when window width is >= 650px
+        // when window width is >= 768px
         768: {
           slidesPerView: 2.75,
           spaceBetween: 17.5,
         },
-        // when window width is >= 850px
+        // when window width is >= 992px
         992: {
           slidesPerView: 3,
           spaceBetween: 22.5,

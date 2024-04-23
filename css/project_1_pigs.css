@@ -8,15 +8,26 @@ body {
     background-color: #111;
 }
 
+.logo-subtext {
+    font-size: clamp(1.2rem, 3vw, 1.45rem)
+}
+
+.project-description p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: clamp(.85rem, 2.5vw, 1rem);
+}
+
 .tags-container {
     margin: 3rem 0;
 }
 
 @media screen and (max-width: 992px) {
     .tags-container {
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
 }
+
+
 
 /************************************************************
 
@@ -26,8 +37,8 @@ body {
 
 .novacancy {
     font-family: "Monoton", sans-serif;
-    font-size: clamp(2.75rem, 7vw, 3.5rem);
-    line-height: 1.25rem;
+    font-size: clamp(2.75rem, 8vw, 3.75rem);
+    line-height: 1rem;
 }
 
 .board {
@@ -35,7 +46,7 @@ body {
     top: 3rem;
     width: auto;
     max-width: 100%;
-    margin-bottom: 4rem;
+    margin-bottom: 3.5rem;
 
     text-transform: uppercase;
     text-shadow: 0 0 80px #e52d27, 0 0 30px FireBrick, 0 0 6px DarkRed;
@@ -45,6 +56,7 @@ body {
 
 #error {
     color: whitesmoke;
+    margin-bottom: .5rem;
     text-shadow: 0 0 80px whitesmoke, 0 0 30px #008000, 0 0 6px #0000ff;
 }
 
@@ -58,8 +70,9 @@ body {
 .swiper-container {
     position: relative;
     /* Center in Col */
-    height: 100%;
-    width: auto;
+    height: auto;
+    width: 100%;
+    max-width: 600px;
     margin: 20px auto;
 
     /* Hide additional slides */
@@ -100,14 +113,14 @@ body {
 /* Thumbnail specific container */
 
 .thumbnail-container {
+    /* Center Thumbnails */
     text-align: center;
-    /* Center thumbnails */
     padding: 10px 0;
+    /* padding-top: 5px; */
 }
 
 .thumbnail {
-    width: 75px;
-    /* Fixed width for all thumbnails */
+    width: 85px;
     height: auto;
     cursor: pointer;
     opacity: 0.4;
@@ -142,7 +155,7 @@ body {
 }
 
 .tag-bg-style {
-    background-color: #9733e9;
+    background-color: #4a99ee;
 }
 
 .tag-bg-extra {
