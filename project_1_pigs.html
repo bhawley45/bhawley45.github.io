@@ -76,7 +76,7 @@
                 </div>
 
             </div>
-            <div class="row mb-5">
+            <div class="row mb-4">
                 <div class="col-lg-6">
 
                     <div class="swiper-container gallery">
@@ -113,12 +113,13 @@
                     </div>
 
                 </div>
-                <div class="col-lg-6 align-items-center project-description px-3 pt-2">
+                <div class="col-lg-6 project-description px-4 pt-2">
 
                     <p>
                         &emsp; Embark on an epic adventure in this thrilling 2D platformer where you, a valiant young
                         prince, must save your kingdom from a mysterious foe!
                     </p>
+                    <br>
                     <p>
                         &emsp; As dawn breaks, you awaken in the throne room to an eerie silence, strange noises echoing
                         through the halls. Investigating further you discover something truly horrifying: pig soldiers
@@ -126,6 +127,7 @@
                         the floor! With the fate of your people resting on your shoulders, you embark on a perilous
                         battle throughout the castle, reclaiming what is rightfully yours.
                     </p>
+                    <br>
                     <p>
                         &emsp; Navigate through questionable level designs, dodge exotic trap placements, and overcome
                         artistic choices that challenge your senses as you journey through the heart of the castle :)
@@ -137,56 +139,98 @@
     </section>
 
 
-    <div class="container download-buttons text-center my-3">
-        <button type="button" class="btn btn-primary">Play</button>
-        <button type="button" class="btn btn-primary">Source Code</button>
+
+    <div class="container">
+
+        <div class="row align-items-center">
+            <div class="col-3 col-md-2 text-center">
+                <img src="./assets/project_assets/Torch.gif" alt="Left Torch"
+                    class="img-fluid animated-torch flip-torch">
+            </div>
+
+            <div class="col-6 col-md-8 text-center mt-4">
+                <p class="light-blue-text">
+                    Will the oinks of tyranny echo through the land forever?
+                </p>
+            </div>
+
+            <div class="col-3 col-md-2 text-center">
+                <img src="./assets/project_assets/Torch.gif" alt="Right Torch" class="img-fluid animated-torch">
+            </div>
+
+        </div>
+
+        <div class="row text-center">
+
+            <div class="col-12 download-buttons mb-2">
+                <a href="https://github.com/bhawley45/Pigs2DPlatformer/releases/tag/v1.0.0" target="_blank">
+                    <button type="button" class="btn custom-button white-text pb-3">Play</button>
+                </a>
+
+                <a href="https://github.com/bhawley45/Pigs2DPlatformer" target="_blank">
+                    <button type="button" class="btn custom-button white-text pb-3">Source Code</button>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="row text-center">
+            <p class="white-text">Unity (2022.3.13f1)</p>
+        </div>
+
     </div>
+
 
 
     <!-- How it was made  -->
     <section id="making-of">
         <div class="container-fluid">
-            <div class="row justify-content-center">
 
-                <div class="col-9 text-center px-3">
-                    <p class="light-blue-text">
-                        &emsp; Will you emerge victorious and restore peace to your homeland, or will the oinks of
-                        tyranny echo through the land forever?
-                    </p>
-                </div>
-
-            </div>
 
             <div class="row">
-                <div class="col-12 text-center mt-4 mb-2">
+                <div class="col-12 text-center mt-4">
                     <h2 class="glow">How it was made...</h2>
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-9 project-description mb-5 px-3">
-                    <p class="text-center">
-                        &emsp; Game Engine: Unity (2022.3.13f1)
-                    </p>
+                <div class="col-12 project-description mb-5 px-4">
+
+                    <!-- <p class="text-center">Unity (2022.3.13f1)</p> -->
+
+                    <br>
+                    <h3 class="text-center">Art Assets:</h3>
+                    <hr />
+
                     <p>
-                        &emsp; Art Assets: This project primarily uses assets from the "Kings and Pigs" pack on itch.io,
-                        giving a fairly cohesive foundation for most of the game. I felt like it was still missing
-                        something while staging the levels though so I added some custom sprites, created in GIMP, an
-                        open-source image editing suite. I was fairly new to GIMP at the time but the challenge of
-                        matching the artistic styling of the original pack was a fun learning experience.
+                        &emsp; This project primarily uses assets from the "Kings and Pigs" pack from
+                        itch.io. After doing some staging for the levels though I decided to add some custom sprites and
+                        animations to help blend the environment. I used GIMP, which I was fairly new to at the time,
+                        but the challenge of matching the art style of the original pack was a fun learning experience.
                     </p>
+
+                    <br>
+                    <h3 class="text-center">Game Development:</h3>
+                    <hr />
+
                     <p>
-                        &emsp; Game Development: This project was my second time using unity for a "full" project, it's
-                        definitely a little rough around the edges but it's a step in my game dev journey none-the-less.
-                        "Pigs?" served as an excellent learning opportunity, introducing me to several new aspects of
-                        Unity that were crucial for it to be fully realized. From spritemaps, custom UI elements, sound
-                        effects, and Cinemachine state-driven camera systems.
+                        &emsp; This project is my second time using Unity for a "full" game project. The game itself is
+                        definitely rough around the edges but served as a stepping stone in my game dev journey.
+                        Development was fairly straightforward, including blocking levels, asset design and
+                        implementation, and scripting. However, I had to learn some previously unknown features of
+                        Unity to fit my vision for the game, most notably: sprite maps, custom UI elements, sound
+                        effects, and the Cinemachine state-driven camera system.
                     </p>
+
+                    <br>
+                    <h3 class="text-center">Challenges & Learning:</h3>
+                    <hr />
+
                     <p>
-                        &emsp; Challenges and Learning: Most elements were pretty straight forward, but I struggled
-                        quite a bit with the camera systems. I was able to improve significantly in my next project. The
-                        only other major hurdle as learning how to use GIMP and match the style of the pre-made asset
-                        pack I was using as a foundation.
+                        &emsp; The hardest challenge encountered was trying to use Unity's Cinemachine camera system,
+                        which I was able to improve in subsequent projects. The only other hurdle, as stated earlier,
+                        was creating pixel art in a similar style to the original asset pack.
                     </p>
+
                 </div>
             </div>
 

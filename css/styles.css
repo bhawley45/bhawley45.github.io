@@ -175,7 +175,7 @@ body {
 #console-image {
     position: relative;
     /*width: 550px;*/
-    width: clamp(350px, 50vw, 625px);
+    width: clamp(385px, 50vw, 625px);
     height: auto;
 }
 

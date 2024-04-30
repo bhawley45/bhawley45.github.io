@@ -1,1 +1,2 @@
 -> Highlight keywords in experience section
+-> Add SFX for cartridge carousel rotation

@@ -12,6 +12,12 @@ body {
     font-size: clamp(1.2rem, 3vw, 1.45rem)
 }
 
+.project-description {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+}
+
 .project-description p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: clamp(.85rem, 2.5vw, 1rem);
@@ -160,4 +166,70 @@ body {
 
 .tag-bg-extra {
     background-color: #a3a1a1;
+}
+
+
+
+/************************************************************
+
+	Animated Torches
+
+*************************************************************/
+
+.animated-torch {
+    width: 125px;
+    height: auto;
+    display: block;
+    margin: auto;
+
+    image-rendering: pixelated;
+    /* For Chrome */
+    image-rendering: -moz-crisp-edges;
+    /* For Firefox */
+    image-rendering: crisp-edges;
+    /* General */
+}
+
+.flip-torch {
+    transform: scaleX(-1);
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+@media (max-width: 768px) {
+    .img-fluid {
+        width: 100px;
+        /* Adjust width to keep images smaller on mobile */
+        height: auto;
+        /* Maintain aspect ratio */
+    }
+}
+
+
+
+/************************************************************
+
+	Custom Buttons
+
+*************************************************************/
+
+.custom-button {
+    background: url('../assets/project_assets/Button_Disable.png') no-repeat;
+    border: none;
+    cursor: pointer;
+    outline: none;
+
+    width: 192px;
+    height: 64px;
+    /* Maintain ratio */
+
+    transition: background 0.3s;
+}
+
+.custom-button:hover {
+    background: url('../assets/project_assets/Button_Hover.png') no-repeat;
 }
