@@ -103,7 +103,8 @@ body {
     align-items: center;
 }
 
-.swiper-slide img {
+.swiper-slide img,
+.swiper-slide video {
     width: 100%;
     height: 100%;
     object-fit: fill;
@@ -136,6 +137,12 @@ body {
 .thumbnail:hover,
 .thumbnail.thumb-active {
     opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .thumbnail {
+        width: 55px;
+    }
 }
 
 
@@ -218,7 +225,7 @@ body {
 *************************************************************/
 
 .custom-button {
-    background: url('../assets/project_assets/Button_Disable.png') no-repeat;
+    background: url('../assets/project_assets/Button_Main_Base.png') no-repeat;
     border: none;
     cursor: pointer;
     outline: none;
@@ -231,5 +238,22 @@ body {
 }
 
 .custom-button:hover {
-    background: url('../assets/project_assets/Button_Hover.png') no-repeat;
+    background: url('../assets/project_assets/Button_Pressed_Base.png') no-repeat;
+}
+
+.download-buttons button {
+    padding-bottom: 2rem;
+}
+
+.download-buttons button:hover {
+    padding-bottom: 1rem;
+}
+
+.download-buttons a {
+    color: transparent;
+    text-decoration: none;
+}
+
+.button-text {
+    font-size: 1.35rem;
 }
