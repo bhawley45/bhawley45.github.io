@@ -179,11 +179,11 @@ body {
 
 /************************************************************
 
-	Animated Torches
+	Animated Object
 
 *************************************************************/
 
-.animated-torch {
+.animated-object {
     width: 125px;
     height: auto;
     display: block;
@@ -197,7 +197,7 @@ body {
     /* General */
 }
 
-.flip-torch {
+.flip-object {
     transform: scaleX(-1);
 }
 
