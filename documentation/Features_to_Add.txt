@@ -1,2 +1,4 @@
 -> Highlight keywords in experience section
 -> Add SFX for cartridge carousel rotation
+-> Fix formatting for "What I do..." Section
+-> Normalize SFX volumes
