@@ -1,4 +1,6 @@
--> Highlight keywords in experience section
--> Add SFX for cartridge carousel rotation
--> Fix formatting for "What I do..." Section
--> Normalize SFX volumes
+-> Custom cursor (maybe for each page?)
+-> Fix opacity of pacman <hr> (get svg editor)
+
+-> Add "Best with audio enabled" popup
+
+

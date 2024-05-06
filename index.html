@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brandon Hawley - Gameplay Dev</title>
+  <link rel="icon" type="image/png" href="/images/Logos/Logo_Aftermath_Transparent.png">
+  <title>Brandon Hawley - Game Dev</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,7 +38,7 @@
   <nav class="navbar navbar-expand-md">
     <div class="container-fluid align-items-center">
       <a class="navbar-brand" href="#">
-        <span class="typing-text transparent">/Game/Developer</span>
+        <span class="typing-text transparent pt-1">/Game/Developer</span>
       </a>
       <button class="navbar-toggler align-middle" type="button" data-bs-toggle="collapse"
         data-bs-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false"
@@ -56,7 +57,8 @@
             <a class="nav-link text-center typing-text transparent" href="#contact">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-center typing-text transparent" href="#">Resume</a>
+            <a class="nav-link text-center typing-text transparent"
+              href="./documentation/resume/bhawleyResume_General.pdf" target="_blank">Resume</a>
           </li>
         </ul>
       </div>
@@ -80,30 +82,29 @@
     </div>
 
     <div class="swiper-wrapper">
+
       <!-- Slides -->
+
       <div class="swiper-slide">
-        <img src="images/Cartridge_Base_Cropped.png" alt="Project 1" class="cartridge-image"
-          data-project-url="project_pigs.html">
-      </div>
-      <div class="swiper-slide">
-        <img src="images/Cartridge_Base_Cropped.png" alt="Project 2" class="cartridge-image"
+        <img src="images/Cartridge_DT.png" alt="Project 3: Droppin' Tilted" class="cartridge-image"
           data-project-url="project_droppin-tilted.html">
       </div>
+
       <div class="swiper-slide">
-        <img src="images/Cartridge_Base_Cropped.png" alt="Project 3" class="cartridge-image"
+        <img src="images/Cartridge_Pigs.png" alt="Project 2: Pigs?" class="cartridge-image"
+          data-project-url="project_pigs.html">
+      </div>
+
+      <div class="swiper-slide">
+        <img src="images/Cartridge_FB.png" alt="Project 1: Falling Blocks" class="cartridge-image"
           data-project-url="project_falling-blocks.html">
       </div>
+
       <div class="swiper-slide">
-        <img src="images/Cartridge_Base_Cropped.png" alt="Project 4" class="cartridge-image"
+        <img src="images/Cartridge_CT.png" alt="Project 4: Crossbow Training" class="cartridge-image"
           data-project-url="project_crossbow-training.html">
       </div>
-      <div class="swiper-slide">
-        <img src="images/Cartridge_Base_Cropped.png" alt="Project 5" class="cartridge-image" />
-      </div>
-      <div class="swiper-slide">
-        <img src="images/Cartridge_Base_Cropped.png" alt="Project 6" class="cartridge-image" />
-      </div>
-      <!-- Add more slides here! -->
+
     </div>
 
     <!-- Dots at bottom of slide -->
@@ -114,14 +115,33 @@
     <div class="swiper-button-next"></div>
   </div>
 
-  <!-- Social Links -->
-
-  <!-- NEED TO ADD -->
 
   <!-- About Section -->
   <section id="about">
     <div class="container-fluid px-4">
-      <h2 class="text-center mb-4 glow">My story so far...</h2>
+
+      <h2 class="text-center glow">My story so far...</h2>
+
+      <!-- Social Links -->
+      <div class="text-center">
+        <ul class="social-links">
+          <li>
+            <a href="https://www.youtube.com/channel/UCss3_mmdO30U7I99bcNwwog" target="_blank">
+              <img src="./images/Logos/Organizations/Logo_Youtube.png" alt="YouTube">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/brandon-hawley/" target="_blank">
+              <img src="./images/Logos/Organizations/Logo_LinkedIn.png" alt="LinkedIn">
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/bhawley45" target="_blank">
+              <img src="./images/Logos/Technologies/Logo_GitHub.png" alt="GitHub">
+            </a>
+          </li>
+        </ul>
+      </div>
 
       <div class="row justify-content-center align-items-center">
         <div class="col-md-12">
@@ -144,9 +164,11 @@
         <div class="col-md-8">
           <p class="white-text">
             &emsp; I switched to Computer Science and started fresh at Missouri Western. However, as COVID-19
-            started disrupting everything, I realized I was essentially paying for self-education. I decided it was time
+            started disrupting everything, I realized I was essentially paying for self-education. I decided it was
+            time
             to rethink my approach. I got married and founded Hawleywood Electronics LLC to support my
-            family, teaching myself software development on the side. Life was good, albeit it hectic - until it wasn't.
+            family, teaching myself software development on the side. Life was good, albeit it hectic - until it
+            wasn't.
             As the electronics business grew, it began to consume all my time and energy, leaving nothing left for my
             family or my dreams.
           </p>
@@ -170,7 +192,8 @@
           <p class="white-text">
             &emsp; Now, I balance being a father with a renewed passion for game development. This shift has brought
             me not only fulfillment but invaluable time with my family. Each project is more than just a game—it's a
-            part of my personal revival and a testament to the resilience needed to believe and pursue one's dreams amid
+            part of my personal revival and a testament to the resilience needed to believe and pursue one's dreams
+            amid
             life's unpredictability.
           </p>
         </div>
@@ -187,18 +210,33 @@
 
   <!-- Technologies Section -->
   <section id="experience">
-    <div class="container-lg text-center my-3">
+    <div class="container-lg my-3">
 
-      <h2 class="glow">What I do...</h2>
-      <p class="light-blue-text">
-        &emsp; I'm an independent game developer with extensive experience in Unreal Engine and Unity. My preferred
-        engine is Unreal. I have experience in a variety of languages but am most proficient in C#, C++, and Java. I
-        have worked with several frameworks, including .NET, for about a year now. I've also been trained in full-stack
-        web development through my work at Cumoratek Consulting and Prosper IT Consulting. Through my creative work at
-        ObviouslyBrandon I've also become well versed in video editing, acting, and scripting.
-      </p>
+      <h2 class="text-center glow">What I do...</h2>
+      <!-- <p class="text-center light-blue-text">Full-Stack/Game/.NET</p> -->
 
-      <div class="row">
+      <div class="row my-4">
+
+        <div class="col-md-6 light-blue-text mb-2">
+          &emsp; My expertise in game development has led me to work extensively with both Unreal and Unity engines,
+          developing and releasing several projects. I am also experienced in using a variety of creative software,
+          including Blender, Aseprite, and GIMP.
+          <br>
+          &emsp; I have a strong background in software development, with proficiency in Java, C#, C++, and full-stack
+          web development.
+        </div>
+        <div class="col-md-6 light-blue-text">
+          &emsp; Work on this website, along with my roles at Cumoratek Consulting and Prosper IT Consulting,
+          have helped to enhance my skills in front-end design using tools such as SwiperJS, jQuery, Bootstrap, and
+          PHP,
+          and in back-end development with various DBMS. Beyond programming, I also manage a YouTube channel, which
+          has
+          equipped me skills in video production and editing with DaVinci Resolve.
+        </div>
+
+      </div>
+
+      <div class="row text-center">
         <!-- Left Grid -->
         <div class="col-6 mb-3">
           <div class="row g-4">
@@ -256,9 +294,14 @@
             <div class="col-4">
               <img src="./images/Logos/Technologies/Logo_DaVinciResolve.png" alt="DaVinci Resolve" class="img-fluid" />
             </div>
+            <div class="col-4">
+              <img src="./images/Logos/Technologies/Logo_Aseprite.png" alt="Asprite" class="img-fluid" />
+            </div>
           </div>
         </div>
+
       </div>
+
     </div>
   </section>
 
@@ -267,7 +310,8 @@
   <section class="experience-header text-center my-5">
     <h2 class="glow mb-3">Where I've been...</h2>
     <p class="light-blue-text subheading">
-      Throughout my career I've had the privilege of collaborating with several outstanding organizations. I can't wait
+      Throughout my career I've had the privilege of collaborating with several outstanding organizations. I can't
+      wait
       to see what's next!
     </p>
   </section>
@@ -367,7 +411,8 @@
         <span id="fullContent3" class="timeline-collapse dropdown-text">&emsp; Graduated with honors from The Tech
           Academy's Game and Software Development Bootcamp, which involved over 900 hours of rigorous courses. I was
           trained in a variety of languages and systems, including development over the full-stack. Key projects
-          included a first-person shooter with Unreal Engine 5, 2D adventure platformer and 3D physics puzzle in Unity,
+          included a first-person shooter with Unreal Engine 5, 2D adventure platformer and 3D physics puzzle in
+          Unity,
           a command-line version of Blackjack in C#, and a number of websites using a variety of frameworks. Project
           development included utilizing Agile methodologies as possible.
         </span>
@@ -423,15 +468,19 @@
 
         <!-- Skills as bullet point -->
         <ul>
-          <li class="dropdown-text">Skills: Buisness Management, Computer Repair, Operating Systems, Computer Building,
+          <li class="dropdown-text">Skills: Buisness Management, Computer Repair, Operating Systems, Computer
+            Building,
             Electronics Repair, Data Recovery, Technical Support, Consulting, Analytical Skills</li>
         </ul>
-        <span id="fullContent5" class="timeline-collapse dropdown-text">&emsp; Starting as a hobby in 2018, I owned and
+        <span id="fullContent5" class="timeline-collapse dropdown-text">&emsp; Starting as a hobby in 2018, I owned
+          and
           operated a small LLC (founded 2020) specializing in computer and electronics repair, providing hardware and
-          software troubleshooting services. Gained comprehensive experience in business management, mastering finances,
+          software troubleshooting services. Gained comprehensive experience in business management, mastering
+          finances,
           scheduling, and client communications. Additionally, performed contract work for companies like Cumoratek,
           handling A/V operations for local events and overseeing the installation of servers and A/V equipment.
-          Acquired robust analytical skills and a deep understanding of various operating systems and technical support.
+          Acquired robust analytical skills and a deep understanding of various operating systems and technical
+          support.
         </span>
 
         <div class="text-center">
@@ -463,7 +512,7 @@
         <span id="fullContent6" class="timeline-collapse dropdown-text">&emsp; As General Manager at Archery
           Excellence, I educated students and trained employees, overseeing event scheduling, staff management, and
           daily operations. I mentored team members and provided technical support for both archery and tech
-          equipment, ensuring high standards of service and safety.
+          equipment.
         </span>
 
         <div class="text-center">
@@ -491,7 +540,8 @@
       <div class="text-box inactive-background" id="text-box-content" data-bs-toggle="collapse"
         data-bs-target="#fullContent7">
         <h2 class="text-center">2019-2020</h2>
-        <h1 class="light-blue-title text-center">Bachelor's of Computer Science @ Missouri Western State University</h1>
+        <h1 class="light-blue-title text-center">Bachelor's of Computer Science @ Missouri Western State University
+        </h1>
 
         <!-- Skills as bullet point -->
         <ul>
@@ -500,7 +550,8 @@
         </ul>
         <span id="fullContent7" class="timeline-collapse dropdown-text">&emsp; At Missouri Western State University, I
           successfully completed two junior-level semesters, demonstrating proficiency in Statistics, Data Analysis,
-          Java Programming, and Linux/GNU operating systems. Additionally, my expertise in Java led to an invitation to
+          Java Programming, and Linux/GNU operating systems. Additionally, my expertise in Java led to an invitation
+          to
           tutor fellow Computer Science students. Unfortunately, due to complications arising from the COVID-19
           pandemic, I had to discontinue studies.
         </span>
@@ -541,7 +592,8 @@
         <span id="fullContent8" class="timeline-collapse dropdown-text">&emsp; I initially pursued an Associate’s
           degree in Electrical Engineering before transitioning to Computer Science. In 2019, prior to completing my
           Associate's degree, I transferred to Missouri Western State University to further my education in Computer
-          Science, continuing with General Education classes until May 2020. Throughout my academic journey, I acquired
+          Science, continuing with General Education classes until May 2020. Throughout my academic journey, I
+          acquired
           foundational knowledge in various subjects and earned an invitation to the Phi Theta Kappa Honor Society due
           to my academic performance.
         </span>
@@ -704,7 +756,7 @@
             <a href="#">Home</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
-            <a href="#">Resume</a>
+            <a hhref="./documentation/resume/bhawleyResume_General.pdf" target="_blank">Resume</a>
           </p>
         </div>
       </div>

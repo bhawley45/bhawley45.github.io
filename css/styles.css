@@ -33,7 +33,7 @@ body {
     top: 6.25rem;
     width: auto;
     max-width: 100%;
-    margin-bottom: 5rem;
+    margin-bottom: 6rem;
 
     text-transform: uppercase;
     text-shadow: 0 0 80px #e52d27, 0 0 30px FireBrick, 0 0 6px DarkRed;
@@ -47,6 +47,14 @@ body {
 }
 
 @media (max-width: 768px) {
+    .board {
+        top: 4rem;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Fix format for 1080p screens */
+@media (max-height: 1080px) {
     .board {
         top: 4rem;
         margin-bottom: 2rem;
@@ -87,7 +95,7 @@ body {
 }
 
 .cartridge-image {
-    height: clamp(235px, 35vw, 335px);
+    height: clamp(235px, 35vw, 365px);
     transition: transform 350ms ease;
 }
 
@@ -115,12 +123,12 @@ body {
 }
 
 #carousel .swiper-button-prev {
-    left: 5px;
+    left: -8px;
     top: 50%;
 }
 
 #carousel .swiper-button-next {
-    right: 5px;
+    right: -8px;
     top: 50%;
 }
 
@@ -226,8 +234,29 @@ body {
 
 *************************************************************/
 
+footer .nav-links a:hover {
+    color: whitesmoke;
+}
 
+.social-links li {
+    display: inline-block;
+    list-style: none;
+    margin-right: 1.25rem;
+}
 
+.social-links li a img {
+    width: 40px;
+    height: auto;
+    display: block;
+    position: relative;
+    background-color: transparent;
+
+    transition: scale 0.3s ease;
+}
+
+.social-links li a img:hover {
+    scale: 1.05;
+}
 
 
 

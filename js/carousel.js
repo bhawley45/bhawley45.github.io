@@ -1,9 +1,9 @@
 // Define SFX and variables
-const hoverSound = new Audio("./sounds/funny/sfx_hover.wav");
-const clickSound = new Audio("./sounds/funny/sfx_click.wav");
-const insertCartridgeSound = new Audio(
-  "./sounds/funny/sfx_insertCartridge.wav"
-);
+const hoverSound = new Audio("./sounds/sfx_hover.wav");
+const clickSound = new Audio("./sounds/sfx_click.wav");
+const insertCartridgeSound = new Audio("./sounds/sfx_insertCartridge.wav");
+const slideChangeSound = new Audio("./sounds/sfx_slideChange.wav");
+
 const consoleContainer = document.getElementById("console");
 const pagination = document.querySelector(".swiper-pagination");
 
@@ -43,35 +43,18 @@ let isSwiperDisabled = false; // Track swiper element
 
       // Adjusting number of cartridges based on viewport
       breakpoints: {
-        // when window width is >= 320px
-        320: {
-          slidesPerView: 1.5,
-          spaceBetween: 12.5,
-        },
-        // when window width is >= 420px
-        420: {
-          slidesPerView: 2,
-          spaceBetween: 12.5,
-        },
-        // when window width is >= 576px
-        576: {
-          slidesPerView: 2.5,
-          spaceBetween: 15,
-        },
-        // when window width is >= 768px
-        768: {
-          slidesPerView: 2.75,
-          spaceBetween: 17.5,
-        },
-        // when window width is >= 992px
-        992: {
-          slidesPerView: 3,
-          spaceBetween: 22.5,
-        },
-        // when window width is >= 1200px
-        1200: {
-          slidesPerView: 3.5,
-          spaceBetween: 25,
+        320: { slidesPerView: 1.5, spaceBetween: 12.5 },
+        420: { slidesPerView: 2, spaceBetween: 12.5 },
+        576: { slidesPerView: 2.5, spaceBetween: 15 },
+        768: { slidesPerView: 2.75, spaceBetween: 17.5 },
+        992: { slidesPerView: 2.75, spaceBetween: 22.5 },
+        1200: { slidesPerView: 3, spaceBetween: 25 },
+      },
+
+      // Add event listener for slide change
+      on: {
+        slideChange: function () {
+          slideChangeSound.play(); // Play sound on slide change
         },
       },
     });

@@ -29,7 +29,11 @@ h3 {
 .light-blue-text {
     color: #4a99ee;
     font-size: clamp(1.2rem, 2.25vw, 1.45rem);
-    text-shadow: 0 0 3px #333;
+    text-shadow: 0 0 45px rgba(0, 0, 0, 1);
+}
+
+.light-blue-clear-text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .light-blue-title {
@@ -102,10 +106,15 @@ h3 {
     color: #a3a1a1;
 }
 
+.navbar-toggler {
+    border-color: rgba(0, 0, 0, 0);
+}
+
 .navbar-toggler-icon {
-    width: 25px;
-    height: 25px;
-    color: #a3a1a1;
+    width: 30px;
+    height: 30px;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(163, 161, 161, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 .nav-link {
