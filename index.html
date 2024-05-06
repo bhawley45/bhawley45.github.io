@@ -34,6 +34,23 @@
     });
   </script>
 
+  <!-- Check Sound Preferences Modal -->
+  <div id="sound-pref-modal">
+    <div>
+      <h2>Enable Sound</h2>
+      <p class="white-text">For the best experience, please enable sound in your browser settings:</p>
+      <ul>
+        <li><strong>Chrome:</strong> Click the lock icon in the address bar, then set 'Sound' to 'Allow'.</li>
+        <li><strong>Firefox:</strong> Click the lock icon next to the website address, and allow permissions for
+          'Autoplay Sound'.</li>
+        <li><strong>Safari:</strong> Go to 'Safari' > 'Settings for This Website' and allow 'Auto-Play'.</li>
+      </ul>
+      <button class="modal-btn" onclick="closeModal()">OK</button>
+    </div>
+  </div>
+
+
+
   <!-- Navigation Bar -->
   <nav class="navbar navbar-expand-md">
     <div class="container-fluid align-items-center">
@@ -789,6 +806,7 @@
   <script src="js/carousel.js" defer></script>
   <script src="js/timeline.js" defer></script>
   <script src="js/testimonials.js" defer></script>
+  <script src="js/checkSound.js" defer></script>
 </body>
 
 </html>

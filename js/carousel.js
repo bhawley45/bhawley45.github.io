@@ -9,6 +9,18 @@ const pagination = document.querySelector(".swiper-pagination");
 
 let isSwiperDisabled = false; // Track swiper element
 
+// Function to check if sound is enabled
+function canPlaySound() {
+  return localStorage.getItem("soundEnabled") === "true";
+}
+
+// Function to play sound safely, checking preference first
+function safePlaySound(sound) {
+  if (canPlaySound()) {
+    sound.play().catch((error) => console.error("Error playing sound:", error));
+  }
+}
+
 (function () {
   "use strict";
 
@@ -54,7 +66,8 @@ let isSwiperDisabled = false; // Track swiper element
       // Add event listener for slide change
       on: {
         slideChange: function () {
-          slideChangeSound.play(); // Play sound on slide change
+          // Play sound on slide change
+          safePlaySound(slideChangeSound);
         },
       },
     });
@@ -65,7 +78,7 @@ let isSwiperDisabled = false; // Track swiper element
         if (!isSwiperDisabled) {
           // Only run if user hasn't selected a cartridge
           target.style.transform = "scale(1.1)";
-          hoverSound.play(); // Play hover sound
+          safePlaySound(hoverSound); // Play hover sound
         }
       });
 
@@ -76,7 +89,7 @@ let isSwiperDisabled = false; // Track swiper element
       });
 
       cartridge.addEventListener("click", (event) => {
-        clickSound.play(); // Play click sound
+        safePlaySound(clickSound); // Play click sound
         if (!isSwiperDisabled) {
           // Only run if user hasn't selected a cartridge
           handleCartridgeClick(event.target);
@@ -97,7 +110,7 @@ let isSwiperDisabled = false; // Track swiper element
       animateCartridgeInsertion(cartridge);
 
       setTimeout(() => {
-        insertCartridgeSound.play(); // Play insert sound
+        safePlaySound(insertCartridgeSound); // Play insert sound
         setTimeout(() => {
           loadProjectPage(cartridge); // Wait for animations and sounds to finish
         }, 200);
