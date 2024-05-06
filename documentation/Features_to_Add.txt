@@ -1,6 +1,2 @@
 -> Custom cursor (maybe for each page?)
 -> Fix opacity of pacman <hr> (get svg editor)
-
--> Add "Best with audio enabled" popup
-
-
