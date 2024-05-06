@@ -1,0 +1,21 @@
+Website Operation:
+
+Make tab logo a cartridge
+
+Scrolling:
+"Back to top" button (stays on top)
+
+
+On Load:
+Game cartridges spin and rise into place
+Background image fades in from black
+Brandon Hawley Name gets typed out (animation)
+
+On Hover:
+Highlight cartridge, scale up slightly, move all others away
+play sound
+
+On click:
+All other cartridges fly away
+Console appears and cartridge is inserted
+play sound

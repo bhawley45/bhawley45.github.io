@@ -1,191 +1,812 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <link rel="stylesheet" type="text/css" href="./css/navBar.css">
-    <link rel="stylesheet" type="text/css" href="./css/mainVideo.css">
-    <link rel="stylesheet" type="text/css" href="./css/portfolio.css">
-    <link rel="stylesheet" type="text/css" href="./css/about.css">
-    <title>Brandon J Hawley</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/images/Logos/Logo_Aftermath_Transparent.png">
+  <title>Brandon Hawley - Game Dev</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
+  <!-- Font Awesome CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+  <!-- Custom stylesheets and scripts -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/essentials.css" />
 </head>
 
 <body>
-    <!--Navbar-->
-    <nav class="navbar">
-        <div class="navbar-toggle">
-            <button class="navbar-toggler" aria-label="Toggle navigation">
-                <img src="./images/navigation icons/hamIcon_white_cropped.png" alt="delicious hamburger">
-            </button>
-        </div>
-        <ul class="navbar-links">
-            <li><a href="#">Home</a></li> <!-- Keep #home unidentified so it take to top of webpage -->
-            <li><a href="#projects">Portfolio</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="navbar-social">
-            <a href="https://www.facebook.com/brandon.hawley.3114" target="_blank"><img
-                    src="./images/Social Icons/Facebook_Icon.png" alt="Facebook"></a>
-            <a href="https://www.linkedin.com/in/brandon-hawley-69a439165/" target="_blank"><img
-                    src="./images/Social Icons/LinkedIn_Icon.png" alt="LinkedIn"></a>
-            <a href="https://github.com/bhawley45" target="_blank"><img src="./images/Social Icons/GitHub_Icon.png"
-                    alt="GitHub"></a>
-        </div>
-    </nav>
 
-    <!--Background video-->
+  <script>
+    window.addEventListener('pageshow', (event) => {
+      // Check if the page is coming from cache
+      if (event.persisted) {
+        window.location.reload(); // Reload the page
+      }
+    });
+  </script>
+
+  <!-- Check Sound Preferences Modal -->
+  <div id="sound-pref-modal">
     <div>
-        <div class="video-container">
-            <video autoplay muted loop>
-                <source src="./video/smoke_flame.mp4" type="video/mp4">
-                <!--Display message if video fails to run-->
-                Your browser does not support HTML5 video.
-            </video>
-        </div>
+      <h2>Enable Sound</h2>
+      <p class="white-text">For the best experience, please enable sound in your browser settings:</p>
+      <ul>
+        <li><strong>Chrome:</strong> Click the lock icon in the address bar, then set 'Sound' to 'Allow'.</li>
+        <li><strong>Firefox:</strong> Click the lock icon next to the website address, and allow permissions for
+          'Autoplay Sound'.</li>
+        <li><strong>Safari:</strong> Go to 'Safari' > 'Settings for This Website' and allow 'Auto-Play'.</li>
+      </ul>
+      <button class="modal-btn" onclick="closeModal()">OK</button>
+    </div>
+  </div>
+
+
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-md">
+    <div class="container-fluid align-items-center">
+      <a class="navbar-brand" href="#">
+        <span class="typing-text transparent pt-1">/Game/Developer</span>
+      </a>
+      <button class="navbar-toggler align-middle" type="button" data-bs-toggle="collapse"
+        data-bs-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-center typing-text transparent" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-center typing-text transparent" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-center typing-text transparent" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-center typing-text transparent"
+              href="./documentation/resume/bhawleyResume_General.pdf" target="_blank">Resume</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- https://codepen.io/rileyjshaw/pen/DQYazZ -->
+  <!-- Cool Retro Logo -->
+  <section id="logo">
+    <div class="board text-center">
+      <p id="error">Brandon</p>
+      <p id="code">Hawley</p>
+    </div>
+  </section>
+
+  <!-- Cartridge Carousel(Swiper) [See carousel.js] -->
+  <div id="carousel">
+    <!-- Console -->
+    <div id="console">
+      <img src="./images/Console_Base_Front.png" alt="Console" id="console-image" />
     </div>
 
-    <!--Video Overlay-->
-    <div class="video-overlay">
-        <p class="white-text">Game Developer | Software Engineer</p>
-        <div class="image-container">
-            <img src="./images/mainPhoto/Brandon_Main_noBG_sm.png" alt="Thought provoking, intuitive, genius">
-        </div>
+    <div class="swiper-wrapper">
+
+      <!-- Slides -->
+
+      <div class="swiper-slide">
+        <img src="images/Cartridge_DT.png" alt="Project 3: Droppin' Tilted" class="cartridge-image"
+          data-project-url="project_droppin-tilted.html">
+      </div>
+
+      <div class="swiper-slide">
+        <img src="images/Cartridge_Pigs.png" alt="Project 2: Pigs?" class="cartridge-image"
+          data-project-url="project_pigs.html">
+      </div>
+
+      <div class="swiper-slide">
+        <img src="images/Cartridge_FB.png" alt="Project 1: Falling Blocks" class="cartridge-image"
+          data-project-url="project_falling-blocks.html">
+      </div>
+
+      <div class="swiper-slide">
+        <img src="images/Cartridge_CT.png" alt="Project 4: Crossbow Training" class="cartridge-image"
+          data-project-url="project_crossbow-training.html">
+      </div>
+
     </div>
 
-    <h2 class="portfolio-text" id="projects">Previous Adventures!</h2>
+    <!-- Dots at bottom of slide -->
+    <div class="swiper-pagination"></div>
 
-    <!--Portfolio Section-->
-    <div class="portfolio">
-        <button class="nav-button left" onclick="scrollProjects('left')">&#60;</button>
-        <div class="projects-container">
-            <div class="project">
-                <a href="https://github.com/bhawley45/Unity-Projects/tree/main/SolarSystem_v1" target="_blank">
-                    <img src="./images/SolarSystem_TN.png" alt="Simple SolarSystem Thumbnail">
-                </a>
-                <h2>Simple Solar System</h2>
-                <p>
-                    A pretty basic modeled Solar System. The main camera isn't movable but each planet rotates
-                    and orbits at it's actualSpeed / Scalar. Learned how to use different skyboxes and light
-                    emmision in Unity.
-                </p>
+    <!-- Navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container-fluid px-4">
+
+      <h2 class="text-center glow">My story so far...</h2>
+
+      <!-- Social Links -->
+      <div class="text-center">
+        <ul class="social-links">
+          <li>
+            <a href="https://www.youtube.com/channel/UCss3_mmdO30U7I99bcNwwog" target="_blank">
+              <img src="./images/Logos/Organizations/Logo_Youtube.png" alt="YouTube">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/brandon-hawley/" target="_blank">
+              <img src="./images/Logos/Organizations/Logo_LinkedIn.png" alt="LinkedIn">
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/bhawley45" target="_blank">
+              <img src="./images/Logos/Technologies/Logo_GitHub.png" alt="GitHub">
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="row justify-content-center align-items-center">
+        <div class="col-md-12">
+          <p class="white-text">
+            &emsp; Hello, I'm Brandon Hawley, a dedicated father and game developer with six years of software
+            development experience. As a kid, I was inspired by gaming; my imagination would run wild with
+            fantastic stories and worlds. I filled journals with sketches, references, and writings until their
+            bindings fell apart. But as time went on, I lost faith that my dreams were possible. I started at MCC
+            pursuing an associate's in Electrical Engineering, hoping for financial stability. I
+            quickly realized it was not a good fit.
+          </p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center align-items-center">
+        <div class="col-md-4 mb-3 mb-md-0">
+          <img src="./images/familyWinter2023_Square.jpg" alt="Family" class="img-fluid custom-circle-img" />
+        </div>
+
+        <div class="col-md-8">
+          <p class="white-text">
+            &emsp; I switched to Computer Science and started fresh at Missouri Western. However, as COVID-19
+            started disrupting everything, I realized I was essentially paying for self-education. I decided it was
+            time
+            to rethink my approach. I got married and founded Hawleywood Electronics LLC to support my
+            family, teaching myself software development on the side. Life was good, albeit it hectic - until it
+            wasn't.
+            As the electronics business grew, it began to consume all my time and energy, leaving nothing left for my
+            family or my dreams.
+          </p>
+          <p class="white-text">
+            &emsp; Then my world suddenly shattered... We lost our 9-month-old son in December of 2020. Losing him was
+            brought indescribable pain. My commitment to Hawleywood Electronics had stolen time from my family that I
+            could never get back, spent on something I didn't even enjoy. I slowly closed my business and entered a
+            season of soul-searching.
+          </p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center align-items-center">
+        <div class="col-md-8 mt-2">
+          <p class="white-text">
+            &emsp; The arrival of our second son brought hope and renewed purpose. It was then that I fully embraced
+            my childhood dream of creating games, resolving no longer to sideline the passions that had ignited my
+            imagination. Life is too short not to pursue your dreams!
+          </p>
+
+          <p class="white-text">
+            &emsp; Now, I balance being a father with a renewed passion for game development. This shift has brought
+            me not only fulfillment but invaluable time with my family. Each project is more than just a game—it's a
+            part of my personal revival and a testament to the resilience needed to believe and pursue one's dreams
+            amid
+            life's unpredictability.
+          </p>
+        </div>
+        <div class="col-md-4 mb-3 mb-md-0">
+          <img src="./images/Brandon_Distance_Cropped_Transparent.png" alt="Brandon"
+            class="img-fluid custom-circle-img" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pac-man divider-->
+  <hr />
+
+  <!-- Technologies Section -->
+  <section id="experience">
+    <div class="container-lg my-3">
+
+      <h2 class="text-center glow">What I do...</h2>
+      <!-- <p class="text-center light-blue-text">Full-Stack/Game/.NET</p> -->
+
+      <div class="row my-4">
+
+        <div class="col-md-6 light-blue-text mb-2">
+          &emsp; My expertise in game development has led me to work extensively with both Unreal and Unity engines,
+          developing and releasing several projects. I am also experienced in using a variety of creative software,
+          including Blender, Aseprite, and GIMP.
+          <br>
+          &emsp; I have a strong background in software development, with proficiency in Java, C#, C++, and full-stack
+          web development.
+        </div>
+        <div class="col-md-6 light-blue-text">
+          &emsp; Work on this website, along with my roles at Cumoratek Consulting and Prosper IT Consulting,
+          have helped to enhance my skills in front-end design using tools such as SwiperJS, jQuery, Bootstrap, and
+          PHP,
+          and in back-end development with various DBMS. Beyond programming, I also manage a YouTube channel, which
+          has
+          equipped me skills in video production and editing with DaVinci Resolve.
+        </div>
+
+      </div>
+
+      <div class="row text-center">
+        <!-- Left Grid -->
+        <div class="col-6 mb-3">
+          <div class="row g-4">
+            <div class="col-4">
+              <img src="./images/Logos/Technologies/Logo_UnrealEngine.png" alt="Unreal Engine" class="img-fluid" />
             </div>
-            <div class="project">
-                <a href="https://github.com/bhawley45/Unity-Projects/tree/main/CastleConquest_v1" target="_blank">
-                    <img src="./images/CastleConquest_TN.png" alt="Castle Conquest Thumbnail">
-                </a>
-                <h2>Castle Conquest!</h2>
-                <p>
-                    First fully developed gameplay loop. Also my first experience with 2D Unity and pixelart. In the
-                    game you play as a prince who's kingdom was taken over by pigs, you have to beat them all and
-                    reclaim the castle... Had a lot of ideas for this project but had to cut some corners to make it
-                    managable.
-                </p>
+            <div class="col-4">
+              <img src="./images/Logos/Technologies/Logo_Unity_1.png" alt="Unity" class="img-fluid" />
             </div>
-            <div class="project">
-                <a href="https://github.com/bhawley45/Unity-Projects/tree/main/DroppinTilted_v1" target="_blank">
-                    <img src="./images/DroppingTilted_TN.png" alt="Droppin' Tilted Thumbnail">
-                </a>
-                <h2>Droppin' Tilted</h2>
-                <p>
-                    This is my first from-scratch game. It's a puzzle game where you take control
-                    of a platform to guide a ball through a fun little maze. This is a fairly
-                    rough project where adaptive planning was necessary but I'm still proud of it.
-                    I have many more levels outlined, but curently only 1 is functional with lots of areas to improve.
-                    Enjoy :)
-                </p>
+            <div class="col-4">
+              <img src="./images/Logos/Technologies/Logo_Cpp.png" alt="C++" class="img-fluid" />
             </div>
-            <div class="project">
-                <a href="https://github.com/bhawley45/Unreal-Projects/tree/main/CrossbowTraining" target="_blank">
-                    <img src="./images/CrossbowTraining_TN.png" alt="Crossbow Training Thumbnail">
-                </a>
-                <h2>Crossbow Training</h2>
-                <p>
-                    This project was intense and required a lot more learning and adapting than I expected. This is my
-                    first project in Unreal Engine and is a small FPS game where you try and shoot all the targets
-                    before your time runs out. Different scores are assigned based on the target and location hit.
-                </p>
+            <div class="col-4">
+              <img src="./images/Logos/Technologies/Logo_Cs.png" alt="C#" class="img-fluid" />
             </div>
-            <!-- Add more projects here -->
+            <div class="col-4">
+              <img src="./images/Logos/Technologies/Logo_Java_1.png" alt="Java" class="img-fluid" />
+            </div>
+            <div class="col-4">
+              <img src="./images/Logos/Technologies/Logo_HTML5.png" alt="HTML 5" class="img-fluid" />
+            </div>
+            <div class="col-4">
+              <img src="./images/Logos/Technologies/Logo_CSS3.png" alt="CSS 3" class="img-fluid" />
+            </div>
+            <div class="col-4">
+              <img src="./images/Logos/Technologies/Logo_JavaScript.png" alt="JavaScript" class="img-fluid" />
+            </div>
+          </div>
         </div>
-        <button class="nav-button right" onclick="scrollProjects('right')">&#62;</button>
+
+        <!-- Right Grid -->
+        <div class="col-6">
+          <div class="row g-4">
+            <div class="col-4">
+              <img src="./images/Logos/Technologies/Logo_NET.png" alt=".NET" class="img-fluid" />
+            </div>
+            <div class="col-4">
+              <img src="./images/Logos/Technologies/Logo_Blender.png" alt="Blender" class="img-fluid" />
+            </div>
+            <div class="col-4">
+              <img src="./images/Logos/Technologies/Logo_Tux.png" alt="Linux" class="img-fluid" />
+            </div>
+            <div class="col-4">
+              <img src="./images/Logos/Technologies/Logo_VSCode.png" alt="VS Code" class="img-fluid" />
+            </div>
+            <div class="col-4">
+              <img src="./images/Logos/Technologies/Logo_VisualStudio.png" alt="Visual Studio" class="img-fluid" />
+            </div>
+            <div class="col-4">
+              <img src="./images/Logos/Technologies/Logo_JetBrains.png" alt="JetBrains" class="img-fluid" />
+            </div>
+            <div class="col-4">
+              <img src="./images/Logos/Technologies/Logo_GitHub.png" alt="GitHub" class="img-fluid" />
+            </div>
+            <div class="col-4">
+              <img src="./images/Logos/Technologies/Logo_DaVinciResolve.png" alt="DaVinci Resolve" class="img-fluid" />
+            </div>
+            <div class="col-4">
+              <img src="./images/Logos/Technologies/Logo_Aseprite.png" alt="Asprite" class="img-fluid" />
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Header for Experience Section -->
+  <section class="experience-header text-center my-5">
+    <h2 class="glow mb-3">Where I've been...</h2>
+    <p class="light-blue-text subheading">
+      Throughout my career I've had the privilege of collaborating with several outstanding organizations. I can't
+      wait
+      to see what's next!
+    </p>
+  </section>
+
+  <!-- Experience timeline -->
+  <section class="timeline">
+
+    <!-- Creative Director (Youtube: ObviouslyBrandon) -->
+    <div class="container left-container">
+
+      <a href="https://www.youtube.com/channel/UCss3_mmdO30U7I99bcNwwog" target="_blank">
+        <img src="./images/Logos/Organizations/Logo_Youtube.png" class="left-timeline-image"
+          alt="Youtube: ObviouslyBrandon">
+      </a>
+
+      <div class="text-box inactive-background" id="text-box-content" data-bs-toggle="collapse"
+        data-bs-target="#fullContent1">
+        <h2 class="text-center">2022-Present</h2>
+        <h1 class="light-blue-title text-center">Creative Director @ Youtube: ObviouslyBrandon</h1>
+
+        <!-- Skills as bullet point -->
+        <ul>
+          <li class="dropdown-text">Skills: Video Production, Video Editing, Content Creation, Time Management</li>
+        </ul>
+        <span id="fullContent1" class="timeline-collapse dropdown-text">&emsp; Developed a successful gaming YouTube
+          channel, gaining proficiency in video editing, content creation, and platform engagement algorithms. Crafted
+          original video ideas and scripts, and established a viewer "character" to effectively target specific
+          audiences. Maintained a consistent video schedule, balancing production with other professional projects.
+        </span>
+
+        <div class="text-center">
+          <i class="fas fa-chevron-down" id="dropdown-arrow_1"></i>
+        </div>
+
+        <span class="left-container-arrow"></span>
+      </div>
     </div>
 
-    <!-- About Section -->
-    <div class="row" id="about">
-        <!--Left column-->
-        <div class="column-image">
-            <img src="./images/family_cropped.jpg" alt="Epic Family Photo">
+    <!-- Prosper IT Consulting Internship -->
+    <div class="container right-container">
+
+      <a href="https://www.learncodinganywhere.com/ProsperITConsulting" target="_blank">
+        <img src="./images/Logos/Organizations/Logo_ProsperConsulting.jpg" class="right-timeline-image"
+          alt="Prosper IT Consulting">
+      </a>
+
+      <div class="text-box inactive-background" id="text-box-content" data-bs-toggle="collapse"
+        data-bs-target="#fullContent2">
+        <h2 class="text-center">2023-2024</h2>
+        <h1 class="light-blue-title text-center">Game Development Intern @ Prosper IT Consulting</h1>
+
+        <!-- Skills as bullet point -->
+        <ul>
+          <li class="dropdown-text">Skills: Unreal Engine, Unity Engine, Game Design, C++, C#, Visual Studio, Version
+            Control, DBMS, .NET, JavaScript, HTML, CSS, Bootstrap, Project Management, Agile Methodologies
+          </li>
+        </ul>
+
+        <span id="fullContent2" class="timeline-collapse dropdown-text">&emsp; Extended my learning from The Tech
+          Academy through an internship with Prosper IT Consulting, the bootcamp’s founding business. This experience
+          allowed me to apply my newly acquired skills in software and game development directly to real-world IT
+          projects, enhancing my practical knowledge and proficiency under professional guidance.
+        </span>
+
+        <div class="text-center">
+          <i class="fas fa-chevron-down" id="dropdown-arrow_2"></i>
         </div>
-        <!--Right column-->
-        <div class="column-text">
-            <h2 class="portfolio-text">About Me</h2>
-            <p>
-                Hello, my name is Brandon, a junior game developer and entrepreneur. After realizing that I’ll never make it as a professional pancake chef (yet), I decided to follow my true dream… Game development. 
-                I’ve spent the last 2 years learning the ins and outs of game engines, dreaming of new ideas, discovering and pushing what’s possible. I started out 6 years ago as an aspiring software developer learning quickBASIC… I know, yikes… but it gets better. I soon discovered that OOP languages actually exist! I dove head-first into Java, then C#, then C++; I couldn’t get enough.
-                I’d had dreams as a kid to become a game developer, as I’m sure most did. I’d dream up fantastical environments and stories (keeping a journal with a destroyed bind due to all the extra pages and pictures I shoved in it over the years). Though, no one really seemed to follow through on their game dev dreams, but I thought to myself, “why not?” 
-                So I went for it. The only thing stopping me from achieving my dreams was myself (and the unforgivably counterintuitive Blender UI). And from then on I’ve been trying to learn as many systems as I can, I aspire to be so well educated that the only thing holding me back is my imagination.
-            </p>
-        </div>
+
+        <span class="right-container-arrow"></span>
+      </div>
     </div>
 
-    <!-- Skills Section -->
-    <div class="row">
-        <!--Left column-->
-        <div class="column-text">
-            <h2 class="portfolio-text">Software Development</h2>
-            <p>
-                6 years experience -> Developing applications in OOP languages including: C#, C++, Java, Javascript,
-                and the .NET framework.
-            </p>
-            <h2 class="portfolio-text">Game Development</h2>
-            <p>
-                2 years experience -> Developing games and applications in both Unity and Unreal Engine. Created
-                assets using Blender and GIMP for 2D, 3D, and UI elements.
-            </p>
-            <h2 class="portfolio-text">Full-Stack Development</h2>
-            <p>
-                1 year experience -> Front and Back-end experience building websites and databases using various versions of HTML,
-                CSS, Javascript, and framerworks including jQuery, Third.js, and Bootstrap.
-            </p>
+    <!-- The Tech-Academy: Game/Software Development  -->
+    <div class="container left-container">
+
+      <a href="https://www.learncodinganywhere.com/" target="_blank">
+        <img src="./images/Logos/Organizations/Logo_TechAcademy.jpg" class="left-timeline-image" alt="The Tech Academy">
+      </a>
+
+      <div class="text-box inactive-background" id="text-box-content" data-bs-toggle="collapse"
+        data-bs-target="#fullContent3">
+        <h2 class="text-center">January 24, 2024</h2>
+        <h1 class="light-blue-title text-center">Game & Software Development Certificate @ The Tech Academy</h1>
+
+        <!-- Skills as bullet point -->
+        <ul>
+          <li class="dropdown-text">Achievements: Graduated with Honors</li>
+        </ul>
+
+        <!-- Certificate -->
+        <div class="text-center mb-3">
+          <a href="./documentation/certificates/Brandon Hawley Grad Certificate.PNG" target="_blank">
+            <button type="button" class="btn">Show Certificate</button>
+          </a>
         </div>
-        <!--Right column-->
-        <div class="column-image">
-            <img src="./images/john-stone-8-7-4k.jpg" alt="cool painting I found">
+
+        <span id="fullContent3" class="timeline-collapse dropdown-text">&emsp; Graduated with honors from The Tech
+          Academy's Game and Software Development Bootcamp, which involved over 900 hours of rigorous courses. I was
+          trained in a variety of languages and systems, including development over the full-stack. Key projects
+          included a first-person shooter with Unreal Engine 5, 2D adventure platformer and 3D physics puzzle in
+          Unity,
+          a command-line version of Blackjack in C#, and a number of websites using a variety of frameworks. Project
+          development included utilizing Agile methodologies as possible.
+        </span>
+
+        <div class="text-center">
+          <i class="fas fa-chevron-down" id="dropdown-arrow_3"></i>
         </div>
+
+        <span class="left-container-arrow"></span>
+      </div>
     </div>
 
-    <!--Contact section-->
-    <div class="row" id="contact">
-        <!--Contact form column-->
-        <div class="column-text column_tall">
-            <h2 class="portfolio-text">Contact Form</h2>
-            <br>
-            <!--This specifies where and how to send the form data; we are leaving it blank-->
-            <form action="" method="POST">
-                <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
-                <label class="portfolio-text" style="padding-top: 5px">Name:</label>
-                <input type="text" placeholder="Please enter your name here">
-                <label class="portfolio-text" style="padding-top: 5px">Email:</label>
-                <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-                <label class="portfolio-text" style="padding-top: 5px">Message:</label>
-                <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                <input type="submit" value="SUBMIT">
-            </form>
+    <!-- IT Specialist -->
+    <div class="container right-container">
+
+      <a href="https://kcavit.com/" target="_blank">
+        <img src="./images/Logos/Organizations/Logo_Cumoratek_2.jpg" class="right-timeline-image"
+          alt="Cumoratek Consulting">
+      </a>
+
+      <div class="text-box inactive-background" id="text-box-content" data-bs-toggle="collapse"
+        data-bs-target="#fullContent4">
+        <h2 class="text-center">2023-2024</h2>
+        <h1 class="light-blue-title text-center">IT Specialist @ Cumoratek Consulting</h1>
+
+        <!-- Skills as bullet point -->
+        <ul>
+          <li class="dropdown-text">Skills: Linux Server, Windows Server, DBMS, PHP</li>
+        </ul>
+        <span id="fullContent4" class="timeline-collapse dropdown-text">&emsp; As an IT Specialist at a private school
+          in Independence, I provided essential IT services, managed and enhanced student databases and APIs, and
+          improved mobile device compatibility for the school website. I designed and deployed numerous Linux and
+          Windows servers to host various school services and conducted repairs on school devices.
+        </span>
+
+        <div class="text-center">
+          <i class="fas fa-chevron-down" id="dropdown-arrow_4"></i>
         </div>
+
+        <span class="right-container-arrow"></span>
+      </div>
     </div>
 
-    <!--Footer section-->
-    <footer>
-        <p class="center">
-            <a href="https://www.AftermathGameStudio.com/" target="_blank">&copy;Aftermath Studio</a>
-        </p>
-    </footer>
+    <!-- Hawleywood Electronics (owner) -->
+    <div class="container left-container">
 
-    <script src="./js/script.js"></script>
+      <img src="./images/Logos/Organizations/Logo_HawleywoodElectronics.JPG" class="left-timeline-image"
+        alt="Hawleywood Electronics LLC">
+      <div class="text-box inactive-background" id="text-box-content" data-bs-toggle="collapse"
+        data-bs-target="#fullContent5">
+        <h2 class="text-center">2018-2022</h2>
+        <h1 class="light-blue-title text-center">CEO @ Hawleywood Electronics LLC</h1>
 
+        <!-- Skills as bullet point -->
+        <ul>
+          <li class="dropdown-text">Skills: Buisness Management, Computer Repair, Operating Systems, Computer
+            Building,
+            Electronics Repair, Data Recovery, Technical Support, Consulting, Analytical Skills</li>
+        </ul>
+        <span id="fullContent5" class="timeline-collapse dropdown-text">&emsp; Starting as a hobby in 2018, I owned
+          and
+          operated a small LLC (founded 2020) specializing in computer and electronics repair, providing hardware and
+          software troubleshooting services. Gained comprehensive experience in business management, mastering
+          finances,
+          scheduling, and client communications. Additionally, performed contract work for companies like Cumoratek,
+          handling A/V operations for local events and overseeing the installation of servers and A/V equipment.
+          Acquired robust analytical skills and a deep understanding of various operating systems and technical
+          support.
+        </span>
+
+        <div class="text-center">
+          <i class="fas fa-chevron-down" id="dropdown-arrow_5"></i>
+        </div>
+
+        <span class="left-container-arrow"></span>
+      </div>
+    </div>
+
+    <!-- Archery Excellence Experience -->
+    <div class="container right-container">
+
+      <a href="https://cbayou.org/archery-excellence-indoor-archery-range/" target="_blank">
+        <img src="./images/Logos/Organizations/Logo_ArcheryExcellence.jpg" class="right-timeline-image"
+          alt="Archery Excellence">
+      </a>
+
+      <div class="text-box inactive-background" id="text-box-content" data-bs-toggle="collapse"
+        data-bs-target="#fullContent6">
+        <h2 class="text-center">2016-2019</h2>
+        <h1 class="light-blue-title text-center">General Manager @ Archery Excellence</h1>
+
+        <!-- Skills as bullet point -->
+        <ul>
+          <li class="dropdown-text">Skills: Leadership, Communication, Team Mentoring, Education, Technical Support
+          </li>
+        </ul>
+        <span id="fullContent6" class="timeline-collapse dropdown-text">&emsp; As General Manager at Archery
+          Excellence, I educated students and trained employees, overseeing event scheduling, staff management, and
+          daily operations. I mentored team members and provided technical support for both archery and tech
+          equipment.
+        </span>
+
+        <div class="text-center">
+          <i class="fas fa-chevron-down" id="dropdown-arrow_6"></i>
+        </div>
+
+        <span class="right-container-arrow"></span>
+      </div>
+    </div>
+
+
+    <!-- Education Heading -->
+    <br>
+    <h2 class="glow mb-3 text-center">College Education</h2>
+
+
+    <!-- Missouri Western State University Education -->
+    <div class="container left-container">
+
+      <a href="https://www.missouriwestern.edu/" target="_blank">
+        <img src="./images/Logos/Organizations/Logo_MissouriWestern.jpg" class="left-timeline-image"
+          alt="Missouri Western State University">
+      </a>
+
+      <div class="text-box inactive-background" id="text-box-content" data-bs-toggle="collapse"
+        data-bs-target="#fullContent7">
+        <h2 class="text-center">2019-2020</h2>
+        <h1 class="light-blue-title text-center">Bachelor's of Computer Science @ Missouri Western State University
+        </h1>
+
+        <!-- Skills as bullet point -->
+        <ul>
+          <li class="dropdown-text">Activities: Java Tutoring</li>
+          <li class="dropdown-text">Skills: Java, Data Analysis, Linux</li>
+        </ul>
+        <span id="fullContent7" class="timeline-collapse dropdown-text">&emsp; At Missouri Western State University, I
+          successfully completed two junior-level semesters, demonstrating proficiency in Statistics, Data Analysis,
+          Java Programming, and Linux/GNU operating systems. Additionally, my expertise in Java led to an invitation
+          to
+          tutor fellow Computer Science students. Unfortunately, due to complications arising from the COVID-19
+          pandemic, I had to discontinue studies.
+        </span>
+
+        <div class="text-center">
+          <i class="fas fa-chevron-down" id="dropdown-arrow_7"></i>
+        </div>
+
+        <span class="left-container-arrow"></span>
+      </div>
+    </div>
+
+    <!-- Metropolitan Community College Education -->
+    <div class="container right-container">
+
+      <a href="https://mcckc.edu/" target="_blank">
+        <img src="./images/Logos/Organizations/Logo_MCC.jpg" class="right-timeline-image"
+          alt="Metropolitan Community College">
+      </a>
+
+      <div class="text-box inactive-background" id="text-box-content" data-bs-toggle="collapse"
+        data-bs-target="#fullContent8">
+        <h2 class="text-center">2018-2020</h2>
+        <h1 class="light-blue-title text-center">Degreework in Computer Science @ Metropolitan Community College</h1>
+
+        <!-- Skills as bullet point -->
+        <ul>
+          <li class="dropdown-text">Achievements: Phi-Theta-Kappa Honor Society, CompTIA A+ Certification</li>
+        </ul>
+
+        <!-- Certificate -->
+        <div class="text-center my-3">
+          <a href="./documentation/certificates/CompTIA IT Fund. Certification.pdf" target="_blank">
+            <button type="button" class="btn">CompTIA A+ Certificate</button>
+          </a>
+        </div>
+
+        <span id="fullContent8" class="timeline-collapse dropdown-text">&emsp; I initially pursued an Associate’s
+          degree in Electrical Engineering before transitioning to Computer Science. In 2019, prior to completing my
+          Associate's degree, I transferred to Missouri Western State University to further my education in Computer
+          Science, continuing with General Education classes until May 2020. Throughout my academic journey, I
+          acquired
+          foundational knowledge in various subjects and earned an invitation to the Phi Theta Kappa Honor Society due
+          to my academic performance.
+        </span>
+
+        <div class="text-center">
+          <i class="fas fa-chevron-down" id="dropdown-arrow_8"></i>
+        </div>
+
+        <span class="right-container-arrow"></span>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="mt-4">
+    <div class="container-fluid pt-5">
+      <div class="row align-items-center">
+
+        <div class="col-md-7 mb-5">
+          <h2 class="mb-5">A new dev you seek?<br>Reach out, you should.</h2>
+          <form class="border-right mb-2" method="POST" action="https://formsubmit.co/bhawley45@gmail.com">
+            <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+            <input type="hidden" name="_captcha" value="false">
+            <div class="row mb-2">
+              <div class="col-sm-6 form-group">
+                <input type="text" class="form-control" name="fname" id="fname" placeholder="First name" required>
+              </div>
+              <div class="col-sm-6 form-group">
+                <input type="text" class="form-control" name="lname" id="lname" placeholder="Last name" required>
+              </div>
+            </div>
+            <div class="row mb-2">
+              <div class="col-md-12 form-group">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 form-group">
+                <textarea class="form-control" name="message" id="message" cols="30" rows="5"
+                  placeholder="Write your message" required></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 mt-4 text-center">
+                <input type="submit" value="Submit" class="btn btn-primary rounded-5">
+              </div>
+            </div>
+          </form>
+        </div>
+
+
+        <div class="col-md-5 text-center mb-4">
+          <!-- Testimonial Quotes -->
+          <!-- <h2 class="grey-text mb-5">Testimonials</h2> -->
+          <div class="swiper mb-5" id="testimonials">
+            <div class="swiper-wrapper">
+
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="testimonial-card">
+                  <div class="row align-items-center justify-content-center">
+
+                    <!-- Slide #1 -->
+                    <div class="col-4 avatar">
+                      <a href="https://kcavit.com/" target="_blank">
+                        <img src="./images/Logos/Organizations/Logo_Cumoratek_2.jpg" class="rounded-circle"
+                          alt="Cumoratek Consulting">
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="row align-items-center">
+
+                    <div class="col-12 testimonial-main">
+                      <h3 class="light-blue-title">
+                        Cumoratek Consulting
+                      </h3>
+                      <p class="testimonial-body">
+                        "I have had the pleasure of working with Brandon for multiple
+                        years in a variety of capacities. I always appreciate Brandon's
+                        positive approach to his work and his immense wealth of
+                        knowledge. He is and has been an excellent asset to our team
+                        here at Cumoratek!"
+                      </p>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide #2 -->
+              <div class="swiper-slide">
+                <div class="testimonial-card">
+                  <div class="row align-items-center justify-content-center">
+
+                    <div class="col-4 avatar">
+                      <a href="https://cbayou.org/archery-excellence-indoor-archery-range/" target="_blank">
+                        <img src="./images/Logos/Organizations/Logo_ArcheryExcellence.jpg" class="rounded-circle"
+                          alt="Archery Excellence">
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="row align-items-center">
+
+                    <div class="col-12 testimonial-main">
+                      <h3 class="light-blue-title">
+                        Archery Excellence
+                      </h3>
+                      <p class="testimonial-body">
+                        "... We're pleased to have had Brandon as part of our team and
+                        wholeheartedly recommend him to any organization he considers
+                        joining. He is an invaluable asset to any team and working
+                        alongside him is a genuinely enjoyable experience."
+                      </p>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Footer -->
+  <footer class="clearfix">
+    <!-- Keep width 100% -->
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+
+        <div class="col-12 text-center">
+          <ul class="footer-social-links">
+            <li>
+              <a href="https://www.youtube.com/channel/UCss3_mmdO30U7I99bcNwwog" target="_blank">
+                <img src="./images/Logos/Organizations/Logo_Youtube.png" alt="YouTube">
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/brandon-hawley/" target="_blank">
+                <img src="./images/Logos/Organizations/Logo_LinkedIn.png" alt="LinkedIn">
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/bhawley45" target="_blank">
+                <img src="./images/Logos/Technologies/Logo_GitHub.png" alt="GitHub">
+              </a>
+            </li>
+          </ul>
+
+          <p class="nav-links my-2 ms-1">
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a hhref="./documentation/resume/bhawleyResume_General.pdf" target="_blank">Resume</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Trademark and Signature -->
+      <div class="row">
+        <div class="col-12 text-center mt-2">
+          <p class="trademark">
+            <span style="color: #a3a1a1;">&copy; 2024 All rights reserved</span> | This website was made with
+            <i class="far fa-heart" aria-hidden="true"></i> by <span style="color: #4a99ee;">Brandon Hawley</span>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- Bootstrap 5.3 with Popper JS -->
+  <script src="./assets/js/bootstrap.bundle.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="./assets/js/swiper-bundle.min.js"></script>
+  <!-- jQuery -->
+  <script src="./assets/js/jquery-3.7.1.min.js"></script>
+  <!-- NoVacancy JS -->
+  <script src="./assets/js/jquery.novacancy.js"></script>
+  <!-- Custom JS -->
+  <script src="js/logo.js" defer></script>
+  <script src="js/typingAnimation.js" defer></script>
+  <script src="js/carousel.js" defer></script>
+  <script src="js/timeline.js" defer></script>
+  <script src="js/testimonials.js" defer></script>
+  <script src="js/checkSound.js" defer></script>
 </body>
 
 </html>
