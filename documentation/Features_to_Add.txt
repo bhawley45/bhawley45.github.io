@@ -1,2 +1,3 @@
 -> Custom cursor (maybe for each page?)
 -> Fix opacity of pacman <hr> (get svg editor)
+-> Add project #0 that includes software?
