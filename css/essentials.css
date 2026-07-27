@@ -18,17 +18,17 @@ h3 {
 
 .white-text {
     color: whitesmoke;
-    font-size: clamp(1.2rem, 2.25vw, 1.45rem);
+    font-size: clamp(1.2rem, 2.25vw, 1.65rem);
 }
 
 .grey-text {
-    font-size: clamp(1.2rem, 2.25vw, 1.45rem);
+    font-size: clamp(1.2rem, 2.25vw, 1.65rem);
     color: #a3a1a1;
 }
 
 .light-blue-text {
     color: #4a99ee;
-    font-size: clamp(1.2rem, 2.25vw, 1.45rem);
+    font-size: clamp(1.2rem, 2.25vw, 1.65rem);
     text-shadow: 0 0 45px rgba(0, 0, 0, 1);
 }
 
