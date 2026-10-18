@@ -6,6 +6,10 @@
     font-size: 16px;
 }
 
+p {
+    font-family: baskerville, sans-serif;
+}
+
 h2 {
     color: whitesmoke;
     font-size: clamp(2.45rem, 5vw, 3.25rem);
@@ -18,11 +22,16 @@ h3 {
 
 .white-text {
     color: whitesmoke;
-    font-size: clamp(1.2rem, 2.25vw, 1.65rem);
+    font-size: clamp(1rem, 2vw, 1.25rem);
 }
 
 .grey-text {
-    font-size: clamp(1.2rem, 2.25vw, 1.65rem);
+    font-size: clamp(1.15rem, 2.25vw, 1.35rem);
+    color: #a3a1a1;
+}
+
+.grey-text-quote {
+    font-size: clamp(0.85rem, 1.5vw, 1rem);
     color: #a3a1a1;
 }
 

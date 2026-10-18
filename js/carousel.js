@@ -9,12 +9,10 @@ const pagination = document.querySelector(".swiper-pagination");
 
 let isSwiperDisabled = false; // Track swiper element
 
-// Function to check if sound is enabled
+
 function canPlaySound() {
   return localStorage.getItem("soundEnabled") === "true";
 }
-
-// Function to play sound safely, checking preference first
 function safePlaySound(sound) {
   if (canPlaySound()) {
     sound.play().catch((error) => console.error("Error playing sound:", error));

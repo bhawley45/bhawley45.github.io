@@ -1,12 +1,10 @@
 const typingSound = new Audio("./sounds/sfx_typing.wav"); // Path to your typing sound
 const typingElements = document.querySelectorAll(".typing-text"); // All elements to animate with typing
 
-// Function to check if sound is enabled
+
 function canPlaySound() {
   return localStorage.getItem("soundEnabled") === "true";
 }
-
-// Function to play sound safely, checking preference first
 function safePlaySound(sound) {
   if (canPlaySound()) {
     sound.play().catch((error) => console.error("Error playing sound:", error));
