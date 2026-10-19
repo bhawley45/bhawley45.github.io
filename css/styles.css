@@ -21,7 +21,7 @@ body {
         rgba(27,27,27,0.45) 20%, 
         rgba(27, 27, 27,0.45) 95%,
         rgba(27,27,27,0) 100%);
-    padding: 4rem 2rem;
+    /* padding: 4rem 2rem; */
 }
 
 
@@ -721,7 +721,7 @@ form.border-right {
 
 *************************************************************/
 
-hr {
+.pacman {
     border: 0;
     width: 100%;
     height: 0;
@@ -731,7 +731,7 @@ hr {
     margin: 2rem 0;
 }
 
-hr:before {
+.pacman:before {
     animation: move 10s infinite linear;
     position: absolute;
     top: -14px;
@@ -746,7 +746,7 @@ hr:before {
     height: 24px;
 }
 
-hr:after {
+.pacman:after {
     animation: move 10s 1s infinite linear;
     position: absolute;
     top: -14px;

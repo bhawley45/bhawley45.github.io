@@ -26,12 +26,12 @@ h3 {
 }
 
 .grey-text {
-    font-size: clamp(1.15rem, 2.25vw, 1.35rem);
+    font-size: clamp(1.15rem, 2.25vw, 1.45rem);
     color: #a3a1a1;
 }
 
 .grey-text-quote {
-    font-size: clamp(0.85rem, 1.5vw, 1rem);
+    font-size: clamp(0.85rem, 1.5vw, 1.05rem);
     color: #a3a1a1;
 }
 
